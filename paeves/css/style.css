@@ -1,0 +1,77 @@
+/* Global */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Logo */
+.logo {
+  width: 6rem;
+}
+
+/* Carousel */
+.carousel_image {
+  width: 100%;
+  height: 50vh;
+}
+
+.carousel_image_1 {
+  background: url(https://source.unsplash.com/random);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel_image_2 {
+  background: url(https://source.unsplash.com/random);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel_image_3 {
+  background: url(https://source.unsplash.com/random);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Footer */
+
+.footer li {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0.5rem 0;
+}
+
+.footer h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.links {
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+@media only screen and (max-width: 767px) {
+  .links {
+    border-right: none;
+  }
+}
+
+/* Products Page */
+/* Categories */
+.collapse a:hover {
+  margin-left: 0.5rem;
+  font-weight: 500;
+  transition: 0.5s ease;
+}

@@ -1,0 +1,3405 @@
+<?xml version="1.0" encoding="Windows-1252" standalone='yes' ?>
+
+<multiCHM Object='multi compiled html' Uri='http://devphp.sf.net/'>
+<![CDATA[
+// +-----------------------------------------------------------------------+
+// | Copyright (C) 2002-2007, http://devphp.sf.net                         |
+// +-----------------------------------------------------------------------+
+// | This file is free software; you can redistribute it and/or modify     |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation; either version 2 of the License, or     |
+// | (at your option) any later version.                                   |
+// | This file is distributed in the hope that it will be useful           |
+// | but WITHOUT ANY WARRANTY; without even the implied warranty of        |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the          |
+// | GNU General Public License for more details.                          |
+// +-----------------------------------------------------------------------+
+// | Author: Pierre Fauconnier pf18387@users.sourceforge.net               |
+// | Author: Urs Mäder         ursmaeder@users.sourceforge.net             |
+// | Author: Leonardo García   simbiotik@users.sourceforge.net             |
+// +-----------------------------------------------------------------------+
+]]>
+<!--
+//  __________________________________________________________________________
+// | <book> corresponds to a compiled help file and is made of                |
+// | <chapter>, <leaf> and <page>.                                            |
+// | <chapter> is also made of <chapter>, <leaf> and <page>.                  |
+// | <leaf> and <page> have no children.                                      |
+// | <page> is a searchable leaf, thru <F1-key>                               |
+// | <ID>   describes the text that will be displayed in treeview             |
+// |        and also the text that will be searched for, thru <F1-key>        |
+// | <icon> is used to draw an icon in treeview (4 icons are available)       |
+// | <key>  is the key to access the CHM-file.                                |
+// |        - if it begins with a / (slash) then it's an absolute key,        |
+// |          else the key is relative to its parent's offset (off)           |
+// |          (in this case, no recurse : parent's off must be an absolute key)
+// |        - if it ends with a . (dot) then 'html' will be appended to it    |
+// |________                                                                  |
+// | <key>  may also contain some buit-in variables                           |
+// | %lang% means that the language, as parametered by user, will be used     |
+// | %0%    means that the exact contents of <ID> will be used as key         |
+// | %1%    means %0% but every _ (underscore) will be replaced by - (hyphen) |
+//  __________________________________________________________________________
+-->
+	<book ID='PHP' icon='1' key='' uri='http://php.net/download-docs.php'>
+		<leaf ID='PHP Manual' icon='3' key='/%lang%/fancy-index.'/>
+		<leaf ID='Table of Contents' icon='4' key='/%lang%/index.'/>
+		<leaf ID='Preface' icon='2' key='/%lang%/preface.'/>
+		<chapter ID='Getting Started' icon='1' key='/%lang%/getting-started.' off='/%lang%/'>
+			<chapter ID='Introduction' icon='1' key='introduction.' off='/%lang%/'>
+				<leaf ID='What is PHP ?' icon='2' key='introduction.html#intro-whatis'/>
+				<leaf ID='What can PHP do ?' icon='2' key='intro-whatcando.'/>
+			</chapter>
+			<chapter ID='A simple tutorial' icon='1' key='tutorial.' off='/%lang%/tutorial.'>
+				<leaf ID='What do I need ?' icon='2' key='html#tutorial.requirements'/>
+				<leaf ID='Your first PHP-enabled page' icon='2' key='firstpage.'/>
+				<leaf ID='Something Useful' icon='2' key='useful.'/>
+				<leaf ID='Dealing with Forms' icon='2' key='forms.'/>
+				<leaf ID='Using old code with new versions of PHP' icon='2' key='oldcode.'/>
+				<leaf ID="What's next ?" icon='2' key='whatsnext.'/>		
+			</chapter>
+		</chapter>
+		<chapter ID='Language Reference' icon='1' key='/%lang%/langref.' off='/%lang%/language.'>
+			<chapter ID='Basic syntax' icon='1' key='basic-syntax.' off='/%lang%/language.basic-syntax.'>
+				<leaf ID='Escaping from HTML' icon='2' key='html#language.basic-syntax.phpmode'/>
+				<leaf ID='Instruction separation' icon='2' key='instruction-separation.'/>
+				<leaf ID='Comments' icon='2' key='comments.'/>
+			</chapter>
+			<chapter ID='Types' icon='1' key='types.' off='/%lang%/language.types.'>
+				<leaf ID='Introduction' icon='2' key='html#language.types.intro'/>
+				<leaf ID='Booleans' icon='2' key='boolean.'/>
+				<leaf ID='Integers' icon='2' key='integer.'/>
+				<leaf ID='Floating point numbers' icon='2' key='float.'/>
+				<leaf ID='Strings' icon='2' key='string.'/>
+				<leaf ID='Arrays' icon='2' key='array.'/>
+				<leaf ID='Objects' icon='2' key='object.'/>
+				<leaf ID='Resource' icon='2' key='resource.'/>
+				<leaf ID='NULL' icon='2' key='null.'/>
+				<leaf ID='Pseudo-types used in this documentation' icon='2' key='/%lang%/language.pseudo-types.'/>
+				<leaf ID='Type Juggling' icon='2' key='type-juggling.'/>
+			</chapter>
+			<chapter ID='Variables' icon='1' key='variables.' off='/%lang%/language.variables.'>
+				<leaf ID='Basics' icon='2' key='html#language.variables.basics'/>
+				<leaf ID='Predefined variables' icon='2' key='predefined.'/>
+				<leaf ID='Variable scope' icon='2' key='scope.'/>
+				<leaf ID='Variable variables' icon='2' key='variable.'/>
+				<leaf ID='Variables from outside PHP' icon='2' key='external.'/>	
+			</chapter>
+			<chapter ID='Constants' icon='1' key='constants.' off='/%lang%/language.constants.'>
+				<leaf ID='Syntax' icon='2' key='html#language.constants.syntax'/>
+				<leaf ID='Magic constants' icon='2' key='predefined.'/>
+			</chapter>
+			<leaf ID='Expressions' icon='2' key='expressions.'/>
+			<chapter ID='Operators' icon='1' key='operators.' off='/%lang%/language.operators.'>
+				<leaf ID='Operator Precedence' icon='2' key='html#language.operators.precedence'/>
+				<leaf ID='Arithmetic Operators' icon='2' key='arithmetic.'/>
+				<leaf ID='Assignment Operators' icon='2' key='assignment.'/>
+				<leaf ID='Bitwise Operators' icon='2' key='bitwise.'/>
+				<leaf ID='Comparison Operators' icon='2' key='comparison.'/>
+				<leaf ID='Error Control Operators' icon='2' key='errorcontrol.'/>
+				<leaf ID='Execution Operators' icon='2' key='execution.'/>
+				<leaf ID='Incrementing/Decrementing Operators' icon='2' key='increment.'/>
+				<leaf ID='Logical Operators' icon='2' key='logical.'/>
+				<leaf ID='String Operators' icon='2' key='string.'/>
+				<leaf ID='Array Operators' icon='2' key='array.'/>
+				<leaf ID='Type Operators' icon='2' key='type.'/>
+			</chapter>
+			<chapter ID='Control Structures' icon='1' key='control-structures.' off='/%lang%/control-structures.'>
+				<page ID='if' icon='2' key='/%lang%/language.control-structures.html#control-structures.if'/>
+				<page ID='else' icon='2' key='else.'/>
+				<page ID='elseif' icon='2' key='elseif.'/>
+				<leaf ID='Alternative syntax for control structures' icon='2' key='alternative-syntax.'/>
+				<page ID='while' icon='2' key='while.'/>
+				<page ID='do' icon='2' key='do.while.'/>
+				<page ID='for' icon='2' key='for.'/>
+				<page ID='foreach' icon='2' key='foreach.'/>
+				<page ID='break' icon='2' key='break.'/>
+				<page ID='continue' icon='2' key='continue.'/>
+				<page ID='switch' icon='2' key='switch.'/>
+				<page ID='declare' icon='2' key='declare.'/>
+				<page ID='return' icon='2' key='/%lang%/function.return.'/>
+				<page ID='require' icon='2' key='/%lang%/function.require.'/>
+				<page ID='include' icon='2' key='/%lang%/function.include.'/>
+				<page ID='require_once' icon='2' key='/%lang%/function.require-once.'/>
+				<page ID='include_once' icon='2' key='/%lang%/function.include-once.'/>
+			</chapter>
+			<chapter ID='Functions' icon='1' key='functions.' off='/%lang%/functions.'>
+				<leaf ID='User-defined functions' icon='2' key='/%lang%/language.functions.html#functions.user-defined'/>
+				<leaf ID='Function arguments' icon='2' key='arguments.'/>
+				<leaf ID='Returning values' icon='2' key='returning-values.'/>
+				<leaf ID='Variable functions' icon='2' key='variable-functions.'/>
+				<leaf ID='Internal (built-in) functions' icon='2' key='internal.'/>
+			</chapter>
+			<chapter ID='Classes and Objects (PHP 4)' icon='1' key='oop.' off='/%lang%/language.oop.'>
+				<page ID='class' icon='2' key='html#keyword.class'/>
+				<page ID='extends' icon='2' key='/%lang%/keyword.extends.'/>
+				<leaf ID='Constructors' icon='2' key='constructor.'/>
+				<leaf ID='Scope Resolution Operator (::)' icon='2' key='/%lang%/keyword.paamayim-nekudotayim.'/>
+				<page ID='parent' icon='2' key='/%lang%/keyword.parent.'/>
+				<leaf ID='Serializing objects - objects in sessions' icon='2' key='serialization.'/>
+				<leaf ID='The magic functions __sleep and __wakeup' icon='2' key='magic-functions.'/>
+				<leaf ID='References inside the constructor' icon='2' key='newref.'/>
+				<leaf ID='Comparing objects' icon='2' key='object-comparison.'/>
+			</chapter>
+			<chapter ID='Classes and Objects (PHP 5)' icon='1' key='oop5.' off='/%lang%/language.oop5.'>
+				<leaf ID='Introduction' icon='2' key='html#op5.intro'/>
+				<leaf ID='The Basics' icon='2' key='basic.'/>
+				<leaf ID='Autoloading Objects' icon='2' key='autoload.'/>
+				<leaf ID='Constructors and Destructors' icon='2' key='decon.'/>
+				<leaf ID='Visibility' icon='2' key='visibility.'/>
+				<leaf ID='Scope Resolution Operator (::)' icon='2' key='paamayim-nekudotayim.'/>
+				<page ID='static' icon='2' key='static.'/>
+				<page ID='const' icon='2' key='constants.'/>
+				<page ID='abstract' icon='2' key='abstract.'/>
+				<page ID='interface' icon='2' key='interfaces.'/>
+				<leaf ID='Overloading' icon='2' key='overloading.'/>
+				<leaf ID='Object Iteration' icon='2' key='iterations.'/>
+				<leaf ID='Patterns' icon='2' key='patterns.'/>
+				<leaf ID='Magic Methods' icon='2' key='magic.'/>
+				<page ID='final' icon='2' key='final.'/>
+				<leaf ID='Object cloning' icon='2' key='cloning.'/>
+				<leaf ID='Comparing objects' icon='2' key='object-comparison.'/>
+				<leaf ID='Reflection' icon='2' key='reflection.'/>
+				<leaf ID='Type Hinting' icon='2' key='typehinting.'/>
+			</chapter>
+			<chapter ID='Exceptions' icon='1' key='exceptions.' off=''>
+				<leaf ID='Extending Exceptions' icon='2' key='/%lang%/language.exceptions.html#language.exceptions.extending'/>
+			</chapter>
+			<chapter ID='References Explained' icon='1' key='references.' off='/%lang%/language.references.'>
+				<leaf ID='What References Are' icon='2' key='html#language.references.whatare'/>
+				<leaf ID='What References Do' icon='2' key='whatdo.'/>
+				<leaf ID='What References Are Not' icon='2' key='arent.'/>
+				<leaf ID='Passing by Reference' icon='2' key='pass.'/>
+				<leaf ID='Returning References' icon='2' key='return.'/>
+				<leaf ID='Unsetting References' icon='2' key='unset.'/>
+				<leaf ID='Spotting References' icon='2' key='spot.'/>
+			</chapter>
+		</chapter>
+		<chapter ID='Security' icon='1' key='/%lang%/security.' off='/%lang%/security.'>
+			<leaf ID='Introduction' icon='2' key='intro.'/>
+			<leaf ID='General considerations' icon='2' key='general.'/>
+			<chapter ID='Installed as CGI binary' icon='1' key='cgi-bin.' off='/%lang%/security.cgi-bin.'>
+				<leaf ID='Possible attacks' icon='2' key='html#security.cgi-bin.attacks'/>
+				<leaf ID='Case 1: only public files served' icon='2' key='default.'/>
+				<leaf ID='Case 2: using --enable-force-cgi-redirect' icon='2' key='force-redirect.'/>
+				<leaf ID='Case 3: setting doc_root or user_dir' icon='2' key='doc-root.'/>
+				<leaf ID='Case 4: PHP parser outside of web tree' icon='2' key='shell.'/>
+			</chapter>
+			<leaf ID='Installed as an Apache module' icon='2' key='apache.'/>
+			<leaf ID='Filesystem Security' icon='2' key='filesystem.'/>
+			<chapter ID='Database Security' icon='1' key='database.' off='/%lang%/security.database.'>
+				<leaf ID='Designing Databases' icon='2' key='html#security.database.design'/>
+				<leaf ID='Connecting to Database' icon='2' key='connection.'/>
+				<leaf ID='Encrypted Storage Model' icon='2' key='storage.'/>
+				<leaf ID='SQL Injection' icon='2' key='sql-injection.'/>
+			</chapter>
+			<leaf ID='Error Reporting' icon='2' key='errors.'/>
+			<leaf ID='Using Register Globals' icon='2' key='globals.'/>
+			<leaf ID='User Submitted Data' icon='2' key='variables.'/>
+			<chapter ID='Magic Quotes' icon='1' key='magicquotes.' off='/%lang%/security.magicquotes.'>
+				<leaf ID='What are Magic Quotes' icon='2' key='html#security.magicquotes.what'/>
+				<leaf ID='Why use Magic Quotes' icon='2' key='why.'/>
+				<leaf ID='Why not to use Magic Quotes' icon='2' key='whynot.'/>
+				<leaf ID='Disabling Magic Quotes' icon='2' key='disabling.'/>
+			</chapter>
+			<leaf ID='Hiding PHP' icon='2' key='hiding.'/>
+			<leaf ID='Keeping Current' icon='2' key='current.'/>
+		</chapter>
+		<chapter ID='Features' icon='1' key='/%lang%/features.' off='/%lang%/features.'>
+			<leaf ID='HTTP authentication with PHP' icon='2' key='http-auth.'/>
+			<leaf ID='Cookies' icon='2' key='cookies.'/>
+			<leaf ID='Sessions' icon='2' key='sessions.'/>
+			<leaf ID='Dealing with XForms' icon='2' key='xforms.'/>
+			<chapter ID='Handling file uploads' icon='1' key='file-upload.' off='/%lang%/features.file-upload.'>
+				<leaf ID='POST method uploads' icon='2' key='html#features.file-upload.post-method'/>
+				<leaf ID='Error Messages Explained' icon='2' key='errors.'/>
+				<leaf ID='Common Pitfalls' icon='2' key='common-pitfalls.'/>
+				<leaf ID='Uploading multiple files' icon='2' key='multiple.'/>
+				<leaf ID='PUT method support' icon='2' key='put-method.'/>
+			</chapter>
+			<leaf ID='Using remote files' icon='2' key='remote-files.'/>
+			<leaf ID='Connection handling' icon='2' key='connection-handling.'/>
+			<leaf ID='Persistent Database Connections' icon='2' key='persistent-connections.'/>
+			<chapter ID='Safe Mode' icon='1' key='safe-mode.' off='/%lang%/features.safe-mode.'>
+				<leaf ID='Security and Safe Mode' icon='2' key='html#ini.sect.safe-mode'/>
+				<leaf ID='Functions restricted/disabled by safe mode' icon='2' key='functions.'/>
+			</chapter>
+			<leaf ID='Using PHP from the command line' icon='2' key='commandline.'/>
+		</chapter>
+		<chapter ID='Function Reference' icon='1' key='/%lang%/funcref.' off='/%lang%/ref.'>
+			<chapter ID='Apache-specific Functions' icon='1' key='apache.' off='/%lang%/function.'>
+				<page ID='apache_child_terminate' icon='2' key='%1%.'/>
+				<page ID='apache_get_modules' icon='2' key='%1%.'/>
+				<page ID='apache_get_version' icon='2' key='%1%.'/>
+				<page ID='apache_getenv' icon='2' key='%1%.'/>
+				<page ID='apache_lookup_uri' icon='2' key='%1%.'/>
+				<page ID='apache_note' icon='2' key='%1%.'/>
+				<page ID='apache_request_headers' icon='2' key='%1%.'/>
+				<page ID='apache_reset_timeout' icon='2' key='%1%.'/>
+				<page ID='apache_response_headers' icon='2' key='%1%.'/>
+				<page ID='apache_setenv' icon='2' key='%1%.'/>
+				<page ID='ascii2ebcdic' icon='2' key='%0%.'/>
+				<page ID='ebcdic2ascii' icon='2' key='%0%.'/>
+				<page ID='getallheaders' icon='2' key='%0%.'/>
+				<page ID='virtual' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='Advanced PHP debugger' icon='1' key='apd.' off='/%lang%/function.'>
+				<page ID='apd_breakpoint' icon='2' key='%1%.'/>
+				<page ID='apd_callstack' icon='2' key='%1%.'/>
+				<page ID='apd_clunk' icon='2' key='%1%.'/>
+				<page ID='apd_continue' icon='2' key='%1%.'/>
+				<page ID='apd_croak' icon='2' key='%1%.'/>
+				<page ID='apd_dump_function_table' icon='2' key='%1%.'/>
+				<page ID='apd_dump_persistent_resources' icon='2' key='%1%.'/>
+				<page ID='apd_dump_regular_resources' icon='2' key='%1%.'/>
+				<page ID='apd_echo' icon='2' key='%1%.'/>
+				<page ID='apd_get_active_symbols' icon='2' key='%1%.'/>
+				<page ID='apd_set_pprof_trace' icon='2' key='%1%.'/>
+				<page ID='apd_set_session_trace' icon='2' key='%1%.'/>
+				<page ID='apd_set_session' icon='2' key='%1%.'/>
+				<page ID='apd_set_socket_session_trace' icon='2' key='%1%.'/>
+				<page ID='override_function' icon='2' key='%1%.'/>
+				<page ID='rename_function' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Array Functions' icon='1' key='array.' off='/%lang%/function.'>
+				<page ID='array_change_key_case' icon='2' key='%1%.'/>
+				<page ID='array_chunk' icon='2' key='%1%.'/>
+				<page ID='array_combine' icon='2' key='%1%.'/>
+				<page ID='array_count_values' icon='2' key='%1%.'/>
+				<page ID='array_diff_assoc' icon='2' key='%1%.'/>
+				<page ID='array_diff_key' icon='2' key='%1%.'/>
+				<page ID='array_diff_uassoc' icon='2' key='%1%.'/>
+				<page ID='array_diff_ukey' icon='2' key='%1%.'/>
+				<page ID='array_diff' icon='2' key='%1%.'/>
+				<page ID='array_filter' icon='2' key='%1%.'/>
+				<page ID='array_flip' icon='2' key='%1%.'/>
+				<page ID='array_intersect_assoc' icon='2' key='%1%.'/>
+				<page ID='array_intersect_key' icon='2' key='%1%.'/>
+				<page ID='array_intersect_uassoc' icon='2' key='%1%.'/>
+				<page ID='array_intersect_ukey' icon='2' key='%1%.'/>
+				<page ID='array_intersect' icon='2' key='%1%.'/>
+				<page ID='array_key_exists' icon='2' key='%1%.'/>
+				<page ID='array_keys' icon='2' key='%1%.'/>
+				<page ID='array_map' icon='2' key='%1%.'/>
+				<page ID='array_merge_recursive' icon='2' key='%1%.'/>
+				<page ID='array_merge' icon='2' key='%1%.'/>
+				<page ID='array_multisort' icon='2' key='%1%.'/>
+				<page ID='array_pad' icon='2' key='%1%.'/>
+				<page ID='array_pop' icon='2' key='%1%.'/>
+				<page ID='array_push' icon='2' key='%1%.'/>
+				<page ID='array_rand' icon='2' key='%1%.'/>
+				<page ID='array_reduce' icon='2' key='%1%.'/>
+				<page ID='array_reverse' icon='2' key='%1%.'/>
+				<page ID='array_search' icon='2' key='%1%.'/>
+				<page ID='array_shift' icon='2' key='%1%.'/>
+				<page ID='array_slice' icon='2' key='%1%.'/>
+				<page ID='array_splice' icon='2' key='%1%.'/>
+				<page ID='array_sum' icon='2' key='%1%.'/>
+				<page ID='array_udiff_assoc' icon='2' key='%1%.'/>
+				<page ID='array_udiff_uassoc' icon='2' key='%1%.'/>
+				<page ID='array_udiff' icon='2' key='%1%.'/>
+				<page ID='array_uintersect_assoc' icon='2' key='%1%.'/>
+				<page ID='array_uintersect_uassoc' icon='2' key='%1%.'/>
+				<page ID='array_uintersect' icon='2' key='%1%.'/>
+				<page ID='array_unique' icon='2' key='%1%.'/>
+				<page ID='array_unshift' icon='2' key='%1%.'/>
+				<page ID='array_values' icon='2' key='%1%.'/>
+				<page ID='array_walk_recursive' icon='2' key='%1%.'/>
+				<page ID='array_walk' icon='2' key='%1%.'/>
+				<page ID='array' icon='2' key='%0%.'/>
+				<page ID='arsort' icon='2' key='%0%.'/>
+				<page ID='asort' icon='2' key='%0%.'/>
+				<page ID='compact' icon='2' key='%0%.'/>
+				<page ID='count' icon='2' key='%0%.'/>
+				<page ID='current' icon='2' key='%0%.'/>
+				<page ID='each' icon='2' key='%0%.'/>
+				<page ID='end' icon='2' key='%0%.'/>
+				<page ID='extract' icon='2' key='%0%.'/>
+				<page ID='in_array' icon='2' key='%1%.'/>
+				<page ID='key' icon='2' key='%0%.'/>
+				<page ID='krsort' icon='2' key='%0%.'/>
+				<page ID='ksort' icon='2' key='%0%.'/>
+				<page ID='list' icon='2' key='%0%.'/>
+				<page ID='natcasesort' icon='2' key='%0%.'/>
+				<page ID='natsort' icon='2' key='%0%.'/>
+				<page ID='next' icon='2' key='%0%.'/>
+				<page ID='pos' icon='2' key='%0%.'/>
+				<page ID='prev' icon='2' key='%0%.'/>
+				<page ID='range' icon='2' key='%0%.'/>
+				<page ID='reset' icon='2' key='%0%.'/>
+				<page ID='rsort' icon='2' key='%0%.'/>
+				<page ID='shuffle' icon='2' key='%0%.'/>
+				<page ID='sizeof' icon='2' key='%0%.'/>
+				<page ID='sort' icon='2' key='%0%.'/>
+				<page ID='uasort' icon='2' key='%0%.'/>
+				<page ID='uksort' icon='2' key='%0%.'/>
+				<page ID='usort' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='Aspell functions [deprecated]' icon='1' key='aspell.' off='/%lang%/function.'>
+				<leaf ID='aspell_check_raw' icon='2' key='%1%.'/>
+				<leaf ID='aspell_check' icon='2' key='%1%.'/>
+				<leaf ID='aspell_new' icon='2' key='%1%.'/>
+				<leaf ID='aspell_suggest' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='BCMath Arbitrary Precision Mathematics Functions' icon='1' key='bc.' off='/%lang%/function.'>
+				<page ID='bcadd' icon='2' key='%0%.'/>
+				<page ID='bccomp' icon='2' key='%0%.'/>
+				<page ID='bcdiv' icon='2' key='%0%.'/>
+				<page ID='bcmod' icon='2' key='%0%.'/>
+				<page ID='bcmul' icon='2' key='%0%.'/>
+				<page ID='bcpow' icon='2' key='%0%.'/>
+				<page ID='bcpowmod' icon='2' key='%0%.'/>
+				<page ID='bcscale' icon='2' key='%0%.'/>
+				<page ID='bcsqrt' icon='2' key='%0%.'/>
+				<page ID='bcsub' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='PHP bytecode Compiler' icon='1' key='bcompiler.' off='/%lang%/function.'>
+				<page ID='bcompiler_load_exe' icon='2' key='%1%.'/>
+				<page ID='bcompiler_load' icon='2' key='%1%.'/>
+				<page ID='bcompiler_parse_class' icon='2' key='%1%.'/>
+				<page ID='bcompiler_read' icon='2' key='%1%.'/>
+				<page ID='bcompiler_write_class' icon='2' key='%1%.'/>
+				<page ID='bcompiler_write_constant' icon='2' key='%1%.'/>
+				<page ID='bcompiler_write_exe_footer' icon='2' key='%1%.'/>
+				<page ID='bcompiler_write_file' icon='2' key='%1%.'/>
+				<page ID='bcompiler_write_footer' icon='2' key='%1%.'/>
+				<page ID='bcompiler_write_function' icon='2' key='%1%.'/>
+				<page ID='bcompiler_write_functions_from_file' icon='2' key='%1%.'/>
+				<page ID='bcompiler_write_header' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Bzip2 Compression Functions' icon='1' key='bzip2.' off='/%lang%/function.'>
+				<page ID='bzclose' icon='2' key='%0%.'/>
+				<page ID='bzcompress' icon='2' key='%0%.'/>
+				<page ID='bzdecompress' icon='2' key='%0%.'/>
+				<page ID='bzerrno' icon='2' key='%0%.'/>
+				<page ID='bzerror' icon='2' key='%0%.'/>
+				<page ID='bzerrstr' icon='2' key='%0%.'/>
+				<page ID='bzflush' icon='2' key='%0%.'/>
+				<page ID='bzopen' icon='2' key='%0%.'/>
+				<page ID='bzread' icon='2' key='%0%.'/>
+				<page ID='bzwrite' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='Calendar Functions' icon='1' key='calendar.' off='/%lang%/function.'>
+				<page ID='cal_days_in_month' icon='2' key='%1%.'/>
+				<page ID='cal_from_jd' icon='2' key='%1%.'/>
+				<page ID='cal_info' icon='2' key='%1%.'/>
+				<page ID='cal_to_jd' icon='2' key='%1%.'/>
+				<page ID='easter_date' icon='2' key='%1%.'/>
+				<page ID='easter_days' icon='2' key='%1%.'/>
+				<page ID='FrenchToJD' icon='2' key='frenchtojd.'/>
+				<page ID='GregorianToJD' icon='2' key='gregoriantojd.'/>
+				<page ID='JDDayOfWeek' icon='2' key='jddayofweek.'/>
+				<page ID='JDMonthName' icon='2' key='jdmonthname.'/>
+				<page ID='JDToFrench' icon='2' key='jdtofrench.'/>
+				<page ID='JDToGregorian' icon='2' key='jdtogregorian.'/>
+				<page ID='jdtojewish' icon='2' key='%0%.'/>
+				<page ID='JDToJulian' icon='2' key='jdtojulian.'/>
+				<page ID='jdtounix' icon='2' key='%0%.'/>
+				<page ID='JewishToJD' icon='2' key='jewishtojd.'/>
+				<page ID='JulianToJD' icon='2' key='juliantojd.'/>
+				<page ID='unixtojd' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='CCVS API Functions [deprecated]' icon='1' key='ccvs.' off='/%lang%/'>
+			</chapter>
+			<chapter ID='Classkit Functions' icon='1' key='classkit.' off='/%lang%/function.'>
+				<page ID='classkit_import' icon='2' key='%1%.'/>
+				<page ID='classkit_method_add' icon='2' key='%1%.'/>
+				<page ID='classkit_method_copy' icon='2' key='%1%.'/>
+				<page ID='classkit_method_redefine' icon='2' key='%1%.'/>
+				<page ID='classkit_method_rename' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Class/Object Functions' icon='1' key='classobj.' off='/%lang%/function.'>
+				<page ID='call_user_method_array' icon='2' key='%1%.'/>
+				<page ID='call_user_method' icon='2' key='%1%.'/>
+				<page ID='class_exists' icon='2' key='%1%.'/>
+				<page ID='get_class_methods' icon='2' key='%1%.'/>
+				<page ID='get_class_vars' icon='2' key='%1%.'/>
+				<page ID='get_class' icon='2' key='%1%.'/>
+				<page ID='get_declared_classes' icon='2' key='%1%.'/>
+				<page ID='get_declared_interfaces' icon='2' key='%1%.'/>
+				<page ID='get_object_vars' icon='2' key='%1%.'/>
+				<page ID='get_parent_class' icon='2' key='%1%.'/>
+				<page ID='interface_exists' icon='2' key='%1%.'/>
+				<page ID='is_a' icon='2' key='%1%.'/>
+				<page ID='is_subclass_of' icon='2' key='%1%.'/>
+				<page ID='method_exists' icon='2' key='%1%.'/>
+				<page ID='property_exists' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='COM and .Net (Windows)' icon='1' key='com.' off='/%lang%/function.'>
+				<page ID='COM' icon='2' key='/%lang%/class.com.'/>
+				<page ID='DOTNET' icon='2' key='/%lang%/class.dotnet.'/>
+				<page ID='VARIANT' icon='2' key='/%lang%/class.variant.'/>
+				<page ID='com_addref' icon='2' key='%1%.'/>
+				<page ID='com_create_guid' icon='2' key='%1%.'/>
+				<page ID='com_event_sink' icon='2' key='%1%.'/>
+				<page ID='com_get_active_object' icon='2' key='%1%.'/>
+				<page ID='com_invoke' icon='2' key='%1%.'/>
+				<page ID='com_isenum' icon='2' key='%1%.'/>
+				<page ID='com_load_typelib' icon='2' key='%1%.'/>
+				<page ID='com_load' icon='2' key='%1%.'/>
+				<page ID='com_message_pump' icon='2' key='%1%.'/>
+				<page ID='com_print_typeinfo' icon='2' key='%1%.'/>
+				<page ID='com_propget' icon='2' key='%1%.'/>
+				<page ID='com_propput' icon='2' key='%1%.'/>
+				<page ID='com_propset' icon='2' key='%1%.'/>
+				<page ID='com_release' icon='2' key='%1%.'/>
+				<page ID='com_set' icon='2' key='%1%.'/>
+				<page ID='variant_abs' icon='2' key='%1%.'/>
+				<page ID='variant_add' icon='2' key='%1%.'/>
+				<page ID='variant_and' icon='2' key='%1%.'/>
+				<page ID='variant_cast' icon='2' key='%1%.'/>
+				<page ID='variant_cat' icon='2' key='%1%.'/>
+				<page ID='variant_cmp' icon='2' key='%1%.'/>
+				<page ID='variant_date_from_timestamp' icon='2' key='%1%.'/>
+				<page ID='variant_date_to_timestamp' icon='2' key='%1%.'/>
+				<page ID='variant_div' icon='2' key='%1%.'/>
+				<page ID='variant_eqv' icon='2' key='%1%.'/>
+				<page ID='variant_fix' icon='2' key='%1%.'/>
+				<page ID='variant_get_type' icon='2' key='%1%.'/>
+				<page ID='variant_idiv' icon='2' key='%1%.'/>
+				<page ID='variant_imp' icon='2' key='%1%.'/>
+				<page ID='variant_int' icon='2' key='%1%.'/>
+				<page ID='variant_mod' icon='2' key='%1%.'/>
+				<page ID='variant_mul' icon='2' key='%1%.'/>
+				<page ID='variant_neg' icon='2' key='%1%.'/>
+				<page ID='variant_not' icon='2' key='%1%.'/>
+				<page ID='variant_or' icon='2' key='%1%.'/>
+				<page ID='variant_pow' icon='2' key='%1%.'/>
+				<page ID='variant_round' icon='2' key='%1%.'/>
+				<page ID='variant_set_type' icon='2' key='%1%.'/>
+				<page ID='variant_set' icon='2' key='%1%.'/>
+				<page ID='variant_sub' icon='2' key='%1%.'/>
+				<page ID='variant_xor' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='ClibPDF Functions' icon='1' key='cpdf.' off='/%lang%/function.'>
+				<page ID='cpdf_add_annotation' icon='2' key='%1%.'/>
+				<page ID='cpdf_add_outline' icon='2' key='%1%.'/>
+				<page ID='cpdf_arc' icon='2' key='%1%.'/>
+				<page ID='cpdf_begin_text' icon='2' key='%1%.'/>
+				<page ID='cpdf_circle' icon='2' key='%1%.'/>
+				<page ID='cpdf_clip' icon='2' key='%1%.'/>
+				<page ID='cpdf_close' icon='2' key='%1%.'/>
+				<page ID='cpdf_closepath_fill_stroke' icon='2' key='%1%.'/>
+				<page ID='cpdf_closepath_stroke' icon='2' key='%1%.'/>
+				<page ID='cpdf_closepath' icon='2' key='%1%.'/>
+				<page ID='cpdf_continue_text' icon='2' key='%1%.'/>
+				<page ID='cpdf_curveto' icon='2' key='%1%.'/>
+				<page ID='cpdf_end_text' icon='2' key='%1%.'/>
+				<page ID='cpdf_fill_stroke' icon='2' key='%1%.'/>
+				<page ID='cpdf_fill' icon='2' key='%1%.'/>
+				<page ID='cpdf_finalize_page' icon='2' key='%1%.'/>
+				<page ID='cpdf_finalize' icon='2' key='%1%.'/>
+				<page ID='cpdf_global_set_document_limits' icon='2' key='%1%.'/>
+				<page ID='cpdf_import_jpeg' icon='2' key='%1%.'/>
+				<page ID='cpdf_lineto' icon='2' key='%1%.'/>
+				<page ID='cpdf_moveto' icon='2' key='%1%.'/>
+				<page ID='cpdf_newpath' icon='2' key='%1%.'/>
+				<page ID='cpdf_open' icon='2' key='%1%.'/>
+				<page ID='cpdf_output_buffer' icon='2' key='%1%.'/>
+				<page ID='cpdf_page_init' icon='2' key='%1%.'/>
+				<page ID='cpdf_place_inline_image' icon='2' key='%1%.'/>
+				<page ID='cpdf_rect' icon='2' key='%1%.'/>
+				<page ID='cpdf_restore' icon='2' key='%1%.'/>
+				<page ID='cpdf_rlineto' icon='2' key='%1%.'/>
+				<page ID='cpdf_rmoveto' icon='2' key='%1%.'/>
+				<page ID='cpdf_rotate_text' icon='2' key='%1%.'/>
+				<page ID='cpdf_rotate' icon='2' key='%1%.'/>
+				<page ID='cpdf_save_to_file' icon='2' key='%1%.'/>
+				<page ID='cpdf_save' icon='2' key='%1%.'/>
+				<page ID='cpdf_scale' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_action_url' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_char_spacing' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_creator' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_current_page' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_font_directories' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_font_map_file' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_font' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_horiz_scaling' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_keywords' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_leading' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_page_animation' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_subject' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_text_matrix' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_text_pos' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_text_rendering' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_text_rise' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_title' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_viewer_preferences' icon='2' key='%1%.'/>
+				<page ID='cpdf_set_word_spacing' icon='2' key='%1%.'/>
+				<page ID='cpdf_setdash' icon='2' key='%1%.'/>
+				<page ID='cpdf_setflat' icon='2' key='%1%.'/>
+				<page ID='cpdf_setgray_fill' icon='2' key='%1%.'/>
+				<page ID='cpdf_setgray_stroke' icon='2' key='%1%.'/>
+				<page ID='cpdf_setgray' icon='2' key='%1%.'/>
+				<page ID='cpdf_setlinecap' icon='2' key='%1%.'/>
+				<page ID='cpdf_setlinejoin' icon='2' key='%1%.'/>
+				<page ID='cpdf_setlinewidth' icon='2' key='%1%.'/>
+				<page ID='cpdf_setmiterlimit' icon='2' key='%1%.'/>
+				<page ID='cpdf_setrgbcolor_fill' icon='2' key='%1%.'/>
+				<page ID='cpdf_setrgbcolor_stroke' icon='2' key='%1%.'/>
+				<page ID='cpdf_setrgbcolor' icon='2' key='%1%.'/>
+				<page ID='cpdf_show_xy' icon='2' key='%1%.'/>
+				<page ID='cpdf_show' icon='2' key='%1%.'/>
+				<page ID='cpdf_stringwidth' icon='2' key='%1%.'/>
+				<page ID='cpdf_stroke' icon='2' key='%1%.'/>
+				<page ID='cpdf_text' icon='2' key='%1%.'/>
+				<page ID='cpdf_translate' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Crack Functions' icon='1' key='crack.' off='/%lang%/function.'>
+				<page ID='crack_check' icon='2' key='%1%.'/>
+				<page ID='crack_closedict' icon='2' key='%1%.'/>
+				<page ID='crack_getlastmessage' icon='2' key='%1%.'/>
+				<page ID='crack_opendict' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Character Type Functions' icon='1' key='ctype.' off='/%lang%/function.'>
+				<page ID='ctype_alnum' icon='2' key='%1%.'/>
+				<page ID='ctype_alpha' icon='2' key='%1%.'/>
+				<page ID='ctype_cntrl' icon='2' key='%1%.'/>
+				<page ID='ctype_digit' icon='2' key='%1%.'/>
+				<page ID='ctype_graph' icon='2' key='%1%.'/>
+				<page ID='ctype_lower' icon='2' key='%1%.'/>
+				<page ID='ctype_print' icon='2' key='%1%.'/>
+				<page ID='ctype_punct' icon='2' key='%1%.'/>
+				<page ID='ctype_space' icon='2' key='%1%.'/>
+				<page ID='ctype_upper' icon='2' key='%1%.'/>
+				<page ID='ctype_xdigit' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='CURL, Client URL Library Functions' icon='1' key='curl.' off='/%lang%/function.'>
+				<page ID='curl_close' icon='2' key='%1%.'/>
+				<page ID='curl_copy_handle' icon='2' key='%1%.'/>
+				<page ID='curl_errno' icon='2' key='%1%.'/>
+				<page ID='curl_error' icon='2' key='%1%.'/>
+				<page ID='curl_exec' icon='2' key='%1%.'/>
+				<page ID='curl_getinfo' icon='2' key='%1%.'/>
+				<page ID='curl_init' icon='2' key='%1%.'/>
+				<page ID='curl_multi_add_handle' icon='2' key='%1%.'/>
+				<page ID='curl_multi_close' icon='2' key='%1%.'/>
+				<page ID='curl_multi_exec' icon='2' key='%1%.'/>
+				<page ID='curl_multi_getcontent' icon='2' key='%1%.'/>
+				<page ID='curl_multi_info_read' icon='2' key='%1%.'/>
+				<page ID='curl_multi_init' icon='2' key='%1%.'/>
+				<page ID='curl_multi_remove_handle' icon='2' key='%1%.'/>
+				<page ID='curl_multi_select' icon='2' key='%1%.'/>
+				<page ID='curl_setopt' icon='2' key='%1%.'/>
+				<page ID='curl_version' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Cybercash Payment Functions' icon='1' key='cybercash.' off='/%lang%/function.'>
+				<page ID='cybercash_base64_decode' icon='2' key='%1%.'/>
+				<page ID='cybercash_base64_encode' icon='2' key='%1%.'/>
+				<page ID='cybercash_decr' icon='2' key='%1%.'/>
+				<page ID='cybercash_encr' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Cyrus IMAP administration Functions' icon='1' key='cyrus.' off='/%lang%/function.'>
+				<page ID='cyrus_authenticate' icon='2' key='%1%.'/>
+				<page ID='cyrus_bind' icon='2' key='%1%.'/>
+				<page ID='cyrus_close' icon='2' key='%1%.'/>
+				<page ID='cyrus_connect' icon='2' key='%1%.'/>
+				<page ID='cyrus_query' icon='2' key='%1%.'/>
+				<page ID='cyrus_unbind' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Date and Time Functions' icon='1' key='datetime.' off='/%lang%/function.'>
+				<page ID='checkdate' icon='2' key='%0%.'/>
+				<page ID='date_sunrise' icon='2' key='%1%.'/>
+				<page ID='date_sunset' icon='2' key='%1%.'/>
+				<page ID='date' icon='2' key='%0%.'/>
+				<page ID='getdate' icon='2' key='%0%.'/>
+				<page ID='gettimeofday' icon='2' key='%0%.'/>
+				<page ID='gmdate' icon='2' key='%0%.'/>
+				<page ID='gmmktime' icon='2' key='%0%.'/>
+				<page ID='gmstrftime' icon='2' key='%0%.'/>
+				<page ID='idate' icon='2' key='%0%.'/>
+				<page ID='localtime' icon='2' key='%0%.'/>
+				<page ID='microtime' icon='2' key='%0%.'/>
+				<page ID='mktime' icon='2' key='%0%.'/>
+				<page ID='strftime' icon='2' key='%0%.'/>
+				<page ID='strptime' icon='2' key='%0%.'/>
+				<page ID='strtotime' icon='2' key='%0%.'/>
+				<page ID='time' icon='2' key='time.'/>
+			</chapter>
+			<chapter ID='Database (dbm-style) Abstraction Layer Functions' icon='1' key='dba.' off='/%lang%/function.'>
+				<page ID='dba_close' icon='2' key='%1%.'/>
+				<page ID='dba_delete' icon='2' key='%1%.'/>
+				<page ID='dba_exists' icon='2' key='%1%.'/>
+				<page ID='dba_fetch' icon='2' key='%1%.'/>
+				<page ID='dba_firstkey' icon='2' key='%1%.'/>
+				<page ID='dba_handlers' icon='2' key='%1%.'/>
+				<page ID='dba_insert' icon='2' key='%1%.'/>
+				<page ID='dba_key_split' icon='2' key='%1%.'/>
+				<page ID='dba_list' icon='2' key='%1%.'/>
+				<page ID='dba_nextkey' icon='2' key='%1%.'/>
+				<page ID='dba_open' icon='2' key='%1%.'/>
+				<page ID='dba_optimize' icon='2' key='%1%.'/>
+				<page ID='dba_popen' icon='2' key='%1%.'/>
+				<page ID='dba_replace' icon='2' key='%1%.'/>
+				<page ID='dba_sync' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='dBase Functions' icon='1' key='dbase.' off='/%lang%/function.'>
+				<page ID='dbase_add_record' icon='2' key='%1%.'/>
+				<page ID='dbase_close' icon='2' key='%1%.'/>
+				<page ID='dbase_create' icon='2' key='%1%.'/>
+				<page ID='dbase_delete_record' icon='2' key='%1%.'/>
+				<page ID='dbase_get_header_info' icon='2' key='%1%.'/>
+				<page ID='dbase_get_record_with_names' icon='2' key='%1%.'/>
+				<page ID='dbase_get_record' icon='2' key='%1%.'/>
+				<page ID='dbase_numfields' icon='2' key='%1%.'/>
+				<page ID='dbase_numrecords' icon='2' key='%1%.'/>
+				<page ID='dbase_open' icon='2' key='%1%.'/>
+				<page ID='dbase_pack' icon='2' key='%1%.'/>
+				<page ID='dbase_replace_record' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='DBM Functions [deprecated]' icon='1' key='dbm.' off='/%lang%/function.'>
+				<page ID='dblist' icon='2' key='%0%.'/>
+				<page ID='dbmclose' icon='2' key='%0%.'/>
+				<page ID='dbmdelete' icon='2' key='%0%.'/>
+				<page ID='dbmexists' icon='2' key='%0%.'/>
+				<page ID='dbmfetch' icon='2' key='%0%.'/>
+				<page ID='dbmfirstkey' icon='2' key='%0%.'/>
+				<page ID='dbminsert' icon='2' key='%0%.'/>
+				<page ID='dbmnextkey' icon='2' key='%0%.'/>
+				<page ID='dbmopen' icon='2' key='%0%.'/>
+				<page ID='dbmreplace' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='DB++ Functions' icon='1' key='dbplus.' off='/%lang%/function.'>
+				<page ID='dbplus_add' icon='2' key='%1%.'/>
+				<page ID='dbplus_aql' icon='2' key='%1%.'/>
+				<page ID='dbplus_chdir' icon='2' key='%1%.'/>
+				<page ID='dbplus_close' icon='2' key='%1%.'/>
+				<page ID='dbplus_curr' icon='2' key='%1%.'/>
+				<page ID='dbplus_errcode' icon='2' key='%1%.'/>
+				<page ID='dbplus_errno' icon='2' key='%1%.'/>
+				<page ID='dbplus_find' icon='2' key='%1%.'/>
+				<page ID='dbplus_first' icon='2' key='%1%.'/>
+				<page ID='dbplus_flush' icon='2' key='%1%.'/>
+				<page ID='dbplus_freealllocks' icon='2' key='%1%.'/>
+				<page ID='dbplus_freelock' icon='2' key='%1%.'/>
+				<page ID='dbplus_freerlocks' icon='2' key='%1%.'/>
+				<page ID='dbplus_getlock' icon='2' key='%1%.'/>
+				<page ID='dbplus_getunique' icon='2' key='%1%.'/>
+				<page ID='dbplus_info' icon='2' key='%1%.'/>
+				<page ID='dbplus_last' icon='2' key='%1%.'/>
+				<page ID='dbplus_lockrel' icon='2' key='%1%.'/>
+				<page ID='dbplus_next' icon='2' key='%1%.'/>
+				<page ID='dbplus_open' icon='2' key='%1%.'/>
+				<page ID='dbplus_prev' icon='2' key='%1%.'/>
+				<page ID='dbplus_rchperm' icon='2' key='%1%.'/>
+				<page ID='dbplus_rcreate' icon='2' key='%1%.'/>
+				<page ID='dbplus_rcrtexact' icon='2' key='%1%.'/>
+				<page ID='dbplus_rcrtlike' icon='2' key='%1%.'/>
+				<page ID='dbplus_resolve' icon='2' key='%1%.'/>
+				<page ID='dbplus_restorepos' icon='2' key='%1%.'/>
+				<page ID='dbplus_rkeys' icon='2' key='%1%.'/>
+				<page ID='dbplus_ropen' icon='2' key='%1%.'/>
+				<page ID='dbplus_rquery' icon='2' key='%1%.'/>
+				<page ID='dbplus_rrename' icon='2' key='%1%.'/>
+				<page ID='dbplus_rsecindex' icon='2' key='%1%.'/>
+				<page ID='dbplus_runlink' icon='2' key='%1%.'/>
+				<page ID='dbplus_rzap' icon='2' key='%1%.'/>
+				<page ID='dbplus_savepos' icon='2' key='%1%.'/>
+				<page ID='dbplus_setindex' icon='2' key='%1%.'/>
+				<page ID='dbplus_setindexbynumber' icon='2' key='%1%.'/>
+				<page ID='dbplus_sql' icon='2' key='%1%.'/>
+				<page ID='dbplus_tcl' icon='2' key='%1%.'/>
+				<page ID='dbplus_tremove' icon='2' key='%1%.'/>
+				<page ID='dbplus_undo' icon='2' key='%1%.'/>
+				<page ID='dbplus_undoprepare' icon='2' key='%1%.'/>
+				<page ID='dbplus_unlockrel' icon='2' key='%1%.'/>
+				<page ID='dbplus_unselect' icon='2' key='%1%.'/>
+				<page ID='dbplus_update' icon='2' key='%1%.'/>
+				<page ID='dbplus_xlockrel' icon='2' key='%1%.'/>
+				<page ID='dbplus_xunlockrel' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='dbx Functions' icon='1' key='dbx.' off='/%lang%/function.'>
+				<page ID='dbx_close' icon='2' key='%1%.'/>
+				<page ID='dbx_compare' icon='2' key='%1%.'/>
+				<page ID='dbx_connect' icon='2' key='%1%.'/>
+				<page ID='dbx_error' icon='2' key='%1%.'/>
+				<page ID='dbx_escape_string' icon='2' key='%1%.'/>
+				<page ID='dbx_fetch_row' icon='2' key='%1%.'/>
+				<page ID='dbx_query' icon='2' key='%1%.'/>
+				<page ID='dbx_sort' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Direct IO Functions' icon='1' key='dio.' off='/%lang%/function.'>
+				<page ID='dio_close' icon='2' key='%1%.'/>
+				<page ID='dio_fcntl' icon='2' key='%1%.'/>
+				<page ID='dio_open' icon='2' key='%1%.'/>
+				<page ID='dio_read' icon='2' key='%1%.'/>
+				<page ID='dio_seek' icon='2' key='%1%.'/>
+				<page ID='dio_stat' icon='2' key='%1%.'/>
+				<page ID='dio_tcsetattr' icon='2' key='%1%.'/>
+				<page ID='dio_truncate' icon='2' key='%1%.'/>
+				<page ID='dio_write' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Directory Functions' icon='1' key='dir.' off='/%lang%/function.'>
+				<page ID='chdir' icon='2' key='%0%.'/>
+				<page ID='chroot' icon='2' key='%0%.'/>
+				<page ID='dir' icon='2' key='/%lang%/class.dir.'/>
+				<page ID='closedir' icon='2' key='%0%.'/>
+				<page ID='getcwd' icon='2' key='%0%.'/>
+				<page ID='opendir' icon='2' key='%0%.'/>
+				<page ID='readdir' icon='2' key='%0%.'/>
+				<page ID='rewinddir' icon='2' key='%0%.'/>
+				<page ID='scandir' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='DOM Functions' icon='1' key='dom.' off='/%lang%/function.dom-'>
+				<page ID='DOMAttr->__construct()' icon='2' key='domattr-construct.'/>
+				<page ID='DOMAttr->isId()' icon='2' key='domattr-isid.'/>
+				<page ID='DOMCharacterData->appendData()' icon='2' key='domcharacterdata-appenddata.'/>
+				<page ID='DOMCharacterData->deleteData()' icon='2' key='domcharacterdata-deletedata.'/>
+				<page ID='DOMCharacterData->insertData()' icon='2' key='domcharacterdata-insertdata.'/>
+				<page ID='DOMCharacterData->replaceData()' icon='2' key='domcharacterdata-replacedata.'/>
+				<page ID='DOMCharacterData->substringData()' icon='2' key='domcharacterdata-substringdata.'/>
+				<page ID='DOMComment->__construct()' icon='2' key='domcomment-construct.'/>
+				<page ID='DOMDocument->__construct()' icon='2' key='domdocument-construct.'/>
+				<page ID='DOMDocument->createAttribute()' icon='2' key='domdocument-createattribute.'/>
+				<page ID='DOMDocument->createAttributeNS()' icon='2' key='domdocument-createattributens.'/>
+				<page ID='DOMDocument->createCDATASection()' icon='2' key='domdocument-createcdatasection.'/>
+				<page ID='DOMDocument->createComment()' icon='2' key='domdocument-createcomment.'/>
+				<page ID='DOMDocument->createDocumentFragment()' icon='2' key='domdocument-createdocumentfragment.'/>
+				<page ID='DOMDocument->createElement()' icon='2' key='domdocument-createelement.'/>
+				<page ID='DOMDocument->createElementNS()' icon='2' key='domdocument-createelementns.'/>
+				<page ID='DOMDocument->createEntityReference()' icon='2' key='domdocument-createentityreference.'/>
+				<page ID='DOMDocument->createProcessingInstruction()' icon='2' key='domdocument-createprocessinginstruction.'/>
+				<page ID='DOMDocument->createTextNode()' icon='2' key='domdocument-createtextnode.'/>
+				<page ID='DOMDocument->getElementById()' icon='2' key='domdocument-getelementbyid.'/>
+				<page ID='DOMDocument->getElementsByTagName()' icon='2' key='domdocument-getElementsByTagName.'/>
+				<page ID='DOMDocument->getElementsByTagNameNS()' icon='2' key='domdocument-getElementsByTagNamens.'/>
+				<page ID='DOMDocument->importNode()' icon='2' key='domdocument-importnode.'/>
+				<page ID='DOMDocument->load()' icon='2' key='domdocument-load.'/>
+				<page ID='DOMDocument->loadHTML()' icon='2' key='domdocument-loadhtml.'/>
+				<page ID='DOMDocument->loadHTMLFile()' icon='2' key='domdocument-loadhtmlfile.'/>
+				<page ID='DOMDocument->loadXML()' icon='2' key='domdocument-loadxml.'/>
+				<page ID='DOMDocument->normalize()' icon='2' key='domdocument-normalize.'/>
+				<page ID='DOMDocument->relaxNGValidate()' icon='2' key='domdocument-relaxngvalidate.'/>
+				<page ID='DOMDocument->relaxNGValidateSource()' icon='2' key='domdocument-relaxngvalidatesource.'/>
+				<page ID='DOMDocument->save()' icon='2' key='domdocument-save.'/>
+				<page ID='DOMDocument->saveHTML()' icon='2' key='domdocument-savehtml.'/>
+				<page ID='DOMDocument->saveHTMLFile()' icon='2' key='domdocument-savehtmlfile.'/>
+				<page ID='DOMDocument->saveXML()' icon='2' key='domdocument-savexml.'/>
+				<page ID='DOMDocument->schemaValidate()' icon='2' key='domdocument-schemavalidate.'/>
+				<page ID='DOMDocument->schemaValidateSource()' icon='2' key='domdocument-schemavalidatesource.'/>
+				<page ID='DOMDocument->validate()' icon='2' key='domdocument-validate.'/>
+				<page ID='DOMDocument->xinclude()' icon='2' key='domdocument-xinclude.'/>
+				<page ID='DOMElement->__construct()' icon='2' key='domelement-construct.'/>
+				<page ID='DOMElement->getAttribute()' icon='2' key='domelement-getattribute.'/>
+				<page ID='DOMElement->getAttributeNode()' icon='2' key='domelement-getattributenode.'/>
+				<page ID='DOMElement->getAttributeNodeNS()' icon='2' key='domelement-getattributenodens.'/>
+				<page ID='DOMElement->getAttributeNS()' icon='2' key='domelement-getattributens.'/>
+				<page ID='DOMElement->getElementsByTagName()' icon='2' key='domelement-getelementsbytagname.'/>
+				<page ID='DOMElement->getElementsByTagNameNS()' icon='2' key='domelement-getelementsbytagnamens.'/>
+				<page ID='DOMElement->hasAttribute()' icon='2' key='domelement-hasattribute.'/>
+				<page ID='DOMElement->hasAttributeNS()' icon='2' key='domelement-hasattributens.'/>
+				<page ID='DOMElement->removeAttribute()' icon='2' key='domelement-removeattribute.'/>
+				<page ID='DOMElement->removeAttributeNode()' icon='2' key='domelement-removeattributenode.'/>
+				<page ID='DOMElement->removeAttributeNS()' icon='2' key='domelement-removeattributens.'/>
+				<page ID='DOMElement->setAttribute()' icon='2' key='domelement-setattribute.'/>
+				<page ID='DOMElement->setAttributeNode()' icon='2' key='domelement-setattributenode.'/>
+				<page ID='DOMElement->setAttributeNodeNS()' icon='2' key='domelement-setattributenodens.'/>
+				<page ID='DOMElement->setAttributeNS()' icon='2' key='domelement-setattributens.'/>
+				<page ID='DOMEntityReference->__construct()' icon='2' key='domentityreference-construct.'/>
+				<page ID='DOMImplementation->__construct()' icon='2' key='domimplementation-construct.'/>
+				<page ID='DOMImplementation->createDocument()' icon='2' key='domimplementation-createdocument.'/>
+				<page ID='DOMImplementation->createDocumentType()' icon='2' key='domimplementation-createdocumenttype.'/>
+				<page ID='DOMImplementation->hasFeature()' icon='2' key='domimplementation-hasfeature.'/>
+				<page ID='DOMNamedNodeMap->getNamedItem()' icon='2' key='domnamednodemap-getnameditem.'/>
+				<page ID='DOMNamedNodeMap->getNamedItemNS()' icon='2' key='domnamednodemap-getnameditemns.'/>
+				<page ID='DOMNamedNodeMap->item()' icon='2' key='domnamednodemap-item.'/>
+				<page ID='DOMNode->appendChild()' icon='2' key='domnode-appendchild.'/>
+				<page ID='DOMNode->cloneNode()' icon='2' key='domnode-clonenode.'/>
+				<page ID='DOMNode->hasAttributes()' icon='2' key='domnode-hasattributes.'/>
+				<page ID='DOMNode->hasChildNodes()' icon='2' key='domnode-haschildnodes.'/>
+				<page ID='DOMNode->insertBefore()' icon='2' key='domnode-insertbefore.'/>
+				<page ID='DOMNode->isSameNode()' icon='2' key='domnode-issamenode.'/>
+				<page ID='DOMNode->isSupported()' icon='2' key='domnode-issupported.'/>
+				<page ID='DOMNode->lookupNamespaceURI()' icon='2' key='domnode-lookupnamespaceuri.'/>
+				<page ID='DOMNode->lookupPrefix()' icon='2' key='domnode-lookupprefix.'/>
+				<page ID='DOMNode->normalize()' icon='2' key='domnode-normalize.'/>
+				<page ID='DOMNode->removeChild()' icon='2' key='domnode-removechild.'/>
+				<page ID='DOMNode->replaceChild()' icon='2' key='domnode-replacechild.'/>
+				<page ID='DOMNodeList->item()' icon='2' key='domnodelist-item.'/>
+				<page ID='DOMProcessingInstruction->__construct()' icon='2' key='domprocessinginstruction-construct.'/>
+				<page ID='DOMText->__construct()' icon='2' key='domtext-construct.'/>
+				<page ID='DOMText->isWhitespaceInElementContent()' icon='2' key='domtext-iswhitespaceinelementcontent.'/>
+				<page ID='DOMText->splitText()' icon='2' key='domtext-splittext.'/>
+				<page ID='DOMXPath->__construct()' icon='2' key='domxpath-construct.'/>
+				<page ID='DOMXPath->evaluate()' icon='2' key='domxpath-evaluate.'/>
+				<page ID='DOMXPath->query()' icon='2' key='domxpath-query.'/>
+				<page ID='DOMXPath->registerNamespace()' icon='2' key='domxpath-registerNamespace.'/>
+				<page ID='dom_import_simplexml' icon='2' key='import-simplexml.'/>
+			</chapter>
+			<chapter ID='DOM XML Functions' icon='1' key='domxml.' off='/%lang%/function.'>
+				<page ID='DomAttribute->name' icon='2' key='domattribute-name.'/>
+				<page ID='DomAttribute->specified' icon='2' key='domattribute-specified.'/>
+				<page ID='DomAttribute->value' icon='2' key='domattribute-value.'/>
+				<page ID='DomDocument->add_root' icon='2' key='domdocument-add-root.'/>
+				<page ID='DomDocument->create_attribute' icon='2' key='domdocument-create-attribute.'/>
+				<page ID='DomDocument->create_cdata_section' icon='2' key='domdocument-create-cdata-section.'/>
+				<page ID='DomDocument->create_comment' icon='2' key='domdocument-create-comment.'/>
+				<page ID='DomDocument->create_element_ns' icon='2' key='domdocument-create-element-ns.'/>
+				<page ID='DomDocument->create_element' icon='2' key='domdocument-create-element.'/>
+				<page ID='DomDocument->create_entity_reference' icon='2' key='domdocument-create-entity-reference.'/>
+				<page ID='DomDocument->create_processing_instruction' icon='2' key='domdocument-create-processing-instruction.'/>
+				<page ID='DomDocument->create_text_node' icon='2' key='domdocument-create-text-node.'/>
+				<page ID='DomDocument->doctype' icon='2' key='domdocument-doctype.'/>
+				<page ID='DomDocument->document_element' icon='2' key='domdocument-document-element.'/>
+				<page ID='DomDocument->dump_file' icon='2' key='domdocument-dump-file.'/>
+				<page ID='DomDocument->dump_mem' icon='2' key='domdocument-dump-mem.'/>
+				<page ID='DomDocument->get_element_by_id' icon='2' key='domdocument-get-element-by-id.'/>
+				<page ID='DomDocument->get_elements_by_tagname' icon='2' key='domdocument-get-elements-by-tagname.'/>
+				<page ID='DomDocument->html_dump_mem' icon='2' key='domdocument-html-dump-mem.'/>
+				<page ID='DomDocument->xinclude' icon='2' key='domdocument-xinclude.'/>
+				<page ID='DomDocumentType->entities()' icon='2' key='domdocumenttype-entities.'/>
+				<page ID='DomDocumentType->internal_subset()' icon='2' key='domdocumenttype-internal-subset.'/>
+				<page ID='DomDocumentType->name()' icon='2' key='domdocumenttype-name.'/>
+				<page ID='DomDocumentType->notations()' icon='2' key='domdocumenttype-notations.'/>
+				<page ID='DomDocumentType->public_id()' icon='2' key='domdocumenttype-public-id.'/>
+				<page ID='DomDocumentType->system_id()' icon='2' key='domdocumenttype-system-id.'/>
+				<page ID='DomElement->get_attribute_node()' icon='2' key='domelement-get-attribute-node.'/>
+				<page ID='DomElement->get_attribute()' icon='2' key='domelement-get-attribute.'/>
+				<page ID='DomElement->get_elements_by_tagname()' icon='2' key='domelement-get-elements-by-tagname.'/>
+				<page ID='DomElement->has_attribute()' icon='2' key='domelement-has-attribute.'/>
+				<page ID='DomElement->remove_attribute()' icon='2' key='domelement-remove-attribute.'/>
+				<page ID='DomElement->set_attribute()' icon='2' key='domelement-set-attribute.'/>
+				<page ID='DomElement->tagname()' icon='2' key='domelement-tagname.'/>
+				<page ID='DomNode->add_namespace' icon='2' key='domnode-add-namespace.'/>
+				<page ID='DomNode->append_child' icon='2' key='domnode-append-child.'/>
+				<page ID='DomNode->append_sibling' icon='2' key='domnode-append-sibling.'/>
+				<page ID='DomNode->attributes' icon='2' key='domnode-attributes.'/>
+				<page ID='DomNode->child_nodes' icon='2' key='domnode-child-nodes.'/>
+				<page ID='DomNode->clone_node' icon='2' key='domnode-clone-node.'/>
+				<page ID='DomNode->dump_node' icon='2' key='domnode-dump-node.'/>
+				<page ID='DomNode->first_child' icon='2' key='domnode-first-child.'/>
+				<page ID='DomNode->get_content' icon='2' key='domnode-get-content.'/>
+				<page ID='DomNode->has_attributes' icon='2' key='domnode-has-attributes.'/>
+				<page ID='DomNode->has_child_nodes' icon='2' key='domnode-has-child-nodes.'/>
+				<page ID='DomNode->insert_before' icon='2' key='domnode-insert-before.'/>
+				<page ID='DomNode->is_blank_node' icon='2' key='domnode-is-blank-node.'/>
+				<page ID='DomNode->last_child' icon='2' key='domnode-last-child.'/>
+				<page ID='DomNode->next_sibling' icon='2' key='domnode-next-sibling.'/>
+				<page ID='DomNode->node_name' icon='2' key='domnode-node-name.'/>
+				<page ID='DomNode->node_type' icon='2' key='domnode-node-type.'/>
+				<page ID='DomNode->node_value' icon='2' key='domnode-node-value.'/>
+				<page ID='DomNode->owner_document' icon='2' key='domnode-owner-document.'/>
+				<page ID='DomNode->parent_node' icon='2' key='domnode-parent-node.'/>
+				<page ID='DomNode->prefix' icon='2' key='domnode-prefix.'/>
+				<page ID='DomNode->previous_sibling' icon='2' key='domnode-previous-sibling.'/>
+				<page ID='DomNode->remove_child' icon='2' key='domnode-remove-child.'/>
+				<page ID='DomNode->replace_child' icon='2' key='domnode-replace-child.'/>
+				<page ID='DomNode->replace_node' icon='2' key='domnode-replace-node.'/>
+				<page ID='DomNode->set_content' icon='2' key='domnode-set-content.'/>
+				<page ID='DomNode->set_name' icon='2' key='domnode-set-name.'/>
+				<page ID='DomNode->set_namespace' icon='2' key='domnode-set-namespace.'/>
+				<page ID='DomNode->unlink_node' icon='2' key='domnode-unlink-node.'/>
+				<page ID='DomProcessingInstruction->data' icon='2' key='domprocessinginstruction-data.'/>
+				<page ID='DomProcessingInstruction->target' icon='2' key='domprocessinginstruction-target.'/>
+				<page ID='DomXsltStylesheet->process()' icon='2' key='domxsltstylesheet-process.'/>
+				<page ID='DomXsltStylesheet->result_dump_file()' icon='2' key='domxsltstylesheet-result-dump-file.'/>
+				<page ID='DomXsltStylesheet->result_dump_mem()' icon='2' key='domxsltstylesheet-result-dump-mem.'/>
+				<page ID='domxml_new_doc' icon='2' key='%1%.'/>
+				<page ID='domxml_open_file' icon='2' key='%1%.'/>
+				<page ID='domxml_open_mem' icon='2' key='%1%.'/>
+				<page ID='domxml_version' icon='2' key='%1%.'/>
+				<page ID='domxml_xmltree' icon='2' key='%1%.'/>
+				<page ID='domxml_xslt_stylesheet_doc' icon='2' key='%1%.'/>
+				<page ID='domxml_xslt_stylesheet_file' icon='2' key='%1%.'/>
+				<page ID='domxml_xslt_stylesheet' icon='2' key='%1%.'/>
+				<page ID='xpath_eval_expression' icon='2' key='%1%.'/>
+				<page ID='xpath_eval' icon='2' key='%1%.'/>
+				<page ID='xpath_new_context' icon='2' key='%1%.'/>
+				<page ID='xptr_eval' icon='2' key='%1%.'/>
+				<page ID='xptr_new_context' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='.NET Functions' icon='1' key='dotnet.' off=''>
+				<page ID='dotnet_load' icon='2' key='/%lang%/function.dotnet-load.'/>
+			</chapter>
+			<chapter ID='Error Handling and Logging Functions' icon='1' key='errorfunc.' off='/%lang%/function.'>
+				<page ID='debug_backtrace' icon='2' key='%1%.'/>
+				<page ID='debug_print_backtrace' icon='2' key='%1%.'/>
+				<page ID='error_log' icon='2' key='%1%.'/>
+				<page ID='error_reporting' icon='2' key='%1%.'/>
+				<page ID='restore_error_handler' icon='2' key='%1%.'/>
+				<page ID='restore_exception_handler' icon='2' key='%1%.'/>
+				<page ID='set_error_handler' icon='2' key='%1%.'/>
+				<page ID='set_exception_handler' icon='2' key='%1%.'/>
+				<page ID='trigger_error' icon='2' key='%1%.'/>
+				<page ID='user_error' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Program Execution Functions' icon='1' key='exec.' off='/%lang%/function.'>
+				<page ID='escapeshellarg' icon='2' key='%0%.'/>
+				<page ID='escapeshellcmd' icon='2' key='%0%.'/>
+				<page ID='exec' icon='2' key='%0%.'/>
+				<page ID='passthru' icon='2' key='%0%.'/>
+				<page ID='proc_close' icon='2' key='%1%.'/>
+				<page ID='proc_get_status' icon='2' key='%1%.'/>
+				<page ID='proc_nice' icon='2' key='%1%.'/>
+				<page ID='proc_open' icon='2' key='%1%.'/>
+				<page ID='proc_terminate' icon='2' key='%1%.'/>
+				<page ID='shell_exec' icon='2' key='%1%.'/>
+				<page ID='system' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='Exif Functions' icon='1' key='exif.' off='/%lang%/function.'>
+				<page ID='exif_imagetype' icon='2' key='%1%.'/>
+				<page ID='exif_read_data' icon='2' key='%1%.'/>
+				<page ID='exif_tagname' icon='2' key='%1%.'/>
+				<page ID='exif_thumbnail' icon='2' key='%1%.'/>
+				<page ID='read_exif_data' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='File Alteration Monitor Functions' icon='1' key='fam.' off='/%lang%/function.'>
+				<page ID='fam_cancel_monitor' icon='2' key='%1%.'/>
+				<page ID='fam_close' icon='2' key='%1%.'/>
+				<page ID='fam_monitor_collection' icon='2' key='%1%.'/>
+				<page ID='fam_monitor_directory' icon='2' key='%1%.'/>
+				<page ID='fam_monitor_file' icon='2' key='%1%.'/>
+				<page ID='fam_next_event' icon='2' key='%1%.'/>
+				<page ID='fam_open' icon='2' key='%1%.'/>
+				<page ID='fam_pending' icon='2' key='%1%.'/>
+				<page ID='fam_resume_monitor' icon='2' key='%1%.'/>
+				<page ID='fam_suspend_monitor' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='FrontBase Functions' icon='1' key='fbsql.' off='/%lang%/function.'>
+				<page ID='fbsql_affected_rows' icon='2' key='%1%.'/>
+				<page ID='fbsql_autocommit' icon='2' key='%1%.'/>
+				<page ID='fbsql_blob_size' icon='2' key='%1%.'/>
+				<page ID='fbsql_change_user' icon='2' key='%1%.'/>
+				<page ID='fbsql_clob_size' icon='2' key='%1%.'/>
+				<page ID='fbsql_close' icon='2' key='%1%.'/>
+				<page ID='fbsql_commit' icon='2' key='%1%.'/>
+				<page ID='fbsql_connect' icon='2' key='%1%.'/>
+				<page ID='fbsql_create_blob' icon='2' key='%1%.'/>
+				<page ID='fbsql_create_clob' icon='2' key='%1%.'/>
+				<page ID='fbsql_create_db' icon='2' key='%1%.'/>
+				<page ID='fbsql_data_seek' icon='2' key='%1%.'/>
+				<page ID='fbsql_database_password' icon='2' key='%1%.'/>
+				<page ID='fbsql_database' icon='2' key='%1%.'/>
+				<page ID='fbsql_db_query' icon='2' key='%1%.'/>
+				<page ID='fbsql_db_status' icon='2' key='%1%.'/>
+				<page ID='fbsql_drop_db' icon='2' key='%1%.'/>
+				<page ID='fbsql_errno' icon='2' key='%1%.'/>
+				<page ID='fbsql_error' icon='2' key='%1%.'/>
+				<page ID='fbsql_fetch_array' icon='2' key='%1%.'/>
+				<page ID='fbsql_fetch_assoc' icon='2' key='%1%.'/>
+				<page ID='fbsql_fetch_field' icon='2' key='%1%.'/>
+				<page ID='fbsql_fetch_lengths' icon='2' key='%1%.'/>
+				<page ID='fbsql_fetch_object' icon='2' key='%1%.'/>
+				<page ID='fbsql_fetch_row' icon='2' key='%1%.'/>
+				<page ID='fbsql_field_flags' icon='2' key='%1%.'/>
+				<page ID='fbsql_field_len' icon='2' key='%1%.'/>
+				<page ID='fbsql_field_name' icon='2' key='%1%.'/>
+				<page ID='fbsql_field_seek' icon='2' key='%1%.'/>
+				<page ID='fbsql_field_table' icon='2' key='%1%.'/>
+				<page ID='fbsql_field_type' icon='2' key='%1%.'/>
+				<page ID='fbsql_free_result' icon='2' key='%1%.'/>
+				<page ID='fbsql_get_autostart_info' icon='2' key='%1%.'/>
+				<page ID='fbsql_hostname' icon='2' key='%1%.'/>
+				<page ID='fbsql_insert_id' icon='2' key='%1%.'/>
+				<page ID='fbsql_list_dbs' icon='2' key='%1%.'/>
+				<page ID='fbsql_list_fields' icon='2' key='%1%.'/>
+				<page ID='fbsql_list_tables' icon='2' key='%1%.'/>
+				<page ID='fbsql_next_result' icon='2' key='%1%.'/>
+				<page ID='fbsql_num_fields' icon='2' key='%1%.'/>
+				<page ID='fbsql_num_rows' icon='2' key='%1%.'/>
+				<page ID='fbsql_password' icon='2' key='%1%.'/>
+				<page ID='fbsql_pconnect' icon='2' key='%1%.'/>
+				<page ID='fbsql_query' icon='2' key='%1%.'/>
+				<page ID='fbsql_read_blob' icon='2' key='%1%.'/>
+				<page ID='fbsql_read_clob' icon='2' key='%1%.'/>
+				<page ID='fbsql_result' icon='2' key='%1%.'/>
+				<page ID='fbsql_rollback' icon='2' key='%1%.'/>
+				<page ID='fbsql_select_db' icon='2' key='%1%.'/>
+				<page ID='fbsql_set_lob_mode' icon='2' key='%1%.'/>
+				<page ID='fbsql_set_password' icon='2' key='%1%.'/>
+				<page ID='fbsql_set_transaction' icon='2' key='%1%.'/>
+				<page ID='fbsql_start_db' icon='2' key='%1%.'/>
+				<page ID='fbsql_stop_db' icon='2' key='%1%.'/>
+				<page ID='fbsql_tablename' icon='2' key='%1%.'/>
+				<page ID='fbsql_username' icon='2' key='%1%.'/>
+				<page ID='fbsql_warnings' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Forms Data Format Functions' icon='1' key='fdf.' off='/%lang%/function.'>
+				<page ID='fdf_add_doc_javascript' icon='2' key='%1%.'/>
+				<page ID='fdf_add_template' icon='2' key='%1%.'/>
+				<page ID='fdf_close' icon='2' key='%1%.'/>
+				<page ID='fdf_create' icon='2' key='%1%.'/>
+				<page ID='fdf_enum_values' icon='2' key='%1%.'/>
+				<page ID='fdf_errno' icon='2' key='%1%.'/>
+				<page ID='fdf_error' icon='2' key='%1%.'/>
+				<page ID='fdf_get_ap' icon='2' key='%1%.'/>
+				<page ID='fdf_get_attachment' icon='2' key='%1%.'/>
+				<page ID='fdf_get_encoding' icon='2' key='%1%.'/>
+				<page ID='fdf_get_file' icon='2' key='%1%.'/>
+				<page ID='fdf_get_flags' icon='2' key='%1%.'/>
+				<page ID='fdf_get_opt' icon='2' key='%1%.'/>
+				<page ID='fdf_get_status' icon='2' key='%1%.'/>
+				<page ID='fdf_get_value' icon='2' key='%1%.'/>
+				<page ID='fdf_get_version' icon='2' key='%1%.'/>
+				<page ID='fdf_header' icon='2' key='%1%.'/>
+				<page ID='fdf_next_field_name' icon='2' key='%1%.'/>
+				<page ID='fdf_open_string' icon='2' key='%1%.'/>
+				<page ID='fdf_open' icon='2' key='%1%.'/>
+				<page ID='fdf_remove_item' icon='2' key='%1%.'/>
+				<page ID='fdf_save_string' icon='2' key='%1%.'/>
+				<page ID='fdf_save' icon='2' key='%1%.'/>
+				<page ID='fdf_set_ap' icon='2' key='%1%.'/>
+				<page ID='fdf_set_encoding' icon='2' key='%1%.'/>
+				<page ID='fdf_set_file' icon='2' key='%1%.'/>
+				<page ID='fdf_set_flags' icon='2' key='%1%.'/>
+				<page ID='fdf_set_javascript_action' icon='2' key='%1%.'/>
+				<page ID='fdf_set_on_import_javascript' icon='2' key='%1%.'/>
+				<page ID='fdf_set_opt' icon='2' key='%1%.'/>
+				<page ID='fdf_set_status' icon='2' key='%1%.'/>
+				<page ID='fdf_set_submit_form_action' icon='2' key='%1%.'/>
+				<page ID='fdf_set_target_frame' icon='2' key='%1%.'/>
+				<page ID='fdf_set_value' icon='2' key='%1%.'/>
+				<page ID='fdf_set_version' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='filePro Functions' icon='1' key='filepro.' off='/%lang%/function.'>
+				<page ID='filepro_fieldcount' icon='2' key='%1%.'/>
+				<page ID='filepro_fieldname' icon='2' key='%1%.'/>
+				<page ID='filepro_fieldtype' icon='2' key='%1%.'/>
+				<page ID='filepro_fieldwidth' icon='2' key='%1%.'/>
+				<page ID='filepro_retrieve' icon='2' key='%1%.'/>
+				<page ID='filepro_rowcount' icon='2' key='%1%.'/>
+				<page ID='filepro' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='Filesystem Functions' icon='1' key='filesystem.' off='/%lang%/function.'>
+				<page ID='basename' icon='2' key='%0%.'/>
+				<page ID='chgrp' icon='2' key='%0%.'/>
+				<page ID='chmod' icon='2' key='%0%.'/>
+				<page ID='chown' icon='2' key='%0%.'/>
+				<page ID='clearstatcache' icon='2' key='%0%.'/>
+				<page ID='copy' icon='2' key='%0%.'/>
+				<page ID='delete' icon='2' key='%0%.'/>
+				<page ID='dirname' icon='2' key='%0%.'/>
+				<page ID='disk_free_space' icon='2' key='%1%.'/>
+				<page ID='disk_total_space' icon='2' key='%1%.'/>
+				<page ID='diskfreespace' icon='2' key='%0%.'/>
+				<page ID='fclose' icon='2' key='%0%.'/>
+				<page ID='feof' icon='2' key='%0%.'/>
+				<page ID='fflush' icon='2' key='%0%.'/>
+				<page ID='fgetc' icon='2' key='%0%.'/>
+				<page ID='fgetcsv' icon='2' key='%0%.'/>
+				<page ID='fgets' icon='2' key='%0%.'/>
+				<page ID='fgetss' icon='2' key='%0%.'/>
+				<page ID='file_exists' icon='2' key='%1%.'/>
+				<page ID='file_get_contents' icon='2' key='%1%.'/>
+				<page ID='file_put_contents' icon='2' key='%1%.'/>
+				<page ID='file' icon='2' key='%0%.'/>
+				<page ID='fileatime' icon='2' key='%0%.'/>
+				<page ID='filectime' icon='2' key='%0%.'/>
+				<page ID='filegroup' icon='2' key='%0%.'/>
+				<page ID='fileinode' icon='2' key='%0%.'/>
+				<page ID='filemtime' icon='2' key='%0%.'/>
+				<page ID='fileowner' icon='2' key='%0%.'/>
+				<page ID='fileperms' icon='2' key='%0%.'/>
+				<page ID='filesize' icon='2' key='%0%.'/>
+				<page ID='filetype' icon='2' key='%0%.'/>
+				<page ID='flock' icon='2' key='%0%.'/>
+				<page ID='fnmatch' icon='2' key='%0%.'/>
+				<page ID='fopen' icon='2' key='%0%.'/>
+				<page ID='fpassthru' icon='2' key='%0%.'/>
+				<page ID='fputcsv' icon='2' key='%0%.'/>
+				<page ID='fputs' icon='2' key='%0%.'/>
+				<page ID='fread' icon='2' key='%0%.'/>
+				<page ID='fscanf' icon='2' key='%0%.'/>
+				<page ID='fseek' icon='2' key='%0%.'/>
+				<page ID='fstat' icon='2' key='%0%.'/>
+				<page ID='ftell' icon='2' key='%0%.'/>
+				<page ID='ftruncate' icon='2' key='%0%.'/>
+				<page ID='fwrite' icon='2' key='%0%.'/>
+				<page ID='glob' icon='2' key='%0%.'/>
+				<page ID='is_dir' icon='2' key='%1%.'/>
+				<page ID='is_executable' icon='2' key='%1%.'/>
+				<page ID='is_file' icon='2' key='%1%.'/>
+				<page ID='is_link' icon='2' key='%1%.'/>
+				<page ID='is_readable' icon='2' key='%1%.'/>
+				<page ID='is_uploaded_file' icon='2' key='%1%.'/>
+				<page ID='is_writable' icon='2' key='%1%.'/>
+				<page ID='is_writeable' icon='2' key='%1%.'/>
+				<page ID='link' icon='2' key='%0%.'/>
+				<page ID='linkinfo' icon='2' key='%0%.'/>
+				<page ID='lstat' icon='2' key='%0%.'/>
+				<page ID='mkdir' icon='2' key='%0%.'/>
+				<page ID='move_uploaded_file' icon='2' key='%1%.'/>
+				<page ID='parse_ini_file' icon='2' key='%1%.'/>
+				<page ID='pathinfo' icon='2' key='%0%.'/>
+				<page ID='pclose' icon='2' key='%0%.'/>
+				<page ID='popen' icon='2' key='%0%.'/>
+				<page ID='readfile' icon='2' key='%0%.'/>
+				<page ID='readlink' icon='2' key='%0%.'/>
+				<page ID='realpath' icon='2' key='%0%.'/>
+				<page ID='rename' icon='2' key='%0%.'/>
+				<page ID='rewind' icon='2' key='%0%.'/>
+				<page ID='rmdir' icon='2' key='%0%.'/>
+				<page ID='set_file_buffer' icon='2' key='%1%.'/>
+				<page ID='stat' icon='2' key='%0%.'/>
+				<page ID='symlink' icon='2' key='%0%.'/>
+				<page ID='tempnam' icon='2' key='%0%.'/>
+				<page ID='tmpfile' icon='2' key='%0%.'/>
+				<page ID='touch' icon='2' key='%0%.'/>
+				<page ID='umask' icon='2' key='%0%.'/>
+				<page ID='unlink' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='FriBiDi Functions' icon='1' key='fribidi.' off='/%lang%/function.'>
+				<page ID='fribidi_log2vis' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='FTP Functions' icon='1' key='ftp.' off='/%lang%/function.'>
+				<page ID='ftp_alloc' icon='2' key='%1%.'/>
+				<page ID='ftp_cdup' icon='2' key='%1%.'/>
+				<page ID='ftp_chdir' icon='2' key='%1%.'/>
+				<page ID='ftp_chmod' icon='2' key='%1%.'/>
+				<page ID='ftp_close' icon='2' key='%1%.'/>
+				<page ID='ftp_connect' icon='2' key='%1%.'/>
+				<page ID='ftp_delete' icon='2' key='%1%.'/>
+				<page ID='ftp_exec' icon='2' key='%1%.'/>
+				<page ID='ftp_fget' icon='2' key='%1%.'/>
+				<page ID='ftp_fput' icon='2' key='%1%.'/>
+				<page ID='ftp_get_option' icon='2' key='%1%.'/>
+				<page ID='ftp_fget' icon='2' key='%1%.'/>
+				<page ID='ftp_login' icon='2' key='%1%.'/>
+				<page ID='ftp_mdtm' icon='2' key='%1%.'/>
+				<page ID='ftp_mkdir' icon='2' key='%1%.'/>
+				<page ID='ftp_nb_continue' icon='2' key='%1%.'/>
+				<page ID='ftp_nb_fget' icon='2' key='%1%.'/>
+				<page ID='ftp_nb_fput' icon='2' key='%1%.'/>
+				<page ID='ftp_nb_get' icon='2' key='%1%.'/>
+				<page ID='ftp_nb_put' icon='2' key='%1%.'/>
+				<page ID='ftp_nlist' icon='2' key='%1%.'/>
+				<page ID='ftp_pasv' icon='2' key='%1%.'/>
+				<page ID='ftp_put' icon='2' key='%1%.'/>
+				<page ID='ftp_pwd' icon='2' key='%1%.'/>
+				<page ID='ftp_quit' icon='2' key='%1%.'/>
+				<page ID='ftp_raw' icon='2' key='%1%.'/>
+				<page ID='ftp_rawlist' icon='2' key='%1%.'/>
+				<page ID='ftp_rename' icon='2' key='%1%.'/>
+				<page ID='ftp_rmdir' icon='2' key='%1%.'/>
+				<page ID='ftp_set_option' icon='2' key='%1%.'/>
+				<page ID='ftp_site' icon='2' key='%1%.'/>
+				<page ID='ftp_size' icon='2' key='%1%.'/>
+				<page ID='ftp_ssl_connect' icon='2' key='%1%.'/>
+				<page ID='ftp_systype' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Function Handling Functions' icon='1' key='funchand.' off='/%lang%/function.'>
+				<page ID='call_user_func_array' icon='2' key='%1%.'/>
+				<page ID='call_user_func' icon='2' key='%1%.'/>
+				<page ID='create_function' icon='2' key='%1%.'/>
+				<page ID='func_get_arg' icon='2' key='%1%.'/>
+				<page ID='func_get_args' icon='2' key='%1%.'/>
+				<page ID='func_num_args' icon='2' key='%1%.'/>
+				<page ID='function_exists' icon='2' key='%1%.'/>
+				<page ID='get_defined_functions' icon='2' key='%1%.'/>
+				<page ID='register_shutdown_function' icon='2' key='%1%.'/>
+				<page ID='register_tick_function' icon='2' key='%1%.'/>
+				<page ID='unregister_tick_function' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Gettext' icon='1' key='gettext.' off='/%lang%/function.'>
+				<page ID='bind_textdomain_codeset' icon='2' key='%1%.'/>
+				<page ID='bindtextdomain' icon='2' key='%0%.'/>
+				<page ID='dcgettext' icon='2' key='%0%.'/>
+				<page ID='dcngettext' icon='2' key='%0%.'/>
+				<page ID='dgettext' icon='2' key='%0%.'/>
+				<page ID='dngettext' icon='2' key='%0%.'/>
+				<page ID='gettext' icon='2' key='%0%.'/>
+				<page ID='ngettext' icon='2' key='%0%.'/>
+				<page ID='textdomain' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='GMP Functions' icon='1' key='gmp.' off='/%lang%/function.'>
+				<page ID='gmp_abs' icon='2' key='%1%.'/>
+				<page ID='gmp_add' icon='2' key='%1%.'/>
+				<page ID='gmp_and' icon='2' key='%1%.'/>
+				<page ID='gmp_clrbit' icon='2' key='%1%.'/>
+				<page ID='gmp_cmp' icon='2' key='%1%.'/>
+				<page ID='gmp_com' icon='2' key='%1%.'/>
+				<page ID='gmp_div_q' icon='2' key='%1%.'/>
+				<page ID='gmp_div_qr' icon='2' key='%1%.'/>
+				<page ID='gmp_div_r' icon='2' key='%1%.'/>
+				<page ID='gmp_div' icon='2' key='%1%.'/>
+				<page ID='gmp_divexact' icon='2' key='%1%.'/>
+				<page ID='gmp_fact' icon='2' key='%1%.'/>
+				<page ID='gmp_gcd' icon='2' key='%1%.'/>
+				<page ID='gmp_gcdext' icon='2' key='%1%.'/>
+				<page ID='gmp_hamdist' icon='2' key='%1%.'/>
+				<page ID='gmp_init' icon='2' key='%1%.'/>
+				<page ID='gmp_intval' icon='2' key='%1%.'/>
+				<page ID='gmp_invert' icon='2' key='%1%.'/>
+				<page ID='gmp_jacobi' icon='2' key='%1%.'/>
+				<page ID='gmp_legendre' icon='2' key='%1%.'/>
+				<page ID='gmp_mod' icon='2' key='%1%.'/>
+				<page ID='gmp_mul' icon='2' key='%1%.'/>
+				<page ID='gmp_neg' icon='2' key='%1%.'/>
+				<page ID='gmp_or' icon='2' key='%1%.'/>
+				<page ID='gmp_perfect_square' icon='2' key='%1%.'/>
+				<page ID='gmp_popcount' icon='2' key='%1%.'/>
+				<page ID='gmp_pow' icon='2' key='%1%.'/>
+				<page ID='gmp_powm' icon='2' key='%1%.'/>
+				<page ID='gmp_prob_prime' icon='2' key='%1%.'/>
+				<page ID='gmp_random' icon='2' key='%1%.'/>
+				<page ID='gmp_scan0' icon='2' key='%1%.'/>
+				<page ID='gmp_scan1' icon='2' key='%1%.'/>
+				<page ID='gmp_setbit' icon='2' key='%1%.'/>
+				<page ID='gmp_sign' icon='2' key='%1%.'/>
+				<page ID='gmp_sqrt' icon='2' key='%1%.'/>
+				<page ID='gmp_sqrtrem' icon='2' key='%1%.'/>
+				<page ID='gmp_strval' icon='2' key='%1%.'/>
+				<page ID='gmp_sub' icon='2' key='%1%.'/>
+				<page ID='gmp_xor' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='HTTP Functions' icon='1' key='http.' off='/%lang%/function.'>
+				<page ID='header' icon='2' key='%0%.'/>
+				<page ID='headers_list' icon='2' key='%1%.'/>
+				<page ID='headers_sent' icon='2' key='%1%.'/>
+				<page ID='setcookie' icon='2' key='%0%.'/>
+				<page ID='setrawcookie' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='Hyperwave Functions' icon='1' key='hw.' off='/%lang%/function.hw-'>
+				<page ID='hw_Array2Objrec' icon='2' key='array2objrec.'/>
+				<page ID='hw_changeobject' icon='2' key='changeobject.'/>
+				<page ID='hw_Children' icon='2' key='children.'/>
+				<page ID='hw_ChildrenObj' icon='2' key='childrenobj.'/>
+				<page ID='hw_Close' icon='2' key='close.'/>
+				<page ID='hw_Connect' icon='2' key='connect.'/>
+				<page ID='hw_connection_info' icon='2' key='connection-info.'/>
+				<page ID='hw_cp' icon='2' key='cp.'/>
+				<page ID='hw_Deleteobject' icon='2' key='deleteobject.'/>
+				<page ID='hw_DocByAnchor' icon='2' key='docbyanchor.'/>
+				<page ID='hw_DocByAnchorObj' icon='2' key='docbyanchorobj.'/>
+				<page ID='hw_Document_Attributes' icon='2' key='document-attributes.'/>
+				<page ID='hw_Document_BodyTag' icon='2' key='document-bodytag.'/>
+				<page ID='hw_Document_Content' icon='2' key='document-content.'/>
+				<page ID='hw_Document_SetContent' icon='2' key='document-setcontent.'/>
+				<page ID='hw_Document_Size' icon='2' key='document-size.'/>
+				<page ID='hw_dummy' icon='2' key='dummy.'/>
+				<page ID='hw_EditText' icon='2' key='edittext.'/>
+				<page ID='hw_Error' icon='2' key='error.'/>
+				<page ID='hw_ErrorMsg' icon='2' key='errormsg.'/>
+				<page ID='hw_Free_Document' icon='2' key='free-document.'/>
+				<page ID='hw_GetAnchors' icon='2' key='getanchors.'/>
+				<page ID='hw_GetAnchorsObj' icon='2' key='getanchorsobj.'/>
+				<page ID='hw_GetAndLock' icon='2' key='getandlock.'/>
+				<page ID='hw_GetChildColl' icon='2' key='getchildcoll.'/>
+				<page ID='hw_GetChildCollObj' icon='2' key='getchildcollobj.'/>
+				<page ID='hw_GetChildDocColl' icon='2' key='getchilddoccoll.'/>
+				<page ID='hw_GetChildDocCollObj' icon='2' key='getchilddoccollobj.'/>
+				<page ID='hw_GetObject' icon='2' key='getobject.'/>
+				<page ID='hw_GetObjectByQuery' icon='2' key='getobjectbyquery.'/>
+				<page ID='hw_GetObjectByQueryColl' icon='2' key='getobjectbyquerycoll.'/>
+				<page ID='hw_GetObjectByQueryCollObj' icon='2' key='getobjectbyquerycollobj.'/>
+				<page ID='hw_GetObjectByQueryObj' icon='2' key='getobjectbyqueryobj.'/>
+				<page ID='hw_GetParents' icon='2' key='getparents.'/>
+				<page ID='hw_GetParentsObj' icon='2' key='getparentsobj.'/>
+				<page ID='hw_getrellink' icon='2' key='getrellink.'/>
+				<page ID='hw_GetRemote' icon='2' key='getremote.'/>
+				<page ID='hw_getremotechildren' icon='2' key='getremotechildren.'/>
+				<page ID='hw_GetSrcByDestObj' icon='2' key='getsrcbydestobj.'/>
+				<page ID='hw_GetText' icon='2' key='gettext.'/>
+				<page ID='hw_getusername' icon='2' key='getusername.'/>
+				<page ID='hw_Identify' icon='2' key='identify.'/>
+				<page ID='hw_InCollections' icon='2' key='incollections.'/>
+				<page ID='hw_Info' icon='2' key='info.'/>
+				<page ID='hw_InsColl' icon='2' key='inscoll.'/>
+				<page ID='hw_InsDoc' icon='2' key='insdoc.'/>
+				<page ID='hw_insertanchors' icon='2' key='insertanchors.'/>
+				<page ID='hw_InsertDocument' icon='2' key='insertdocument.'/>
+				<page ID='hw_InsertObject' icon='2' key='insertobject.'/>
+				<page ID='hw_mapid' icon='2' key='mapid.'/>
+				<page ID='hw_Modifyobject' icon='2' key='modifyobject.'/>
+				<page ID='hw_mv' icon='2' key='mv.'/>
+				<page ID='hw_New_Document' icon='2' key='new-document.'/>
+				<page ID='hw_objrec2array' icon='2' key='objrec2array.'/>
+				<page ID='hw_Output_Document' icon='2' key='output-document.'/>
+				<page ID='hw_pConnect' icon='2' key='pconnect.'/>
+				<page ID='hw_PipeDocument' icon='2' key='pipedocument.'/>
+				<page ID='hw_Root' icon='2' key='root.'/>
+				<page ID='hw_setlinkroot' icon='2' key='setlinkroot.'/>
+				<page ID='hw_stat' icon='2' key='stat.'/>
+				<page ID='hw_Unlock' icon='2' key='unlock.'/>
+				<page ID='hw_Who' icon='2' key='who.'/>
+			</chapter>
+			<chapter ID='Hyperwave API Functions' icon='1' key='hwapi.' off='/%lang%/function.hwapi-'>
+				<page ID='hw_api_attribute->key' icon='2' key='attribute-key.'/>
+				<page ID='hw_api_attribute->langdepvalue' icon='2' key='attribute-langdepvalue.'/>
+				<page ID='hw_api_attribute->value' icon='2' key='attribute-value.'/>
+				<page ID='hw_api_attribute->values' icon='2' key='attribute-values.'/>
+				<page ID='hw_api_attribute' icon='2' key='attribute.'/>
+				<page ID='hw_api->checkin' icon='2' key='checkin.'/>
+				<page ID='hw_api->checkout' icon='2' key='checkout.'/>
+				<page ID='hw_api->children' icon='2' key='children.'/>
+				<page ID='hw_api_content->mimetype' icon='2' key='content-mimetype.'/>
+				<page ID='hw_api_content->read' icon='2' key='content-read.'/>
+				<page ID='hw_api->content' icon='2' key='content.'/>
+				<page ID='hw_api->copy' icon='2' key='copy.'/>
+				<page ID='hw_api->dbstat' icon='2' key='dbstat.'/>
+				<page ID='hw_api->dcstat' icon='2' key='dcstat.'/>
+				<page ID='hw_api->dstanchors' icon='2' key='dstanchors.'/>
+				<page ID='hw_api->dstofsrcanchor' icon='2' key='dstofsrcanchor.'/>
+				<page ID='hw_api_error->count' icon='2' key='error-count.'/>
+				<page ID='hw_api_error->reason' icon='2' key='error-reason.'/>
+				<page ID='hw_api->find' icon='2' key='find.'/>
+				<page ID='hw_api->ftstat' icon='2' key='ftstat.'/>
+				<page ID='hw_api_hgcsp' icon='2' key='hgcsp.'/>
+				<page ID='hw_api->hwstat' icon='2' key='hwstat.'/>
+				<page ID='hw_api->identify' icon='2' key='identify.'/>
+				<page ID='hw_api->info' icon='2' key='info.'/>
+				<page ID='hw_api->insert' icon='2' key='insert.'/>
+				<page ID='hw_api->insertanchor' icon='2' key='insertanchor.'/>
+				<page ID='hw_api->insertcollection' icon='2' key='insertcollection.'/>
+				<page ID='hw_api->insertdocument' icon='2' key='insertdocument.'/>
+				<page ID='hw_api->link' icon='2' key='/%lang%/function.hwapi-link.'/>
+				<page ID='hw_api->lock' icon='2' key='/%lang%/function.hwapi-lock.'/>
+				<page ID='hw_api->move' icon='2' key='/%lang%/function.hwapi-move.'/>
+				<page ID='hw_api_content' icon='2' key='new-content.'/>
+				<page ID='hw_api_object->assign' icon='2' key='object-assign.'/>
+				<page ID='hw_api_object->attreditable' icon='2' key='object-attreditable.'/>
+				<page ID='hw_api_object->count' icon='2' key='object-count.'/>
+				<page ID='hw_api_object->insert' icon='2' key='object-insert.'/>
+				<page ID='hw_api_object' icon='2' key='object-new.'/>
+				<page ID='hw_api_object->remove' icon='2' key='object-remove.'/>
+				<page ID='hw_api_object->title' icon='2' key='object-title.'/>
+				<page ID='hw_api_object->value' icon='2' key='object-value.'/>
+				<page ID='hw_api->object' icon='2' key='object.'/>
+				<page ID='hw_api->objectbyanchor' icon='2' key='objectbyanchor.'/>
+				<page ID='hw_api->parents' icon='2' key='parents.'/>
+				<page ID='hw_api_reason->description' icon='2' key='reason-description.'/>
+				<page ID='hw_api_reason->type' icon='2' key='reason-type.'/>
+				<page ID='hw_api->remove' icon='2' key='remove.'/>
+				<page ID='hw_api->replace' icon='2' key='replace.'/>
+				<page ID='hw_api->setcommittedversion' icon='2' key='setcommittedversion.'/>
+				<page ID='hw_api->srcanchors' icon='2' key='srcanchors.'/>
+				<page ID='hw_api->srcsofdst' icon='2' key='srcsofdst.'/>
+				<page ID='hw_api->unlock' icon='2' key='unlock.'/>
+				<page ID='hw_api->user' icon='2' key='user.'/>
+				<page ID='hw_api->userlist' icon='2' key='userlist.'/>
+			</chapter>
+			<chapter ID='Firebird/InterBase Functions' icon='1' key='ibase.' off='/%lang%/function.'>
+				<page ID='ibase_add_user' icon='2' key='%1%.'/>
+				<page ID='ibase_affected_rows' icon='2' key='%1%.'/>
+				<page ID='ibase_backup' icon='2' key='%1%.'/>
+				<page ID='ibase_blob_add' icon='2' key='%1%.'/>
+				<page ID='ibase_blob_cancel' icon='2' key='%1%.'/>
+				<page ID='ibase_blob_close' icon='2' key='%1%.'/>
+				<page ID='ibase_blob_create' icon='2' key='%1%.'/>
+				<page ID='ibase_blob_echo' icon='2' key='%1%.'/>
+				<page ID='ibase_blob_get' icon='2' key='%1%.'/>
+				<page ID='ibase_blob_import' icon='2' key='%1%.'/>
+				<page ID='ibase_blob_info' icon='2' key='%1%.'/>
+				<page ID='ibase_blob_open' icon='2' key='%1%.'/>
+				<page ID='ibase_close' icon='2' key='%1%.'/>
+				<page ID='ibase_commit_ret' icon='2' key='%1%.'/>
+				<page ID='ibase_commit' icon='2' key='%1%.'/>
+				<page ID='ibase_connect' icon='2' key='%1%.'/>
+				<page ID='ibase_db_info' icon='2' key='%1%.'/>
+				<page ID='ibase_delete_user' icon='2' key='%1%.'/>
+				<page ID='ibase_drop_db' icon='2' key='%1%.'/>
+				<page ID='ibase_errcode' icon='2' key='%1%.'/>
+				<page ID='ibase_errmsg' icon='2' key='%1%.'/>
+				<page ID='ibase_execute' icon='2' key='%1%.'/>
+				<page ID='ibase_fetch_assoc' icon='2' key='%1%.'/>
+				<page ID='ibase_fetch_object' icon='2' key='%1%.'/>
+				<page ID='ibase_fetch_row' icon='2' key='%1%.'/>
+				<page ID='ibase_field_info' icon='2' key='%1%.'/>
+				<page ID='ibase_free_event_handler' icon='2' key='%1%.'/>
+				<page ID='ibase_free_query' icon='2' key='%1%.'/>
+				<page ID='ibase_free_result' icon='2' key='%1%.'/>
+				<page ID='ibase_gen_id' icon='2' key='%1%.'/>
+				<page ID='ibase_maintain_db' icon='2' key='%1%.'/>
+				<page ID='ibase_modify_user' icon='2' key='%1%.'/>
+				<page ID='ibase_name_result' icon='2' key='%1%.'/>
+				<page ID='ibase_num_fields' icon='2' key='%1%.'/>
+				<page ID='ibase_num_params' icon='2' key='%1%.'/>
+				<page ID='ibase_param_info' icon='2' key='%1%.'/>
+				<page ID='ibase_pconnect' icon='2' key='%1%.'/>
+				<page ID='ibase_prepare' icon='2' key='%1%.'/>
+				<page ID='ibase_query' icon='2' key='%1%.'/>
+				<page ID='ibase_restore' icon='2' key='%1%.'/>
+				<page ID='ibase_rollback_ret' icon='2' key='%1%.'/>
+				<page ID='ibase_rollback' icon='2' key='%1%.'/>
+				<page ID='ibase_server_info' icon='2' key='%1%.'/>
+				<page ID='ibase_service_attach' icon='2' key='%1%.'/>
+				<page ID='ibase_service_detach' icon='2' key='%1%.'/>
+				<page ID='ibase_set_event_handler' icon='2' key='%1%.'/>
+				<page ID='ibase_timefmt' icon='2' key='%1%.'/>
+				<page ID='ibase_trans' icon='2' key='%1%.'/>
+				<page ID='ibase_wait_event' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='ICAP Functions [deprecated]' icon='1' key='icap.' off='/%lang%/function.'>
+				<page ID='icap_close' icon='2' key='%1%.'/>
+				<page ID='icap_create_calendar' icon='2' key='%1%.'/>
+				<page ID='icap_delete_calendar' icon='2' key='%1%.'/>
+				<page ID='icap_delete_event' icon='2' key='%1%.'/>
+				<page ID='icap_fetch_event' icon='2' key='%1%.'/>
+				<page ID='icap_list_alarms' icon='2' key='%1%.'/>
+				<page ID='icap_list_events' icon='2' key='%1%.'/>
+				<page ID='icap_open' icon='2' key='%1%.'/>
+				<page ID='icap_rename_calendar' icon='2' key='%1%.'/>
+				<page ID='icap_reopen' icon='2' key='%1%.'/>
+				<page ID='icap_snooze' icon='2' key='%1%.'/>
+				<page ID='icap_store_event' icon='2' key='%1%.'/>			
+			</chapter>
+			<chapter ID='iconv Functions' icon='1' key='iconv.' off='/%lang%/function.'>
+				<page ID='iconv_get_encoding' icon='2' key='%1%.'/>
+				<page ID='iconv_mime_decode_headers' icon='2' key='%1%.'/>
+				<page ID='iconv_mime_decode' icon='2' key='%1%.'/>
+				<page ID='iconv_mime_encode' icon='2' key='%1%.'/>
+				<page ID='iconv_set_encoding' icon='2' key='%1%.'/>
+				<page ID='iconv_strlen' icon='2' key='%1%.'/>
+				<page ID='iconv_strpos' icon='2' key='%1%.'/>
+				<page ID='iconv_strrpos' icon='2' key='%1%.'/>
+				<page ID='iconv_substr' icon='2' key='%1%.'/>
+				<page ID='iconv' icon='2' key='%0%.%0%.iconv.'/>
+				<page ID='ob_iconv_handler' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='ID3 Functions' icon='1' key='id3.' off='/%lang%/function.'>
+				<page ID='id3_get_frame_long_name' icon='2' key='%1%.'/>
+				<page ID='id3_get_frame_short_name' icon='2' key='%1%.'/>
+				<page ID='id3_get_genre_id' icon='2' key='%1%.'/>
+				<page ID='id3_get_genre_list' icon='2' key='%1%.'/>
+				<page ID='id3_get_genre_name' icon='2' key='%1%.'/>
+				<page ID='id3_get_tag' icon='2' key='%1%.'/>
+				<page ID='id3_get_version' icon='2' key='%1%.'/>
+				<page ID='id3_remove_tag' icon='2' key='%1%.'/>
+				<page ID='id3_set_tag' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Informix Functions' icon='1' key='ifx.' off='/%lang%/function.'>
+				<page ID='ifx_affected_rows' icon='2' key='%1%.'/>
+				<page ID='ifx_blobinfile_mode' icon='2' key='%1%.'/>
+				<page ID='ifx_byteasvarchar' icon='2' key='%1%.'/>
+				<page ID='ifx_close' icon='2' key='%1%.'/>
+				<page ID='ifx_connect' icon='2' key='%1%.'/>
+				<page ID='ifx_copy_blob' icon='2' key='%1%.'/>
+				<page ID='ifx_create_blob' icon='2' key='%1%.'/>
+				<page ID='ifx_create_char' icon='2' key='%1%.'/>
+				<page ID='ifx_do' icon='2' key='%1%.'/>
+				<page ID='ifx_error' icon='2' key='%1%.'/>
+				<page ID='ifx_errormsg' icon='2' key='%1%.'/>
+				<page ID='ifx_fetch_row' icon='2' key='%1%.'/>
+				<page ID='ifx_fieldproperties' icon='2' key='%1%.'/>
+				<page ID='ifx_fieldtypes' icon='2' key='%1%.'/>
+				<page ID='ifx_free_blob' icon='2' key='%1%.'/>
+				<page ID='ifx_free_char' icon='2' key='%1%.'/>
+				<page ID='ifx_free_result' icon='2' key='%1%.'/>
+				<page ID='ifx_get_blob' icon='2' key='%1%.'/>
+				<page ID='ifx_get_char' icon='2' key='%1%.'/>
+				<page ID='ifx_getsqlca' icon='2' key='%1%.'/>
+				<page ID='ifx_htmltbl_result' icon='2' key='%1%.'/>
+				<page ID='ifx_nullformat' icon='2' key='%1%.'/>
+				<page ID='ifx_num_fields' icon='2' key='%1%.'/>
+				<page ID='ifx_num_rows' icon='2' key='%1%.'/>
+				<page ID='ifx_pconnect' icon='2' key='%1%.'/>
+				<page ID='ifx_prepare' icon='2' key='%1%.'/>
+				<page ID='ifx_query' icon='2' key='%1%.'/>
+				<page ID='ifx_textasvarchar' icon='2' key='%1%.'/>
+				<page ID='ifx_update_blob' icon='2' key='%1%.'/>
+				<page ID='ifx_update_char' icon='2' key='%1%.'/>
+				<page ID='ifxus_close_slob' icon='2' key='%1%.'/>
+				<page ID='ifxus_create_slob' icon='2' key='%1%.'/>
+				<page ID='ifxus_free_slob' icon='2' key='%1%.'/>
+				<page ID='ifxus_open_slob' icon='2' key='%1%.'/>
+				<page ID='ifxus_read_slob' icon='2' key='%1%.'/>
+				<page ID='ifxus_seek_slob' icon='2' key='%1%.'/>
+				<page ID='ifxus_tell_slob' icon='2' key='%1%.'/>
+				<page ID='ifxus_write_slob' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='IIS Administration Functions' icon='1' key='iisfunc.' off='/%lang%/function.'>
+				<page ID='iis_add_server' icon='2' key='%1%.'/>
+				<page ID='iis_get_dir_security' icon='2' key='%1%.'/>
+				<page ID='iis_get_script_map' icon='2' key='%1%.'/>
+				<page ID='iis_get_server_by_comment' icon='2' key='%1%.'/>
+				<page ID='iis_get_server_by_path' icon='2' key='%1%.'/>
+				<page ID='iis_get_server_rights' icon='2' key='%1%.'/>
+				<page ID='iis_get_service_state' icon='2' key='%1%.'/>
+				<page ID='iis_remove_server' icon='2' key='%1%.'/>
+				<page ID='iis_set_app_settings' icon='2' key='%1%.'/>
+				<page ID='iis_set_dir_security' icon='2' key='%1%.'/>
+				<page ID='iis_set_script_map' icon='2' key='%1%.'/>
+				<page ID='iis_set_server_rights' icon='2' key='%1%.'/>
+				<page ID='iis_start_server' icon='2' key='%1%.'/>
+				<page ID='iis_start_service' icon='2' key='%1%.'/>
+				<page ID='iis_stop_server' icon='2' key='%1%.'/>
+				<page ID='iis_stop_service' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Image Functions' icon='1' key='image.' off='/%lang%/function.'>
+				<page ID='gd_info' icon='2' key='%1%.'/>
+				<page ID='getimagesize' icon='2' key='%0%.'/>
+				<page ID='image_type_to_extension' icon='2' key='%1%.'/>
+				<page ID='image_type_to_mime_type' icon='2' key='%1%.'/>
+				<page ID='image2wbmp' icon='2' key='%0%.'/>
+				<page ID='imagealphablending' icon='2' key='%0%.'/>
+				<page ID='imageantialias' icon='2' key='%0%.'/>
+				<page ID='imagearc' icon='2' key='%0%.'/>
+				<page ID='imagechar' icon='2' key='%0%.'/>
+				<page ID='imagecharup' icon='2' key='%0%.'/>
+				<page ID='imagecolorallocate' icon='2' key='%0%.'/>
+				<page ID='imagecolorallocatealpha' icon='2' key='%0%.'/>
+				<page ID='imagecolorat' icon='2' key='%0%.'/>
+				<page ID='imagecolorclosest' icon='2' key='%0%.'/>
+				<page ID='imagecolorclosestalpha' icon='2' key='%0%.'/>
+				<page ID='imagecolorclosesthwb' icon='2' key='%0%.'/>
+				<page ID='imagecolordeallocate' icon='2' key='%0%.'/>
+				<page ID='imagecolorexact' icon='2' key='%0%.'/>
+				<page ID='imagecolorexactalpha' icon='2' key='%0%.'/>
+				<page ID='imagecolormatch' icon='2' key='%0%.'/>
+				<page ID='imagecolorresolve' icon='2' key='%0%.'/>
+				<page ID='imagecolorresolvealpha' icon='2' key='%0%.'/>
+				<page ID='imagecolorset' icon='2' key='%0%.'/>
+				<page ID='imagecolorsforindex' icon='2' key='%0%.'/>
+				<page ID='imagecolorstotal' icon='2' key='%0%.'/>
+				<page ID='imagecolortransparent' icon='2' key='%0%.'/>
+				<page ID='imagecopy' icon='2' key='%0%.'/>
+				<page ID='imagecopymerge' icon='2' key='%0%.'/>
+				<page ID='imagecopymergegray' icon='2' key='%0%.'/>
+				<page ID='imagecopyresampled' icon='2' key='%0%.'/>
+				<page ID='imagecopyresized' icon='2' key='%0%.'/>
+				<page ID='imagecreate' icon='2' key='%0%.'/>
+				<page ID='imagecreatefromgd2' icon='2' key='%0%.'/>
+				<page ID='imagecreatefromgd' icon='2' key='%0%.'/>
+				<page ID='imagecreatefromgif' icon='2' key='%0%.'/>
+				<page ID='imagecreatefromjpeg' icon='2' key='%0%.'/>
+				<page ID='imagecreatefrompng' icon='2' key='%0%.'/>
+				<page ID='imagecreatefromstring' icon='2' key='%0%.'/>
+				<page ID='imagecreatefromwbmp' icon='2' key='%0%.'/>
+				<page ID='imagecreatefromxbm' icon='2' key='%0%.'/>
+				<page ID='imagecreatefromxpm' icon='2' key='%0%.'/>
+				<page ID='imagecreatetruecolor' icon='2' key='%0%.'/>
+				<page ID='imagedashedline' icon='2' key='%0%.'/>
+				<page ID='imagedestroy' icon='2' key='%0%.'/>
+				<page ID='imageellipse' icon='2' key='%0%.'/>
+				<page ID='imagefill' icon='2' key='%0%.'/>
+				<page ID='imagefilledarc' icon='2' key='%0%.'/>
+				<page ID='imagefilledellipse' icon='2' key='%0%.'/>
+				<page ID='imagefilledpolygon' icon='2' key='%0%.'/>
+				<page ID='imagefilledrectangle' icon='2' key='%0%.'/>
+				<page ID='imagefilltoborder' icon='2' key='%0%.'/>
+				<page ID='imagefilter' icon='2' key='%0%.'/>
+				<page ID='imagefontheight' icon='2' key='%0%.'/>
+				<page ID='imagefontwidth' icon='2' key='%0%.'/>
+				<page ID='imageftbbox' icon='2' key='%0%.'/>
+				<page ID='imagefttext' icon='2' key='%0%.'/>
+				<page ID='imagegammacorrect' icon='2' key='%0%.'/>
+				<page ID='imagegd2' icon='2' key='%0%.'/>
+				<page ID='imagegd' icon='2' key='%0%.'/>
+				<page ID='imagegif' icon='2' key='%0%.'/>
+				<page ID='imageinterlace' icon='2' key='%0%.'/>
+				<page ID='imageistruecolor' icon='2' key='%0%.'/>
+				<page ID='imagejpeg' icon='2' key='%0%.'/>
+				<page ID='imagelayereffect' icon='2' key='%0%.'/>
+				<page ID='imageline' icon='2' key='%0%.'/>
+				<page ID='imageloadfont' icon='2' key='%0%.'/>
+				<page ID='imagepalettecopy' icon='2' key='%0%.'/>
+				<page ID='imagepng' icon='2' key='%0%.'/>
+				<page ID='imagepolygon' icon='2' key='%0%.'/>
+				<page ID='imagepsbbox' icon='2' key='%0%.'/>
+				<page ID='imagepscopyfont' icon='2' key='%0%.'/>
+				<page ID='imagepsencodefont' icon='2' key='%0%.'/>
+				<page ID='imagepsextendfont' icon='2' key='%0%.'/>
+				<page ID='imagepsfreefont' icon='2' key='%0%.'/>
+				<page ID='imagepsloadfont' icon='2' key='%0%.'/>
+				<page ID='imagepsslantfont' icon='2' key='%0%.'/>
+				<page ID='imagepstext' icon='2' key='%0%.'/>
+				<page ID='imagerectangle' icon='2' key='%0%.'/>
+				<page ID='imagerotate' icon='2' key='%0%.'/>
+				<page ID='imagesavealpha' icon='2' key='%0%.'/>
+				<page ID='imagesetbrush' icon='2' key='%0%.'/>
+				<page ID='imagesetpixel' icon='2' key='%0%.'/>
+				<page ID='imagesetstyle' icon='2' key='%0%.'/>
+				<page ID='imagesetthickness' icon='2' key='%0%.'/>
+				<page ID='imagesettile' icon='2' key='%0%.'/>
+				<page ID='imagestring' icon='2' key='%0%.'/>
+				<page ID='imagestringup' icon='2' key='%0%.'/>
+				<page ID='imagesx' icon='2' key='%0%.'/>
+				<page ID='imagesy' icon='2' key='%0%.'/>
+				<page ID='imagetruecolortopalette' icon='2' key='%0%.'/>
+				<page ID='imagettfbbox' icon='2' key='%0%.'/>
+				<page ID='imagettftext' icon='2' key='%0%.'/>
+				<page ID='imagetypes' icon='2' key='%0%.'/>
+				<page ID='imagewbmp' icon='2' key='%0%.'/>
+				<page ID='imagexbm' icon='2' key='%0%.'/>
+				<page ID='iptcembed' icon='2' key='%0%.'/>
+				<page ID='iptcparse' icon='2' key='%0%.'/>
+				<page ID='jpeg2wbmp' icon='2' key='%0%.'/>
+				<page ID='png2wbmp' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='IMAP, POP3 and NNTP Functions' icon='1' key='imap.' off='/%lang%/function.'>
+				<page ID='imap_8bit' icon='2' key='%1%.'/>
+				<page ID='imap_alerts' icon='2' key='%1%.'/>
+				<page ID='imap_append' icon='2' key='%1%.'/>
+				<page ID='imap_base64' icon='2' key='%1%.'/>
+				<page ID='imap_binary' icon='2' key='%1%.'/>
+				<page ID='imap_body' icon='2' key='%1%.'/>
+				<page ID='imap_bodystruct' icon='2' key='%1%.'/>
+				<page ID='imap_check' icon='2' key='%1%.'/>
+				<page ID='imap_clearflag_full' icon='2' key='%1%.'/>
+				<page ID='imap_close' icon='2' key='%1%.'/>
+				<page ID='imap_createmailbox' icon='2' key='%1%.'/>
+				<page ID='imap_delete' icon='2' key='%1%.'/>
+				<page ID='imap_deletemailbox' icon='2' key='%1%.'/>
+				<page ID='imap_errors' icon='2' key='%1%.'/>
+				<page ID='imap_expunge' icon='2' key='%1%.'/>
+				<page ID='imap_fetch_overview' icon='2' key='%1%.'/>
+				<page ID='imap_fetchbody' icon='2' key='%1%.'/>
+				<page ID='imap_fetchheader' icon='2' key='%1%.'/>
+				<page ID='imap_fetchstructure' icon='2' key='%1%.'/>
+				<page ID='imap_get_quota' icon='2' key='%1%.'/>
+				<page ID='imap_get_quotaroot' icon='2' key='%1%.'/>
+				<page ID='imap_getacl' icon='2' key='%1%.'/>
+				<page ID='imap_getmailboxes' icon='2' key='%1%.'/>
+				<page ID='imap_getsubscribed' icon='2' key='%1%.'/>
+				<page ID='imap_header' icon='2' key='%1%.'/>
+				<page ID='imap_headerinfo' icon='2' key='%1%.'/>
+				<page ID='imap_headers' icon='2' key='%1%.'/>
+				<page ID='imap_last_error' icon='2' key='%1%.'/>
+				<page ID='imap_list' icon='2' key='%1%.'/>
+				<page ID='imap_listmailbox' icon='2' key='%1%.'/>
+				<page ID='imap_listscan' icon='2' key='%1%.'/>
+				<page ID='imap_listsubscribed' icon='2' key='%1%.'/>
+				<page ID='imap_lsub' icon='2' key='%1%.'/>
+				<page ID='imap_mail_compose' icon='2' key='%1%.'/>
+				<page ID='imap_mail_copy' icon='2' key='%1%.'/>
+				<page ID='imap_mail_move' icon='2' key='%1%.'/>
+				<page ID='imap_mail' icon='2' key='%1%.'/>
+				<page ID='imap_mailboxmsginfo' icon='2' key='%1%.'/>
+				<page ID='imap_mime_header_decode' icon='2' key='%1%.'/>
+				<page ID='imap_msgno' icon='2' key='%1%.'/>
+				<page ID='imap_num_msg' icon='2' key='%1%.'/>
+				<page ID='imap_num_recent' icon='2' key='%1%.'/>
+				<page ID='imap_open' icon='2' key='%1%.'/>
+				<page ID='imap_ping' icon='2' key='%1%.'/>
+				<page ID='imap_qprint' icon='2' key='%1%.'/>
+				<page ID='imap_renamemailbox' icon='2' key='%1%.'/>
+				<page ID='imap_reopen' icon='2' key='%1%.'/>
+				<page ID='imap_rfc822_parse_adrlist' icon='2' key='%1%.'/>
+				<page ID='imap_rfc822_parse_headers' icon='2' key='%1%.'/>
+				<page ID='imap_rfc822_write_address' icon='2' key='%1%.'/>
+				<page ID='imap_scanmailbox' icon='2' key='%1%.'/>
+				<page ID='imap_search' icon='2' key='%1%.'/>
+				<page ID='imap_set_quota' icon='2' key='%1%.'/>
+				<page ID='imap_setacl' icon='2' key='%1%.'/>
+				<page ID='imap_setflag_full' icon='2' key='%1%.'/>
+				<page ID='imap_sort' icon='2' key='%1%.'/>
+				<page ID='imap_status' icon='2' key='%1%.'/>
+				<page ID='imap_subscribe' icon='2' key='%1%.'/>
+				<page ID='imap_thread' icon='2' key='%1%.'/>
+				<page ID='imap_timeout' icon='2' key='%1%.'/>
+				<page ID='imap_uid' icon='2' key='%1%.'/>
+				<page ID='imap_undelete' icon='2' key='%1%.'/>
+				<page ID='imap_unsubscribe' icon='2' key='%1%.'/>
+				<page ID='imap_utf7_decode' icon='2' key='%1%.'/>
+				<page ID='imap_utf7_encode' icon='2' key='%1%.'/>
+				<page ID='imap_utf8' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='PHP Options + Information' icon='1' key='info.' off='/%lang%/function.'>
+				<page ID='assert_options' icon='2' key='%1%.'/>
+				<page ID='assert' icon='2' key='%0%.'/>
+				<page ID='dl' icon='2' key='%0%.'/>
+				<page ID='extension_loaded' icon='2' key='%1%.'/>
+				<page ID='get_cfg_var' icon='2' key='%1%.'/>
+				<page ID='get_current_user' icon='2' key='%1%.'/>
+				<page ID='get_defined_constants' icon='2' key='%1%.'/>
+				<page ID='get_extension_funcs' icon='2' key='%1%.'/>
+				<page ID='get_include_path' icon='2' key='%1%.'/>
+				<page ID='get_included_files' icon='2' key='%1%.'/>
+				<page ID='get_loaded_extensions' icon='2' key='%1%.'/>
+				<page ID='get_magic_quotes_gpc' icon='2' key='%1%.'/>
+				<page ID='get_magic_quotes_runtime' icon='2' key='%1%.'/>
+				<page ID='get_required_files' icon='2' key='%1%.'/>
+				<page ID='getenv' icon='2' key='%0%.'/>
+				<page ID='getlastmod' icon='2' key='%0%.'/>
+				<page ID='getmygid' icon='2' key='%0%.'/>
+				<page ID='getmyinode' icon='2' key='%0%.'/>
+				<page ID='getmypid' icon='2' key='%0%.'/>
+				<page ID='getmyuid' icon='2' key='%0%.'/>
+				<page ID='getopt' icon='2' key='%0%.'/>
+				<page ID='getrusage' icon='2' key='%0%.'/>
+				<page ID='ini_alter' icon='2' key='%1%.'/>
+				<page ID='ini_get_all' icon='2' key='%1%.'/>
+				<page ID='ini_get' icon='2' key='%1%.'/>
+				<page ID='ini_restore' icon='2' key='%1%.'/>
+				<page ID='ini_set' icon='2' key='%1%.'/>
+				<page ID='main' icon='2' key='main.'/>
+				<page ID='memory_get_usage' icon='2' key='%1%.'/>
+				<page ID='php_ini_scanned_files' icon='2' key='%1%.'/>
+				<page ID='php_logo_guid' icon='2' key='%1%.'/>
+				<page ID='php_sapi_name' icon='2' key='%1%.'/>
+				<page ID='php_uname' icon='2' key='%1%.'/>
+				<page ID='phpcredits' icon='2' key='%0%.'/>
+				<page ID='phpinfo' icon='2' key='%0%.'/>
+				<page ID='phpversion' icon='2' key='%0%.'/>
+				<page ID='putenv' icon='2' key='%0%.'/>
+				<page ID='restore_include_path' icon='2' key='%1%.'/>
+				<page ID='set_include_path' icon='2' key='%1%.'/>
+				<page ID='set_magic_quotes_runtime' icon='2' key='%1%.'/>
+				<page ID='set_time_limit' icon='2' key='%1%.'/>
+				<page ID='version_compare' icon='2' key='%1%.'/>
+				<page ID='zend_logo_guid' icon='2' key='%1%.'/>
+				<page ID='zend_version' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Ingres II Functions' icon='1' key='ingres.' off='/%lang%/function.'>
+				<page ID='ingres_autocommit' icon='2' key='%1%.'/>
+				<page ID='ingres_close' icon='2' key='%1%.'/>
+				<page ID='ingres_commit' icon='2' key='%1%.'/>
+				<page ID='ingres_connect' icon='2' key='%1%.'/>
+				<page ID='ingres_fetch_array' icon='2' key='%1%.'/>
+				<page ID='ingres_fetch_object' icon='2' key='%1%.'/>
+				<page ID='ingres_fetch_row' icon='2' key='%1%.'/>
+				<page ID='ingres_field_length' icon='2' key='%1%.'/>
+				<page ID='ingres_field_name' icon='2' key='%1%.'/>
+				<page ID='ingres_field_nullable' icon='2' key='%1%.'/>
+				<page ID='ingres_field_precision' icon='2' key='%1%.'/>
+				<page ID='ingres_field_scale' icon='2' key='%1%.'/>
+				<page ID='ingres_field_type' icon='2' key='%1%.'/>
+				<page ID='ingres_num_fields' icon='2' key='%1%.'/>
+				<page ID='ingres_num_rows' icon='2' key='%1%.'/>
+				<page ID='ingres_pconnect' icon='2' key='%1%.'/>
+				<page ID='ingres_query' icon='2' key='%1%.'/>
+				<page ID='ingres_rollback' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='IRC Gateway Functions' icon='1' key='ircg.' off='/%lang%/function.'>
+				<page ID='ircg_channel_mode' icon='2' key='%1%.'/>
+				<page ID='ircg_disconnect' icon='2' key='%1%.'/>
+				<page ID='ircg_eval_ecmascript_params' icon='2' key='%1%.'/>
+				<page ID='ircg_fetch_error_msg' icon='2' key='%1%.'/>
+				<page ID='ircg_get_username' icon='2' key='%1%.'/>
+				<page ID='ircg_html_encode' icon='2' key='%1%.'/>
+				<page ID='ircg_ignore_add' icon='2' key='%1%.'/>
+				<page ID='ircg_ignore_del' icon='2' key='%1%.'/>
+				<page ID='ircg_invite' icon='2' key='%1%.'/>
+				<page ID='ircg_is_conn_alive' icon='2' key='%1%.'/>
+				<page ID='ircg_join' icon='2' key='%1%.'/>
+				<page ID='ircg_kick' icon='2' key='%1%.'/>
+				<page ID='ircg_list' icon='2' key='%1%.'/>
+				<page ID='ircg_lookup_format_messages' icon='2' key='%1%.'/>
+				<page ID='ircg_lusers' icon='2' key='%1%.'/>
+				<page ID='ircg_msg' icon='2' key='%1%.'/>
+				<page ID='ircg_names' icon='2' key='%1%.'/>
+				<page ID='ircg_nick' icon='2' key='%1%.'/>
+				<page ID='ircg_nickname_escape' icon='2' key='%1%.'/>
+				<page ID='ircg_nickname_unescape' icon='2' key='%1%.'/>
+				<page ID='ircg_notice' icon='2' key='%1%.'/>
+				<page ID='ircg_oper' icon='2' key='%1%.'/>
+				<page ID='ircg_part' icon='2' key='%1%.'/>
+				<page ID='ircg_pconnect' icon='2' key='%1%.'/>
+				<page ID='ircg_register_format_messages' icon='2' key='%1%.'/>
+				<page ID='ircg_set_current' icon='2' key='%1%.'/>
+				<page ID='ircg_set_file' icon='2' key='%1%.'/>
+				<page ID='ircg_set_on_die' icon='2' key='%1%.'/>
+				<page ID='ircg_topic' icon='2' key='%1%.'/>
+				<page ID='ircg_who' icon='2' key='%1%.'/>
+				<page ID='ircg_whois' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='PHP / Java Integration' icon='1' key='java.' off='/%lang%/function.'>
+				<page ID='java_last_exception_clear' icon='2' key='%1%.'/>
+				<page ID='java_last_exception_get' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='LDAP Functions' icon='1' key='ldap.' off='/%lang%/function.'>
+				<page ID='ldap_8859_to_t61' icon='2' key='%1%.'/>
+				<page ID='ldap_add' icon='2' key='%1%.'/>
+				<page ID='ldap_bind' icon='2' key='%1%.'/>
+				<page ID='ldap_close' icon='2' key='%1%.'/>
+				<page ID='ldap_compare' icon='2' key='%1%.'/>
+				<page ID='ldap_connect' icon='2' key='%1%.'/>
+				<page ID='ldap_count_entries' icon='2' key='%1%.'/>
+				<page ID='ldap_delete' icon='2' key='%1%.'/>
+				<page ID='ldap_dn2ufn' icon='2' key='%1%.'/>
+				<page ID='ldap_err2str' icon='2' key='%1%.'/>
+				<page ID='ldap_errno' icon='2' key='%1%.'/>
+				<page ID='ldap_error' icon='2' key='%1%.'/>
+				<page ID='ldap_explode_dn' icon='2' key='%1%.'/>
+				<page ID='ldap_first_attribute' icon='2' key='%1%.'/>
+				<page ID='ldap_first_entry' icon='2' key='%1%.'/>
+				<page ID='ldap_first_reference' icon='2' key='%1%.'/>
+				<page ID='ldap_free_result' icon='2' key='%1%.'/>
+				<page ID='ldap_get_attributes' icon='2' key='%1%.'/>
+				<page ID='ldap_get_dn' icon='2' key='%1%.'/>
+				<page ID='ldap_get_entries' icon='2' key='%1%.'/>
+				<page ID='ldap_get_option' icon='2' key='%1%.'/>
+				<page ID='ldap_get_values_len' icon='2' key='%1%.'/>
+				<page ID='ldap_get_values' icon='2' key='%1%.'/>
+				<page ID='ldap_list' icon='2' key='%1%.'/>
+				<page ID='ldap_mod_add' icon='2' key='%1%.'/>
+				<page ID='ldap_mod_del' icon='2' key='%1%.'/>
+				<page ID='ldap_mod_replace' icon='2' key='%1%.'/>
+				<page ID='ldap_modify' icon='2' key='%1%.'/>
+				<page ID='ldap_next_attribute' icon='2' key='%1%.'/>
+				<page ID='ldap_next_entry' icon='2' key='%1%.'/>
+				<page ID='ldap_next_reference' icon='2' key='%1%.'/>
+				<page ID='ldap_parse_reference' icon='2' key='%1%.'/>
+				<page ID='ldap_parse_result' icon='2' key='%1%.'/>
+				<page ID='ldap_read' icon='2' key='%1%.'/>
+				<page ID='ldap_rename' icon='2' key='%1%.'/>
+				<page ID='ldap_sasl_bind' icon='2' key='%1%.'/>
+				<page ID='ldap_search' icon='2' key='%1%.'/>
+				<page ID='ldap_set_option' icon='2' key='%1%.'/>
+				<page ID='ldap_set_rebind_proc' icon='2' key='%1%.'/>
+				<page ID='ldap_sort' icon='2' key='%1%.'/>
+				<page ID='ldap_start_tls' icon='2' key='%1%.'/>
+				<page ID='ldap_t61_to_8859' icon='2' key='%1%.'/>
+				<page ID='ldap_unbind' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='libxml Functions' icon='1' key='libxml.' off='/%lang%/function.'>
+				<page ID='libxml_clear_errors' icon='2' key='%1%.'/>
+				<page ID='libxml_get_errors' icon='2' key='%1%.'/>
+				<page ID='libxml_get_last_error' icon='2' key='%1%.'/>
+				<page ID='libxml_set_streams_context' icon='2' key='%1%.'/>
+				<page ID='libxml_use_internal_errors' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='LZF Functions' icon='1' key='lzf.' off='/%lang%/function.'>
+				<page ID='lzf_compress' icon='2' key='%1%.'/>
+				<page ID='lzf_decompress' icon='2' key='%1%.'/>
+				<page ID='lzf_optimized_for' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Mail Functions' icon='1' key='mail.' off='/%lang%/function.'>
+				<page ID='ezmlm_hash' icon='2' key='%1%.'/>
+				<page ID='mail' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='mailparse Functions' icon='1' key='mailparse.' off='/%lang%/function.'>
+				<page ID='mailparse_determine_best_xfer_encoding' icon='2' key='%1%.'/>
+				<page ID='mailparse_msg_create' icon='2' key='%1%.'/>
+				<page ID='mailparse_msg_extract_part_file' icon='2' key='%1%.'/>
+				<page ID='mailparse_msg_extract_part' icon='2' key='%1%.'/>
+				<page ID='mailparse_msg_free' icon='2' key='%1%.'/>
+				<page ID='mailparse_msg_get_part_data' icon='2' key='%1%.'/>
+				<page ID='mailparse_msg_get_part' icon='2' key='%1%.'/>
+				<page ID='mailparse_msg_get_structure' icon='2' key='%1%.'/>
+				<page ID='mailparse_msg_parse_file' icon='2' key='%1%.'/>
+				<page ID='mailparse_msg_parse' icon='2' key='%1%.'/>
+				<page ID='mailparse_rfc822_parse_addresses' icon='2' key='%1%.'/>
+				<page ID='mailparse_stream_encode' icon='2' key='%1%.'/>
+				<page ID='mailparse_uudecode_all' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Mathematical Functions' icon='1' key='math.' off='/%lang%/function.'>
+				<page ID='abs' icon='2' key='%0%.'/>
+				<page ID='acos' icon='2' key='%0%.'/>
+				<page ID='acosh' icon='2' key='%0%.'/>
+				<page ID='asin' icon='2' key='%0%.'/>
+				<page ID='asinh' icon='2' key='%0%.'/>
+				<page ID='atan2' icon='2' key='%0%.'/>
+				<page ID='atan' icon='2' key='%0%.'/>
+				<page ID='atanh' icon='2' key='%0%.'/>
+				<page ID='base_convert' icon='2' key='%1%.'/>
+				<page ID='bindec' icon='2' key='%0%.'/>
+				<page ID='ceil' icon='2' key='%0%.'/>
+				<page ID='cos' icon='2' key='%0%.'/>
+				<page ID='cosh' icon='2' key='%0%.'/>
+				<page ID='decbin' icon='2' key='%0%.'/>
+				<page ID='dechex' icon='2' key='%0%.'/>
+				<page ID='decoct' icon='2' key='%0%.'/>
+				<page ID='deg2rad' icon='2' key='%0%.'/>
+				<page ID='exp' icon='2' key='%0%.'/>
+				<page ID='expm1' icon='2' key='%0%.'/>
+				<page ID='floor' icon='2' key='%0%.'/>
+				<page ID='fmod' icon='2' key='%0%.'/>
+				<page ID='getrandmax' icon='2' key='%0%.'/>
+				<page ID='hexdec' icon='2' key='%0%.'/>
+				<page ID='hypot' icon='2' key='%0%.'/>
+				<page ID='is_finite' icon='2' key='%1%.'/>
+				<page ID='is_infinite' icon='2' key='%1%.'/>
+				<page ID='is_nan' icon='2' key='%1%.'/>
+				<page ID='lcg_value' icon='2' key='%1%.'/>
+				<page ID='log10' icon='2' key='%0%.'/>
+				<page ID='log1p' icon='2' key='%0%.'/>
+				<page ID='log' icon='2' key='%0%.'/>
+				<page ID='max' icon='2' key='%0%.'/>
+				<page ID='min' icon='2' key='%0%.'/>
+				<page ID='mt_getrandmax' icon='2' key='%1%.'/>
+				<page ID='mt_rand' icon='2' key='%1%.'/>
+				<page ID='mt_srand' icon='2' key='%1%.'/>
+				<page ID='octdec' icon='2' key='%0%.'/>
+				<page ID='pi' icon='2' key='%0%.'/>
+				<page ID='pow' icon='2' key='%0%.'/>
+				<page ID='rad2deg' icon='2' key='%0%.'/>
+				<page ID='rand' icon='2' key='%0%.'/>
+				<page ID='round' icon='2' key='%0%.'/>
+				<page ID='sin' icon='2' key='%0%.'/>
+				<page ID='sinh' icon='2' key='%0%.'/>
+				<page ID='sqrt' icon='2' key='%0%.'/>
+				<page ID='srand' icon='2' key='%0%.'/>
+				<page ID='tan' icon='2' key='%0%.'/>
+				<page ID='tanh' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='MaxDB PHP Extension' icon='1' key='maxdb.' off='/%lang%/function.'>
+				<page ID='maxdb_affected_rows' icon='2' key='%1%.'/>
+				<page ID='maxdb_autocommit' icon='2' key='%1%.'/>
+				<page ID='maxdb_bind_param' icon='2' key='%1%.'/>
+				<page ID='maxdb_bind_result' icon='2' key='%1%.'/>
+				<page ID='maxdb_change_user' icon='2' key='%1%.'/>
+				<page ID='maxdb_character_set_name' icon='2' key='%1%.'/>
+				<page ID='maxdb_client_encoding' icon='2' key='%1%.'/>
+				<page ID='maxdb_close_long_data' icon='2' key='%1%.'/>
+				<page ID='maxdb_close' icon='2' key='%1%.'/>
+				<page ID='maxdb_commit' icon='2' key='%1%.'/>
+				<page ID='maxdb_connect_errno' icon='2' key='%1%.'/>
+				<page ID='maxdb_connect_error' icon='2' key='%1%.'/>
+				<page ID='maxdb_connect' icon='2' key='%1%.'/>
+				<page ID='maxdb_data_seek' icon='2' key='%1%.'/>
+				<page ID='maxdb_dump_debug_info' icon='2' key='%1%.'/>
+				<page ID='maxdb_debug' icon='2' key='%1%.'/>
+				<page ID='maxdb_disable_reads_from_master' icon='2' key='%1%.'/>
+				<page ID='maxdb_disable_rpl_parse' icon='2' key='%1%.'/>
+				<page ID='maxdb_embedded_connect' icon='2' key='%1%.'/>
+				<page ID='maxdb_enable_reads_from_master' icon='2' key='%1%.'/>
+				<page ID='maxdb_enable_rpl_parse' icon='2' key='%1%.'/>
+				<page ID='maxdb_errno' icon='2' key='%1%.'/>
+				<page ID='maxdb_error' icon='2' key='%1%.'/>
+				<page ID='maxdb_escape_string' icon='2' key='%1%.'/>
+				<page ID='maxdb_execute' icon='2' key='%1%.'/>
+				<page ID='maxdb_fetch_array' icon='2' key='%1%.'/>
+				<page ID='maxdb_fetch_assoc' icon='2' key='%1%.'/>
+				<page ID='maxdb_fetch_field_direct' icon='2' key='%1%.'/>
+				<page ID='maxdb_fetch_field' icon='2' key='%1%.'/>
+				<page ID='maxdb_fetch_fields' icon='2' key='%1%.'/>
+				<page ID='maxdb_fetch_lengths' icon='2' key='%1%.'/>
+				<page ID='maxdb_fetch_object' icon='2' key='%1%.'/>
+				<page ID='maxdb_fetch_row' icon='2' key='%1%.'/>
+				<page ID='maxdb_fetch' icon='2' key='%1%.'/>
+				<page ID='maxdb_field_count' icon='2' key='%1%.'/>
+				<page ID='maxdb_field_seek' icon='2' key='%1%.'/>
+				<page ID='maxdb_field_tell' icon='2' key='%1%.'/>
+				<page ID='maxdb_free_result' icon='2' key='%1%.'/>
+				<page ID='maxdb_get_client_info' icon='2' key='%1%.'/>
+				<page ID='maxdb_get_client_version' icon='2' key='%1%.'/>
+				<page ID='maxdb_get_host_info' icon='2' key='%1%.'/>
+				<page ID='maxdb_get_metadata' icon='2' key='%1%.'/>
+				<page ID='maxdb_get_proto_info' icon='2' key='%1%.'/>
+				<page ID='maxdb_get_server_info' icon='2' key='%1%.'/>
+				<page ID='maxdb_get_server_version' icon='2' key='%1%.'/>
+				<page ID='maxdb_info' icon='2' key='%1%.'/>
+				<page ID='maxdb_init' icon='2' key='%1%.'/>
+				<page ID='maxdb_insert_id' icon='2' key='%1%.'/>
+				<page ID='maxdb_kill' icon='2' key='%1%.'/>
+				<page ID='maxdb_master_query' icon='2' key='%1%.'/>
+				<page ID='maxdb_more_results' icon='2' key='%1%.'/>
+				<page ID='maxdb_multi_query' icon='2' key='%1%.'/>
+				<page ID='maxdb_next_result' icon='2' key='%1%.'/>
+				<page ID='maxdb_num_fields' icon='2' key='%1%.'/>
+				<page ID='maxdb_num_rows' icon='2' key='%1%.'/>
+				<page ID='maxdb_options' icon='2' key='%1%.'/>
+				<page ID='maxdb_param_count' icon='2' key='%1%.'/>
+				<page ID='maxdb_ping' icon='2' key='%1%.'/>
+				<page ID='maxdb_prepare' icon='2' key='%1%.'/>
+				<page ID='maxdb_query' icon='2' key='%1%.'/>
+				<page ID='maxdb_real_connect' icon='2' key='%1%.'/>
+				<page ID='maxdb_real_escape_string' icon='2' key='%1%.'/>
+				<page ID='maxdb_real_query' icon='2' key='%1%.'/>
+				<page ID='maxdb_report' icon='2' key='%1%.'/>
+				<page ID='maxdb_rollback' icon='2' key='%1%.'/>
+				<page ID='maxdb_rpl_parse_enabled' icon='2' key='%1%.'/>
+				<page ID='maxdb_rpl_probe' icon='2' key='%1%.'/>
+				<page ID='maxdb_rpl_query_type' icon='2' key='%1%.'/>
+				<page ID='maxdb_select_db' icon='2' key='%1%.'/>
+				<page ID='maxdb_send_long_data' icon='2' key='%1%.'/>
+				<page ID='maxdb_send_query' icon='2' key='%1%.'/>
+				<page ID='maxdb_server_end' icon='2' key='%1%.'/>
+				<page ID='maxdb_server_init' icon='2' key='%1%.'/>
+				<page ID='maxdb_set_opt' icon='2' key='%1%.'/>
+				<page ID='maxdb_sqlstate' icon='2' key='%1%.'/>
+				<page ID='maxdb_ssl_set' icon='2' key='%1%.'/>
+				<page ID='maxdb_stat' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_affected_rows' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_bind_param' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_bind_result' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_close_long_data' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_close' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_data_seek' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_errno' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_error' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_execute' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_fetch' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_free_result' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_init' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_num_rows' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_param_count' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_prepare' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_reset' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_result_metadata' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_send_long_data' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_sqlstate' icon='2' key='%1%.'/>
+				<page ID='maxdb_stmt_store_result' icon='2' key='%1%.'/>
+				<page ID='maxdb_store_result' icon='2' key='%1%.'/>
+				<page ID='maxdb_thread_id' icon='2' key='%1%.'/>
+				<page ID='maxdb_thread_safe' icon='2' key='%1%.'/>
+				<page ID='maxdb_use_result' icon='2' key='%1%.'/>
+				<page ID='maxdb_warning_count' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Multibyte String Functions' icon='1' key='mbstring.' off='/%lang%/function.'>
+				<page ID='mb_convert_case' icon='2' key='%1%.'/>
+				<page ID='mb_convert_encoding' icon='2' key='%1%.'/>
+				<page ID='mb_convert_kana' icon='2' key='%1%.'/>
+				<page ID='mb_convert_variables' icon='2' key='%1%.'/>
+				<page ID='mb_decode_mimeheader' icon='2' key='%1%.'/>
+				<page ID='mb_decode_numericentity' icon='2' key='%1%.'/>
+				<page ID='mb_detect_encoding' icon='2' key='%1%.'/>
+				<page ID='mb_detect_order' icon='2' key='%1%.'/>
+				<page ID='mb_encode_mimeheader' icon='2' key='%1%.'/>
+				<page ID='mb_encode_numericentity' icon='2' key='%1%.'/>
+				<page ID='mb_ereg_match' icon='2' key='%1%.'/>
+				<page ID='mb_ereg_replace' icon='2' key='%1%.'/>
+				<page ID='mb_ereg_search_getpos' icon='2' key='%1%.'/>
+				<page ID='mb_ereg_search_getregs' icon='2' key='%1%.'/>
+				<page ID='mb_ereg_search_init' icon='2' key='%1%.'/>
+				<page ID='mb_ereg_search_pos' icon='2' key='%1%.'/>
+				<page ID='mb_ereg_search_regs' icon='2' key='%1%.'/>
+				<page ID='mb_ereg_search_setpos' icon='2' key='%1%.'/>
+				<page ID='mb_ereg_search' icon='2' key='%1%.'/>
+				<page ID='mb_ereg' icon='2' key='%1%.'/>
+				<page ID='mb_ereg_match' icon='2' key='%1%.'/>
+				<page ID='mb_eregi_replace' icon='2' key='%1%.'/>
+				<page ID='mb_eregi' icon='2' key='%1%.'/>
+				<page ID='mb_get_info' icon='2' key='%1%.'/>
+				<page ID='mb_http_input' icon='2' key='%1%.'/>
+				<page ID='mb_http_output' icon='2' key='%1%.'/>
+				<page ID='mb_internal_encoding' icon='2' key='%1%.'/>
+				<page ID='mb_language' icon='2' key='%1%.'/>
+				<page ID='mb_list_encodings' icon='2' key='%1%.'/>
+				<page ID='mb_output_handler' icon='2' key='%1%.'/>
+				<page ID='mb_parse_str' icon='2' key='%1%.'/>
+				<page ID='mb_preferred_mime_name' icon='2' key='%1%.'/>
+				<page ID='mb_regex_encoding' icon='2' key='%1%.'/>
+				<page ID='mb_regex_set_options' icon='2' key='%1%.'/>
+				<page ID='mb_send_mail' icon='2' key='%1%.'/>
+				<page ID='mb_split' icon='2' key='%1%.'/>
+				<page ID='mb_strcut' icon='2' key='%1%.'/>
+				<page ID='mb_strimwidth' icon='2' key='%1%.'/>
+				<page ID='mb_strlen' icon='2' key='%1%.'/>
+				<page ID='mb_strpos' icon='2' key='%1%.'/>
+				<page ID='mb_strrpos' icon='2' key='%1%.'/>
+				<page ID='mb_strtolower' icon='2' key='%1%.'/>
+				<page ID='mb_strtoupper' icon='2' key='%1%.'/>
+				<page ID='mb_strwidth' icon='2' key='%1%.'/>
+				<page ID='mb_substitute_character' icon='2' key='%1%.'/>
+				<page ID='mb_substr_count' icon='2' key='%1%.'/>
+				<page ID='mb_substr' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='MCAL Functions' icon='1' key='mcal.' off='/%lang%/function.'>
+				<page ID='mcal_append_event' icon='2' key='%1%.'/>
+				<page ID='mcal_close' icon='2' key='%1%.'/>
+				<page ID='mcal_create_calendar' icon='2' key='%1%.'/>
+				<page ID='mcal_date_compare' icon='2' key='%1%.'/>
+				<page ID='mcal_date_valid' icon='2' key='%1%.'/>
+				<page ID='mcal_day_of_week' icon='2' key='%1%.'/>
+				<page ID='mcal_day_of_year' icon='2' key='%1%.'/>
+				<page ID='mcal_days_in_month' icon='2' key='%1%.'/>
+				<page ID='mcal_delete_calendar' icon='2' key='%1%.'/>
+				<page ID='mcal_delete_event' icon='2' key='%1%.'/>
+				<page ID='mcal_event_add_attribute' icon='2' key='%1%.'/>
+				<page ID='mcal_event_init' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_alarm' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_category' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_class' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_description' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_end' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_recur_daily' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_recur_monthly_mday' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_recur_monthly_wday' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_recur_none' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_recur_weekly' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_recur_yearly' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_start' icon='2' key='%1%.'/>
+				<page ID='mcal_event_set_title' icon='2' key='%1%.'/>
+				<page ID='mcal_expunge' icon='2' key='%1%.'/>
+				<page ID='mcal_fetch_current_stream_event' icon='2' key='%1%.'/>
+				<page ID='mcal_fetch_event' icon='2' key='%1%.'/>
+				<page ID='mcal_is_leap_year' icon='2' key='%1%.'/>
+				<page ID='mcal_list_alarms' icon='2' key='%1%.'/>
+				<page ID='mcal_list_events' icon='2' key='%1%.'/>
+				<page ID='mcal_next_recurrence' icon='2' key='%1%.'/>
+				<page ID='mcal_open' icon='2' key='%1%.'/>
+				<page ID='mcal_popen' icon='2' key='%1%.'/>
+				<page ID='mcal_rename_calendar' icon='2' key='%1%.'/>
+				<page ID='mcal_reopen' icon='2' key='%1%.'/>
+				<page ID='mcal_snooze' icon='2' key='%1%.'/>
+				<page ID='mcal_store_event' icon='2' key='%1%.'/>
+				<page ID='mcal_time_valid' icon='2' key='%1%.'/>
+				<page ID='mcal_week_of_year' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Mcrypt Encryption Functions' icon='1' key='mcrypt.' off='/%lang%/function.'>
+				<page ID='mcrypt_cbc' icon='2' key='%1%.'/>
+				<page ID='mcrypt_cfb' icon='2' key='%1%.'/>
+				<page ID='mcrypt_create_iv' icon='2' key='%1%.'/>
+				<page ID='mcrypt_decrypt' icon='2' key='%1%.'/>
+				<page ID='mcrypt_ecb' icon='2' key='%1%.'/>
+				<page ID='mcrypt_enc_get_algorithms_name' icon='2' key='%1%.'/>
+				<page ID='mcrypt_enc_get_block_size' icon='2' key='%1%.'/>
+				<page ID='mcrypt_enc_get_iv_size' icon='2' key='%1%.'/>
+				<page ID='mcrypt_enc_get_key_size' icon='2' key='%1%.'/>
+				<page ID='mcrypt_enc_get_modes_name' icon='2' key='%1%.'/>
+				<page ID='mcrypt_enc_get_supported_key_sizes' icon='2' key='%1%.'/>
+				<page ID='mcrypt_enc_is_block_algorithm_mode' icon='2' key='%1%.'/>
+				<page ID='mcrypt_enc_is_block_algorithm' icon='2' key='%1%.'/>
+				<page ID='mcrypt_enc_is_block_mode' icon='2' key='%1%.'/>
+				<page ID='mcrypt_enc_self_test' icon='2' key='%1%.'/>
+				<page ID='mcrypt_encrypt' icon='2' key='%1%.'/>
+				<page ID='mcrypt_generic_deinit' icon='2' key='%1%.'/>
+				<page ID='mcrypt_generic_end' icon='2' key='%1%.'/>
+				<page ID='mcrypt_generic_init' icon='2' key='%1%.'/>
+				<page ID='mcrypt_generic' icon='2' key='%1%.'/>
+				<page ID='mcrypt_get_block_size' icon='2' key='%1%.'/>
+				<page ID='mcrypt_get_cipher_name' icon='2' key='%1%.'/>
+				<page ID='mcrypt_get_iv_size' icon='2' key='%1%.'/>
+				<page ID='mcrypt_get_key_size' icon='2' key='%1%.'/>
+				<page ID='mcrypt_list_algorithms' icon='2' key='%1%.'/>
+				<page ID='mcrypt_list_modes' icon='2' key='%1%.'/>
+				<page ID='mcrypt_module_close' icon='2' key='%1%.'/>
+				<page ID='mcrypt_module_get_algo_block_size' icon='2' key='%1%.'/>
+				<page ID='mcrypt_module_get_algo_key_size' icon='2' key='%1%.'/>
+				<page ID='mcrypt_module_get_supported_key_sizes' icon='2' key='%1%.'/>
+				<page ID='mcrypt_module_is_block_algorithm_mode' icon='2' key='%1%.'/>
+				<page ID='mcrypt_module_is_block_algorithm' icon='2' key='%1%.'/>
+				<page ID='mcrypt_module_is_block_mode' icon='2' key='%1%.'/>
+				<page ID='mcrypt_module_open' icon='2' key='%1%.'/>
+				<page ID='mcrypt_module_self_test' icon='2' key='%1%.'/>
+				<page ID='mcrypt_ofb' icon='2' key='%1%.'/>
+				<page ID='mdecrypt_generic' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='MCVE (Monetra) Payment Functions' icon='1' key='mcve.' off='/%lang%/function.'>
+				<page ID='m_checkstatus' icon='2' key='%1%.'/>
+				<page ID='m_completeauthorizations' icon='2' key='%1%.'/>
+				<page ID='m_connect' icon='2' key='%1%.'/>
+				<page ID='m_connectionerror' icon='2' key='%1%.'/>
+				<page ID='m_deletetrans' icon='2' key='%1%.'/>
+				<page ID='m_destroyconn' icon='2' key='%1%.'/>
+				<page ID='m_destroyengine' icon='2' key='%1%.'/>
+				<page ID='m_getcell' icon='2' key='%1%.'/>
+				<page ID='m_getcellbynum' icon='2' key='%1%.'/>
+				<page ID='m_getcommadelimited' icon='2' key='%1%.'/>
+				<page ID='m_getheader' icon='2' key='%1%.'/>
+				<page ID='m_initconn' icon='2' key='%1%.'/>
+				<page ID='m_initengine' icon='2' key='%1%.'/>
+				<page ID='m_iscommadelimited' icon='2' key='%1%.'/>
+				<page ID='m_maxconntimeout' icon='2' key='%1%.'/>
+				<page ID='m_monitor' icon='2' key='%1%.'/>
+				<page ID='m_numcolumns' icon='2' key='%1%.'/>
+				<page ID='m_numrows' icon='2' key='%1%.'/>
+				<page ID='m_parsecommadelimited' icon='2' key='%1%.'/>
+				<page ID='m_responsekeys' icon='2' key='%1%.'/>
+				<page ID='m_responseparam' icon='2' key='%1%.'/>
+				<page ID='m_returnstatus' icon='2' key='%1%.'/>
+				<page ID='m_setblocking' icon='2' key='%1%.'/>
+				<page ID='m_setdropfile' icon='2' key='%1%.'/>
+				<page ID='m_setip' icon='2' key='%1%.'/>
+				<page ID='m_setssl_cafile' icon='2' key='%1%.'/>
+				<page ID='m_setssl_files' icon='2' key='%1%.'/>
+				<page ID='m_setssl' icon='2' key='%1%.'/>
+				<page ID='m_settimeout' icon='2' key='%1%.'/>
+				<page ID='m_sslcert_gen_hash' icon='2' key='%1%.'/>
+				<page ID='m_transactionssent' icon='2' key='%1%.'/>
+				<page ID='m_transinqueue' icon='2' key='%1%.'/>
+				<page ID='m_transkeyval' icon='2' key='%1%.'/>
+				<page ID='m_transnew' icon='2' key='%1%.'/>
+				<page ID='m_transsend' icon='2' key='%1%.'/>
+				<page ID='m_uwait' icon='2' key='%1%.'/>
+				<page ID='m_validateidentifier' icon='2' key='%1%.'/>
+				<page ID='m_verifyconnection' icon='2' key='%1%.'/>
+				<page ID='m_verifysslcert' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Memcache Functions' icon='1' key='memcache.' off='/%lang%/function.memcache-'>
+				<page ID='Memcache::add' icon='2' key='add.'/>
+				<page ID='Memcache::close' icon='2' key='close.'/>
+				<page ID='Memcache::connect' icon='2' key='connect.'/>
+				<page ID='memcache_debug' icon='2' key='debug.'/>
+				<page ID='Memcache::decrement' icon='2' key='decrement.'/>
+				<page ID='Memcache::delete' icon='2' key='delete.'/>
+				<page ID='Memcache::flush' icon='2' key='flush.'/>
+				<page ID='Memcache::get' icon='2' key='get.'/>
+				<page ID='Memcache::getStats' icon='2' key='getstats.'/>
+				<page ID='Memcache::getVersion' icon='2' key='getversion.'/>
+				<page ID='Memcache::increment' icon='2' key='increment.'/>
+				<page ID='Memcache::pconnect' icon='2' key='pconnect.'/>
+				<page ID='Memcache::replace' icon='2' key='replace.'/>
+				<page ID='Memcache::set' icon='2' key='set.'/>
+			</chapter>
+			<chapter ID='Mhash Functions' icon='1' key='mhash.' off='/%lang%/function.'>
+				<page ID='mhash_count' icon='2' key='%1%.'/>
+				<page ID='mhash_get_block_size' icon='2' key='%1%.'/>
+				<page ID='mhash_get_hash_name' icon='2' key='%1%.'/>
+				<page ID='mhash_keygen_s2k' icon='2' key='%1%.'/>
+				<page ID='mhash' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Mimetype Functions' icon='1' key='mime-magic.' off='/%lang%/function.'>
+				<page ID='mime_content_type' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Ming functions for Flash' icon='1' key='ming.' off='/%lang%/function.'>
+				<page ID='ming_keypress' icon='2' key='%1%.'/>
+				<page ID='ming_setcubicthreshold' icon='2' key='%1%.'/>
+				<page ID='ming_setscale' icon='2' key='%1%.'/>
+				<page ID='ming_useswfversion' icon='2' key='%1%.'/>
+				<page ID='SWFAction' icon='2' key='swfaction.'/>
+				<page ID='SWFBitmap->getHeight' icon='2' key='swfbitmap.getheight.'/>
+				<page ID='SWFBitmap->getWidth' icon='2' key='swfbitmap.getwidth.'/>
+				<page ID='SWFBitmap' icon='2' key='swfbitmap.'/>
+				<page ID='SWFbutton->addAction' icon='2' key='swfbutton.addaction.'/>
+				<page ID='SWFButton->addASound' icon='2' key='swfbutton.addasound.'/>
+				<page ID='SWFbutton->addShape' icon='2' key='swfbutton.addshape.'/>
+				<page ID='SWFbutton->setAction' icon='2' key='swfbutton.setaction.'/>
+				<page ID='SWFbutton->setDown' icon='2' key='swfbutton.setdown.'/>
+				<page ID='SWFbutton->setHit' icon='2' key='swfbutton.sethit.'/>
+				<page ID='SWFbutton->setOver' icon='2' key='swfbutton.setover.'/>
+				<page ID='SWFbutton->setUp' icon='2' key='swfbutton.setup.'/>
+				<page ID='SWFbutton' icon='2' key='swfbutton.'/>
+				<page ID='SWFDisplayItem->addColor' icon='2' key='swfdisplayitem.addcolor.'/>
+				<page ID='SWFDisplayItem->move' icon='2' key='swfdisplayitem.move.'/>
+				<page ID='SWFDisplayItem->moveTo' icon='2' key='swfdisplayitem.moveto.'/>
+				<page ID='SWFDisplayItem->multColor' icon='2' key='swfdisplayitem.multcolor.'/>
+				<page ID='SWFDisplayItem->remove' icon='2' key='swfdisplayitem.remove.'/>
+				<page ID='SWFDisplayItem->rotate' icon='2' key='swfdisplayitem.rotate.'/>
+				<page ID='SWFDisplayItem->rotateTo' icon='2' key='swfdisplayitem.rotateto.'/>
+				<page ID='SWFDisplayItem->scale' icon='2' key='swfdisplayitem.scale.'/>
+				<page ID='SWFDisplayItem->scaleTo' icon='2' key='swfdisplayitem.scaleto.'/>
+				<page ID='SWFDisplayItem->setDepth' icon='2' key='swfdisplayitem.setdepth.'/>
+				<page ID='SWFDisplayItem->setName' icon='2' key='swfdisplayitem.setname.'/>
+				<page ID='SWFDisplayItem->setRatio' icon='2' key='swfdisplayitem.setratio.'/>
+				<page ID='SWFDisplayItem->skewX' icon='2' key='swfdisplayitem.skewx.'/>
+				<page ID='SWFDisplayItem->skewXTo' icon='2' key='swfdisplayitem.skewxto.'/>
+				<page ID='SWFDisplayItem->skewY' icon='2' key='swfdisplayitem.skewy.'/>
+				<page ID='SWFDisplayItem->skewYTo' icon='2' key='swfdisplayitem.skewyto.'/>
+				<page ID='SWFDisplayItem' icon='2' key='swfdisplayitem.'/>
+				<page ID='SWFFill->moveTo' icon='2' key='swffill.moveto.'/>
+				<page ID='SWFFill->rotateTo' icon='2' key='swffill.rotateto.'/>
+				<page ID='SWFFill->scaleTo' icon='2' key='swffill.scaleto.'/>
+				<page ID='SWFFill->skewXTo' icon='2' key='swffill.skewxto.'/>
+				<page ID='SWFFill->skewYTo' icon='2' key='swffill.skewyto.'/>
+				<page ID='SWFFill' icon='2' key='swffill.'/>
+				<page ID='SWFfont->getWidth' icon='2' key='swffont.getwidth.'/>
+				<page ID='SWFfont' icon='2' key='swffont.'/>
+				<page ID='SWFGradient->addEntry' icon='2' key='swfgradient.addentry.'/>
+				<page ID='SWFGradient' icon='2' key='swfgradient.'/>
+				<page ID='SWFMorph->getShape1' icon='2' key='swfmorph.getshape1.'/>
+				<page ID='SWFMorph->getShape2' icon='2' key='swfmorph.getshape2.'/>
+				<page ID='SWFMorph' icon='2' key='swfmorph.'/>
+				<page ID='SWFMovie->add' icon='2' key='swfmovie.add.'/>
+				<page ID='SWFMovie->nextFrame' icon='2' key='swfmovie.nextframe.'/>
+				<page ID='SWFMovie->output' icon='2' key='swfmovie.output.'/>
+				<page ID='SWFMovie->remove' icon='2' key='swfmovie.remove.'/>
+				<page ID='SWFMovie->save' icon='2' key='swfmovie.save.'/>
+				<page ID='SWFMovie->setBackground' icon='2' key='swfmovie.setbackground.'/>
+				<page ID='SWFMovie->setDimension' icon='2' key='swfmovie.setdimension.'/>
+				<page ID='SWFMovie->setFrames' icon='2' key='swfmovie.setframes.'/>
+				<page ID='SWFMovie->setRate' icon='2' key='swfmovie.setrate.'/>
+				<page ID='SWFMovie->streamMP3' icon='2' key='swfmovie.streammp3.'/>
+				<page ID='SWFMovie' icon='2' key='swfmovie.'/>
+				<page ID='SWFShape->addFill' icon='2' key='swfshape.addfill.'/>
+				<page ID='SWFShape->drawCurve' icon='2' key='swfshape.drawcurve.'/>
+				<page ID='SWFShape->drawCurveTo' icon='2' key='swfshape.drawcurveto.'/>
+				<page ID='SWFShape->drawLine' icon='2' key='swfshape.drawline.'/>
+				<page ID='SWFShape->drawLineTo' icon='2' key='swfshape.drawlineto.'/>
+				<page ID='SWFShape->movePen' icon='2' key='swfshape.movepen.'/>
+				<page ID='SWFShape->movePenTo' icon='2' key='swfshape.movepento.'/>
+				<page ID='SWFShape->setLeftFill' icon='2' key='swfshape.setleftfill.'/>
+				<page ID='SWFShape->setLine' icon='2' key='swfshape.setline.'/>
+				<page ID='SWFShape->setRightFill' icon='2' key='swfshape.setrightfill.'/>
+				<page ID='SWFShape' icon='2' key='swfshape.'/>
+				<page ID='SWFSprite->add' icon='2' key='swfsprite.add.'/>
+				<page ID='SWFSprite->nextFrame' icon='2' key='swfsprite.nextframe.'/>
+				<page ID='SWFSprite->remove' icon='2' key='swfsprite.remove.'/>
+				<page ID='SWFSprite->setFrames' icon='2' key='swfsprite.setframes.'/>
+				<page ID='SWFSprite' icon='2' key='swfsprite.'/>
+				<page ID='SWFText->addString' icon='2' key='swftext.addstring.'/>
+				<page ID='SWFText->getWidth' icon='2' key='swftext.getwidth.'/>
+				<page ID='SWFText->moveTo' icon='2' key='swftext.moveto.'/>
+				<page ID='SWFText->setColor' icon='2' key='swftext.setcolor.'/>
+				<page ID='SWFText->setFont' icon='2' key='swftext.setfont.'/>
+				<page ID='SWFText->setHeight' icon='2' key='swftext.setheight.'/>
+				<page ID='SWFText->setSpacing' icon='2' key='swftext.setspacing.'/>
+				<page ID='SWFText' icon='2' key='swftext.'/>
+				<page ID='SWFTextField->addString' icon='2' key='swftextfield.addstring.'/>
+				<page ID='SWFTextField->align' icon='2' key='swftextfield.align.'/>
+				<page ID='SWFTextField->setBounds' icon='2' key='swftextfield.setbounds.'/>
+				<page ID='SWFTextField->setColor' icon='2' key='swftextfield.setcolor.'/>
+				<page ID='SWFTextField->setFont' icon='2' key='swftextfield.setfont.'/>
+				<page ID='SWFTextField->setHeight' icon='2' key='swftextfield.setheight.'/>
+				<page ID='SWFTextField->setIndentation' icon='2' key='swftextfield.setindentation.'/>
+				<page ID='SWFTextField->setLeftMargin' icon='2' key='swftextfield.setleftmargin.'/>
+				<page ID='SWFTextField->setLineSpacing' icon='2' key='swftextfield.setlinespacing.'/>
+				<page ID='SWFTextField->setMargins' icon='2' key='swftextfield.setmargins.'/>
+				<page ID='SWFTextField->setName' icon='2' key='swftextfield.setname.'/>
+				<page ID='SWFTextField->setRightMargin' icon='2' key='swftextfield.setRightmargin.'/>
+				<page ID='SWFTextField' icon='2' key='swftextfield.'/>
+			</chapter>
+			<chapter ID='Miscellaneous Functions' icon='1' key='misc.' off='/%lang%/function.'>
+				<page ID='connection_aborted' icon='2' key='%1%.'/>
+				<page ID='connection_status' icon='2' key='%1%.'/>
+				<page ID='connection_timeout' icon='2' key='%1%.'/>
+				<page ID='constant' icon='2' key='%1%.'/>
+				<page ID='define' icon='2' key='%1%.'/>
+				<page ID='defined' icon='2' key='%1%.'/>
+				<page ID='die' icon='2' key='%1%.'/>
+				<page ID='eval' icon='2' key='%1%.'/>
+				<page ID='exit' icon='2' key='%1%.'/>
+				<page ID='get_browser' icon='2' key='%1%.'/>
+				<page ID='highlight_file' icon='2' key='%1%.'/>
+				<page ID='highlight_string' icon='2' key='%1%.'/>
+				<page ID='ignore_user_abort' icon='2' key='%1%.'/>
+				<page ID='pack' icon='2' key='%1%.'/>
+				<page ID='php_check_syntax' icon='2' key='%1%.'/>
+				<page ID='php_strip_whitespace' icon='2' key='%1%.'/>
+				<page ID='show_source' icon='2' key='%1%.'/>
+				<page ID='sleep' icon='2' key='%1%.'/>
+				<page ID='time_nanosleep' icon='2' key='%1%.'/>
+				<page ID='uniqid' icon='2' key='%1%.'/>
+				<page ID='unpack' icon='2' key='%1%.'/>
+				<page ID='usleep' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='mnoGoSearch Functions' icon='1' key='mnogosearch.' off='/%lang%/function.'>
+				<page ID='udm_add_search_limit' icon='2' key='%1%.'/>
+				<page ID='udm_alloc_agent_array' icon='2' key='%1%.'/>
+				<page ID='udm_alloc_agent' icon='2' key='%1%.'/>
+				<page ID='udm_api_version' icon='2' key='%1%.'/>
+				<page ID='udm_cat_list' icon='2' key='%1%.'/>
+				<page ID='udm_cat_path' icon='2' key='%1%.'/>
+				<page ID='udm_check_charset' icon='2' key='%1%.'/>
+				<page ID='udm_check_stored' icon='2' key='%1%.'/>
+				<page ID='udm_clear_search_limits' icon='2' key='%1%.'/>
+				<page ID='udm_close_stored' icon='2' key='%1%.'/>
+				<page ID='udm_crc32' icon='2' key='%1%.'/>
+				<page ID='udm_errno' icon='2' key='%1%.'/>
+				<page ID='udm_error' icon='2' key='%1%.'/>
+				<page ID='udm_find' icon='2' key='%1%.'/>
+				<page ID='udm_free_agent' icon='2' key='%1%.'/>
+				<page ID='udm_free_ispell_data' icon='2' key='%1%.'/>
+				<page ID='udm_free_res' icon='2' key='%1%.'/>
+				<page ID='udm_get_doc_count' icon='2' key='%1%.'/>
+				<page ID='udm_get_res_field' icon='2' key='%1%.'/>
+				<page ID='udm_get_res_param' icon='2' key='%1%.'/>
+				<page ID='udm_hash32' icon='2' key='%1%.'/>
+				<page ID='udm_load_ispell_data' icon='2' key='%1%.'/>
+				<page ID='udm_open_stored' icon='2' key='%1%.'/>
+				<page ID='udm_set_agent_param' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Mohawk Software Session Handler Functions' icon='1' key='msession.' off='/%lang%/function.'>
+				<page ID='msession_connect' icon='2' key='%1%.'/>
+				<page ID='msession_count' icon='2' key='%1%.'/>
+				<page ID='msession_create' icon='2' key='%1%.'/>
+				<page ID='msession_destroy' icon='2' key='%1%.'/>
+				<page ID='msession_disconnect' icon='2' key='%1%.'/>
+				<page ID='msession_find' icon='2' key='%1%.'/>
+				<page ID='msession_get_array' icon='2' key='%1%.'/>
+				<page ID='msession_get_data' icon='2' key='%1%.'/>
+				<page ID='msession_get' icon='2' key='%1%.'/>
+				<page ID='msession_inc' icon='2' key='%1%.'/>
+				<page ID='msession_list' icon='2' key='%1%.'/>
+				<page ID='msession_listvar' icon='2' key='%1%.'/>
+				<page ID='msession_lock' icon='2' key='%1%.'/>
+				<page ID='msession_plugin' icon='2' key='%1%.'/>
+				<page ID='msession_randstr' icon='2' key='%1%.'/>
+				<page ID='msession_set_array' icon='2' key='%1%.'/>
+				<page ID='msession_set_data' icon='2' key='%1%.'/>
+				<page ID='msession_set' icon='2' key='%1%.'/>
+				<page ID='msession_timeout' icon='2' key='%1%.'/>
+				<page ID='msession_uniq' icon='2' key='%1%.'/>
+				<page ID='msession_unlock' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='mSQL Functions' icon='1' key='msql.' off='/%lang%/function.'>
+				<page ID='msql_affected_rows' icon='2' key='%1%.'/>
+				<page ID='msql_close' icon='2' key='%1%.'/>
+				<page ID='msql_connect' icon='2' key='%1%.'/>
+				<page ID='msql_create_db' icon='2' key='%1%.'/>
+				<page ID='msql_createdb' icon='2' key='%1%.'/>
+				<page ID='msql_data_seek' icon='2' key='%1%.'/>
+				<page ID='msql_db_query' icon='2' key='%1%.'/>
+				<page ID='msql_dbname' icon='2' key='%1%.'/>
+				<page ID='msql_drop_db' icon='2' key='%1%.'/>
+				<page ID='msql_error' icon='2' key='%1%.'/>
+				<page ID='msql_fetch_array' icon='2' key='%1%.'/>
+				<page ID='msql_fetch_field' icon='2' key='%1%.'/>
+				<page ID='msql_fetch_object' icon='2' key='%1%.'/>
+				<page ID='msql_fetch_row' icon='2' key='%1%.'/>
+				<page ID='msql_field_flags' icon='2' key='%1%.'/>
+				<page ID='msql_field_len' icon='2' key='%1%.'/>
+				<page ID='msql_field_name' icon='2' key='%1%.'/>
+				<page ID='msql_field_seek' icon='2' key='%1%.'/>
+				<page ID='msql_field_table' icon='2' key='%1%.'/>
+				<page ID='msql_field_type' icon='2' key='%1%.'/>
+				<page ID='msql_fieldflags' icon='2' key='%1%.'/>
+				<page ID='msql_fieldlen' icon='2' key='%1%.'/>
+				<page ID='msql_fieldname' icon='2' key='%1%.'/>
+				<page ID='msql_fieldtable' icon='2' key='%1%.'/>
+				<page ID='msql_fieldtype' icon='2' key='%1%.'/>
+				<page ID='msql_free_result' icon='2' key='%1%.'/>
+				<page ID='msql_list_dbs' icon='2' key='%1%.'/>
+				<page ID='msql_list_fields' icon='2' key='%1%.'/>
+				<page ID='msql_list_tables' icon='2' key='%1%.'/>
+				<page ID='msql_num_fields' icon='2' key='%1%.'/>
+				<page ID='msql_num_rows' icon='2' key='%1%.'/>
+				<page ID='msql_numfields' icon='2' key='%1%.'/>
+				<page ID='msql_numrows' icon='2' key='%1%.'/>
+				<page ID='msql_pconnect' icon='2' key='%1%.'/>
+				<page ID='msql_query' icon='2' key='%1%.'/>
+				<page ID='msql_regcase' icon='2' key='%1%.'/>
+				<page ID='msql_result' icon='2' key='%1%.'/>
+				<page ID='msql_select_db' icon='2' key='%1%.'/>
+				<page ID='msql_tablename' icon='2' key='%1%.'/>
+				<page ID='msql' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='Microsoft SQL Server Functions' icon='1' key='mssql.' off='/%lang%/function.'>
+				<page ID='mssql_bind' icon='2' key='%1%.'/>
+				<page ID='mssql_close' icon='2' key='%1%.'/>
+				<page ID='mssql_connect' icon='2' key='%1%.'/>
+				<page ID='mssql_data_seek' icon='2' key='%1%.'/>
+				<page ID='mssql_execute' icon='2' key='%1%.'/>
+				<page ID='mssql_fetch_array' icon='2' key='%1%.'/>
+				<page ID='mssql_fetch_assoc' icon='2' key='%1%.'/>
+				<page ID='mssql_fetch_batch' icon='2' key='%1%.'/>
+				<page ID='mssql_fetch_field' icon='2' key='%1%.'/>
+				<page ID='mssql_fetch_object' icon='2' key='%1%.'/>
+				<page ID='mssql_fetch_row' icon='2' key='%1%.'/>
+				<page ID='mssql_field_length' icon='2' key='%1%.'/>
+				<page ID='mssql_field_name' icon='2' key='%1%.'/>
+				<page ID='mssql_field_seek' icon='2' key='%1%.'/>
+				<page ID='mssql_field_type' icon='2' key='%1%.'/>
+				<page ID='mssql_free_result' icon='2' key='%1%.'/>
+				<page ID='mssql_free_statement' icon='2' key='%1%.'/>
+				<page ID='mssql_get_last_message' icon='2' key='%1%.'/>
+				<page ID='mssql_guid_string' icon='2' key='%1%.'/>
+				<page ID='mssql_init' icon='2' key='%1%.'/>
+				<page ID='mssql_min_error_severity' icon='2' key='%1%.'/>
+				<page ID='mssql_min_message_severity' icon='2' key='%1%.'/>
+				<page ID='mssql_next_result' icon='2' key='%1%.'/>
+				<page ID='mssql_num_fields' icon='2' key='%1%.'/>
+				<page ID='mssql_num_rows' icon='2' key='%1%.'/>
+				<page ID='mssql_pconnect' icon='2' key='%1%.'/>
+				<page ID='mssql_query' icon='2' key='%1%.'/>
+				<page ID='mssql_result' icon='2' key='%1%.'/>
+				<page ID='mssql_rows_affected' icon='2' key='%1%.'/>
+				<page ID='mssql_select_db' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='muscat Functions' icon='1' key='muscat.' off='/%lang%/function.'>
+				<page ID='muscat_close' icon='2' key='%1%.'/>
+				<page ID='muscat_get' icon='2' key='%1%.'/>
+				<page ID='muscat_give' icon='2' key='%1%.'/>
+				<page ID='muscat_setup_net' icon='2' key='%1%.'/>
+				<page ID='muscat_setup' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='MySQL Functions' icon='1' key='mysql.' off='/%lang%/function.'>
+				<page ID='mysql_affected_rows' icon='2' key='%1%.'/>
+				<page ID='mysql_change_user' icon='2' key='%1%.'/>
+				<page ID='mysql_client_encoding' icon='2' key='%1%.'/>
+				<page ID='mysql_close' icon='2' key='%1%.'/>
+				<page ID='mysql_connect' icon='2' key='%1%.'/>
+				<page ID='mysql_create_db' icon='2' key='%1%.'/>
+				<page ID='mysql_data_seek' icon='2' key='%1%.'/>
+				<page ID='mysql_db_name' icon='2' key='%1%.'/>
+				<page ID='mysql_db_query' icon='2' key='%1%.'/>
+				<page ID='mysql_drop_db' icon='2' key='%1%.'/>
+				<page ID='mysql_errno' icon='2' key='%1%.'/>
+				<page ID='mysql_error' icon='2' key='%1%.'/>
+				<page ID='mysql_escape_string' icon='2' key='%1%.'/>
+				<page ID='mysql_fetch_array' icon='2' key='%1%.'/>
+				<page ID='mysql_fetch_assoc' icon='2' key='%1%.'/>
+				<page ID='mysql_fetch_field' icon='2' key='%1%.'/>
+				<page ID='mysql_fetch_lengths' icon='2' key='%1%.'/>
+				<page ID='mysql_fetch_object' icon='2' key='%1%.'/>
+				<page ID='mysql_fetch_row' icon='2' key='%1%.'/>
+				<page ID='mysql_field_flags' icon='2' key='%1%.'/>
+				<page ID='mysql_field_len' icon='2' key='%1%.'/>
+				<page ID='mysql_field_name' icon='2' key='%1%.'/>
+				<page ID='mysql_field_seek' icon='2' key='%1%.'/>
+				<page ID='mysql_field_table' icon='2' key='%1%.'/>
+				<page ID='mysql_field_type' icon='2' key='%1%.'/>
+				<page ID='mysql_free_result' icon='2' key='%1%.'/>
+				<page ID='mysql_get_client_info' icon='2' key='%1%.'/>
+				<page ID='mysql_get_host_info' icon='2' key='%1%.'/>
+				<page ID='mysql_get_proto_info' icon='2' key='%1%.'/>
+				<page ID='mysql_get_server_info' icon='2' key='%1%.'/>
+				<page ID='mysql_info' icon='2' key='%1%.'/>
+				<page ID='mysql_insert_id' icon='2' key='%1%.'/>
+				<page ID='mysql_list_dbs' icon='2' key='%1%.'/>
+				<page ID='mysql_list_fields' icon='2' key='%1%.'/>
+				<page ID='mysql_list_processes' icon='2' key='%1%.'/>
+				<page ID='mysql_list_tables' icon='2' key='%1%.'/>
+				<page ID='mysql_num_fields' icon='2' key='%1%.'/>
+				<page ID='mysql_num_rows' icon='2' key='%1%.'/>
+				<page ID='mysql_pconnect' icon='2' key='%1%.'/>
+				<page ID='mysql_ping' icon='2' key='%1%.'/>
+				<page ID='mysql_query' icon='2' key='%1%.'/>
+				<page ID='mysql_real_escape_string' icon='2' key='%1%.'/>
+				<page ID='mysql_result' icon='2' key='%1%.'/>
+				<page ID='mysql_select_db' icon='2' key='%1%.'/>
+				<page ID='mysql_stat' icon='2' key='%1%.'/>
+				<page ID='mysql_tablename' icon='2' key='%1%.'/>
+				<page ID='mysql_thread_id' icon='2' key='%1%.'/>
+				<page ID='mysql_unbuffered_query' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='MySQL Improved Extension' icon='1' key='mysqli.' off='/%lang%/function.'>
+				<page ID='mysqli_affected_rows' icon='2' key='%1%.'/>
+				<page ID='mysqli_autocommit' icon='2' key='%1%.'/>
+				<page ID='mysqli_bind_param' icon='2' key='%1%.'/>
+				<page ID='mysqli_bind_result' icon='2' key='%1%.'/>
+				<page ID='mysqli_change_user' icon='2' key='%1%.'/>
+				<page ID='mysqli_character_set_name' icon='2' key='%1%.'/>
+				<page ID='mysqli_client_encoding' icon='2' key='%1%.'/>
+				<page ID='mysqli_close' icon='2' key='%1%.'/>
+				<page ID='mysqli_commit' icon='2' key='%1%.'/>
+				<page ID='mysqli_connect_errno' icon='2' key='%1%.'/>
+				<page ID='mysqli_connect_error' icon='2' key='%1%.'/>
+				<page ID='mysqli_connect' icon='2' key='%1%.'/>
+				<page ID='mysqli_data_seek' icon='2' key='%1%.'/>
+				<page ID='mysqli_debug' icon='2' key='%1%.'/>
+				<page ID='mysqli_disable_reads_from_master' icon='2' key='%1%.'/>
+				<page ID='mysqli_disable_rpl_parse' icon='2' key='%1%.'/>
+				<page ID='mysqli_dump_debug_info' icon='2' key='%1%.'/>
+				<page ID='mysqli_embedded_connect' icon='2' key='%1%.'/>
+				<page ID='mysqli_enable_reads_from_master' icon='2' key='%1%.'/>
+				<page ID='mysqli_enable_rpl_parse' icon='2' key='%1%.'/>
+				<page ID='mysqli_errno' icon='2' key='%1%.'/>
+				<page ID='mysqli_error' icon='2' key='%1%.'/>
+				<page ID='mysqli_escape_string' icon='2' key='%1%.'/>
+				<page ID='mysqli_execute' icon='2' key='%1%.'/>
+				<page ID='mysqli_fetch_array' icon='2' key='%1%.'/>
+				<page ID='mysqli_fetch_assoc' icon='2' key='%1%.'/>
+				<page ID='mysqli_fetch_field_direct' icon='2' key='%1%.'/>
+				<page ID='mysqli_fetch_field' icon='2' key='%1%.'/>
+				<page ID='mysqli_fetch_fields' icon='2' key='%1%.'/>
+				<page ID='mysqli_fetch_lengths' icon='2' key='%1%.'/>
+				<page ID='mysqli_fetch_object' icon='2' key='%1%.'/>
+				<page ID='mysqli_fetch_row' icon='2' key='%1%.'/>
+				<page ID='mysqli_fetch' icon='2' key='%1%.'/>
+				<page ID='mysqli_field_count' icon='2' key='%1%.'/>
+				<page ID='mysqli_field_seek' icon='2' key='%1%.'/>
+				<page ID='mysqli_field_tell' icon='2' key='%1%.'/>
+				<page ID='mysqli_free_result' icon='2' key='%1%.'/>
+				<page ID='mysqli_get_client_info' icon='2' key='%1%.'/>
+				<page ID='mysqli_get_client_version' icon='2' key='%1%.'/>
+				<page ID='mysqli_get_host_info' icon='2' key='%1%.'/>
+				<page ID='mysqli_get_metadata' icon='2' key='%1%.'/>
+				<page ID='mysqli_get_proto_info' icon='2' key='%1%.'/>
+				<page ID='mysqli_get_server_info' icon='2' key='%1%.'/>
+				<page ID='mysqli_get_server_version' icon='2' key='%1%.'/>
+				<page ID='mysqli_info' icon='2' key='%1%.'/>
+				<page ID='mysqli_init' icon='2' key='%1%.'/>
+				<page ID='mysqli_insert_id' icon='2' key='%1%.'/>
+				<page ID='mysqli_kill' icon='2' key='%1%.'/>
+				<page ID='mysqli_master_query' icon='2' key='%1%.'/>
+				<page ID='mysqli_more_results' icon='2' key='%1%.'/>
+				<page ID='mysqli_multi_query' icon='2' key='%1%.'/>
+				<page ID='mysqli_next_result' icon='2' key='%1%.'/>
+				<page ID='mysqli_num_fields' icon='2' key='%1%.'/>
+				<page ID='mysqli_num_rows' icon='2' key='%1%.'/>
+				<page ID='mysqli_options' icon='2' key='%1%.'/>
+				<page ID='mysqli_param_count' icon='2' key='%1%.'/>
+				<page ID='mysqli_ping' icon='2' key='%1%.'/>
+				<page ID='mysqli_prepare' icon='2' key='%1%.'/>
+				<page ID='mysqli_query' icon='2' key='%1%.'/>
+				<page ID='mysqli_real_connect' icon='2' key='%1%.'/>
+				<page ID='mysqli_real_escape_string' icon='2' key='%1%.'/>
+				<page ID='mysqli_real_query' icon='2' key='%1%.'/>
+				<page ID='mysqli_report' icon='2' key='%1%.'/>
+				<page ID='mysqli_rollback' icon='2' key='%1%.'/>
+				<page ID='mysqli_rpl_parse_enabled' icon='2' key='%1%.'/>
+				<page ID='mysqli_rpl_probe' icon='2' key='%1%.'/>
+				<page ID='mysqli_rpl_query_type' icon='2' key='%1%.'/>
+				<page ID='mysqli_select_db' icon='2' key='%1%.'/>
+				<page ID='mysqli_send_long_data' icon='2' key='%1%.'/>
+				<page ID='mysqli_send_query' icon='2' key='%1%.'/>
+				<page ID='mysqli_server_end' icon='2' key='%1%.'/>
+				<page ID='mysqli_server_init' icon='2' key='%1%.'/>
+				<page ID='mysqli_set_opt' icon='2' key='%1%.'/>
+				<page ID='mysqli_sqlstate' icon='2' key='%1%.'/>
+				<page ID='mysqli_ssl_set' icon='2' key='%1%.'/>
+				<page ID='mysqli_stat' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_affected_rows' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_bind_param' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_bind_result' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_close' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_data_seek' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_errno' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_error' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_execute' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_fetch' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_free_result' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_init' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_num_rows' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_param_count' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_prepare' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_reset' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_result_metadata' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_send_long_data' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_sqlstate' icon='2' key='%1%.'/>
+				<page ID='mysqli_stmt_store_result' icon='2' key='%1%.'/>
+				<page ID='mysqli_store_result' icon='2' key='%1%.'/>
+				<page ID='mysqli_thread_id' icon='2' key='%1%.'/>
+				<page ID='mysqli_thread_safe' icon='2' key='%1%.'/>
+				<page ID='mysqli_use_result' icon='2' key='%1%.'/>
+				<page ID='mysqli_warning_count' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Ncurses Terminal Screen Control Functions' icon='1' key='ncurses.' off='/%lang%/function.'>
+				<page ID='ncurses_addch' icon='2' key='%1%.'/>
+				<page ID='ncurses_addchnstr' icon='2' key='%1%.'/>
+				<page ID='ncurses_addchstr' icon='2' key='%1%.'/>
+				<page ID='ncurses_addnstr' icon='2' key='%1%.'/>
+				<page ID='ncurses_addstr' icon='2' key='%1%.'/>
+				<page ID='ncurses_assume_default_colors' icon='2' key='%1%.'/>
+				<page ID='ncurses_attroff' icon='2' key='%1%.'/>
+				<page ID='ncurses_attron' icon='2' key='%1%.'/>
+				<page ID='ncurses_attrset' icon='2' key='%1%.'/>
+				<page ID='ncurses_baudrate' icon='2' key='%1%.'/>
+				<page ID='ncurses_beep' icon='2' key='%1%.'/>
+				<page ID='ncurses_bkgd' icon='2' key='%1%.'/>
+				<page ID='ncurses_bkgdset' icon='2' key='%1%.'/>
+				<page ID='ncurses_border' icon='2' key='%1%.'/>
+				<page ID='ncurses_bottom_panel' icon='2' key='%1%.'/>
+				<page ID='ncurses_can_change_color' icon='2' key='%1%.'/>
+				<page ID='ncurses_cbreak' icon='2' key='%1%.'/>
+				<page ID='ncurses_clear' icon='2' key='%1%.'/>
+				<page ID='ncurses_clrtobot' icon='2' key='%1%.'/>
+				<page ID='ncurses_clrtoeol' icon='2' key='%1%.'/>
+				<page ID='ncurses_color_content' icon='2' key='%1%.'/>
+				<page ID='ncurses_color_set' icon='2' key='%1%.'/>
+				<page ID='ncurses_curs_set' icon='2' key='%1%.'/>
+				<page ID='ncurses_def_prog_mode' icon='2' key='%1%.'/>
+				<page ID='ncurses_def_shell_mode' icon='2' key='%1%.'/>
+				<page ID='ncurses_define_key' icon='2' key='%1%.'/>
+				<page ID='ncurses_del_panel' icon='2' key='%1%.'/>
+				<page ID='ncurses_delay_output' icon='2' key='%1%.'/>
+				<page ID='ncurses_delch' icon='2' key='%1%.'/>
+				<page ID='ncurses_deleteln' icon='2' key='%1%.'/>
+				<page ID='ncurses_delwin' icon='2' key='%1%.'/>
+				<page ID='ncurses_doupdate' icon='2' key='%1%.'/>
+				<page ID='ncurses_echo' icon='2' key='%1%.'/>
+				<page ID='ncurses_echochar' icon='2' key='%1%.'/>
+				<page ID='ncurses_end' icon='2' key='%1%.'/>
+				<page ID='ncurses_erase' icon='2' key='%1%.'/>
+				<page ID='ncurses_erasechar' icon='2' key='%1%.'/>
+				<page ID='ncurses_filter' icon='2' key='%1%.'/>
+				<page ID='ncurses_flash' icon='2' key='%1%.'/>
+				<page ID='ncurses_flushinp' icon='2' key='%1%.'/>
+				<page ID='ncurses_getch' icon='2' key='%1%.'/>
+				<page ID='ncurses_getmaxyx' icon='2' key='%1%.'/>ncurses_getch
+				<page ID='ncurses_getmouse' icon='2' key='%1%.'/>
+				<page ID='ncurses_getyx' icon='2' key='%1%.'/>
+				<page ID='ncurses_halfdelay' icon='2' key='%1%.'/>
+				<page ID='ncurses_has_colors' icon='2' key='%1%.'/>
+				<page ID='ncurses_has_ic' icon='2' key='%1%.'/>
+				<page ID='ncurses_has_il' icon='2' key='%1%.'/>
+				<page ID='ncurses_has_key' icon='2' key='%1%.'/>
+				<page ID='ncurses_hide_panel' icon='2' key='%1%.'/>
+				<page ID='ncurses_hline' icon='2' key='%1%.'/>
+				<page ID='ncurses_inch' icon='2' key='%1%.'/>
+				<page ID='ncurses_init_color' icon='2' key='%1%.'/>
+				<page ID='ncurses_init_pair' icon='2' key='%1%.'/>
+				<page ID='ncurses_init' icon='2' key='%1%.'/>
+				<page ID='ncurses_insch' icon='2' key='%1%.'/>
+				<page ID='ncurses_insdelln' icon='2' key='%1%.'/>
+				<page ID='ncurses_insertln' icon='2' key='%1%.'/>
+				<page ID='ncurses_insstr' icon='2' key='%1%.'/>
+				<page ID='ncurses_instr' icon='2' key='%1%.'/>
+				<page ID='ncurses_isendwin' icon='2' key='%1%.'/>
+				<page ID='ncurses_keyok' icon='2' key='%1%.'/>
+				<page ID='ncurses_keypad' icon='2' key='%1%.'/>
+				<page ID='ncurses_killchar' icon='2' key='%1%.'/>
+				<page ID='ncurses_longname' icon='2' key='%1%.'/>
+				<page ID='ncurses_meta' icon='2' key='%1%.'/>
+				<page ID='ncurses_mouse_trafo' icon='2' key='%1%.'/>
+				<page ID='ncurses_mouseinterval' icon='2' key='%1%.'/>
+				<page ID='ncurses_mousemask' icon='2' key='%1%.'/>
+				<page ID='ncurses_move_panel' icon='2' key='%1%.'/>
+				<page ID='ncurses_move' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvaddch' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvaddchnstr' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvaddchstr' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvaddnstr' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvaddstr' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvcur' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvdelch' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvgetch' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvhline' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvinch' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvvline' icon='2' key='%1%.'/>
+				<page ID='ncurses_mvwaddstr' icon='2' key='%1%.'/>
+				<page ID='ncurses_napms' icon='2' key='%1%.'/>
+				<page ID='ncurses_new_panel' icon='2' key='%1%.'/>
+				<page ID='ncurses_newpad' icon='2' key='%1%.'/>
+				<page ID='ncurses_newwin' icon='2' key='%1%.'/>
+				<page ID='ncurses_nl' icon='2' key='%1%.'/>
+				<page ID='ncurses_nocbreak' icon='2' key='%1%.'/>
+				<page ID='ncurses_noecho' icon='2' key='%1%.'/>
+				<page ID='ncurses_nonl' icon='2' key='%1%.'/>
+				<page ID='ncurses_noqiflush' icon='2' key='%1%.'/>
+				<page ID='ncurses_noraw' icon='2' key='%1%.'/>
+				<page ID='ncurses_pair_content' icon='2' key='%1%.'/>
+				<page ID='ncurses_panel_above' icon='2' key='%1%.'/>
+				<page ID='ncurses_panel_below' icon='2' key='%1%.'/>
+				<page ID='ncurses_panel_window' icon='2' key='%1%.'/>
+				<page ID='ncurses_pnoutrefresh' icon='2' key='%1%.'/>
+				<page ID='ncurses_prefresh' icon='2' key='%1%.'/>
+				<page ID='ncurses_putp' icon='2' key='%1%.'/>
+				<page ID='ncurses_qiflush' icon='2' key='%1%.'/>
+				<page ID='ncurses_raw' icon='2' key='%1%.'/>
+				<page ID='ncurses_refresh' icon='2' key='%1%.'/>
+				<page ID='ncurses_replace_panel' icon='2' key='%1%.'/>
+				<page ID='ncurses_reset_prog_mode' icon='2' key='%1%.'/>
+				<page ID='ncurses_reset_shell_mode' icon='2' key='%1%.'/>
+				<page ID='ncurses_resetty' icon='2' key='%1%.'/>
+				<page ID='ncurses_savetty' icon='2' key='%1%.'/>
+				<page ID='ncurses_scr_dump' icon='2' key='%1%.'/>
+				<page ID='ncurses_scr_init' icon='2' key='%1%.'/>
+				<page ID='ncurses_scr_restore' icon='2' key='%1%.'/>
+				<page ID='ncurses_scr_set' icon='2' key='%1%.'/>
+				<page ID='ncurses_scrl' icon='2' key='%1%.'/>
+				<page ID='ncurses_show_panel' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_attr' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_attroff' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_attron' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_attrset' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_clear' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_color' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_init' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_noutrefresh' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_refresh' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_restore' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_set' icon='2' key='%1%.'/>
+				<page ID='ncurses_slk_touch' icon='2' key='%1%.'/>
+				<page ID='ncurses_standend' icon='2' key='%1%.'/>
+				<page ID='ncurses_standout' icon='2' key='%1%.'/>
+				<page ID='ncurses_start_color' icon='2' key='%1%.'/>
+				<page ID='ncurses_termattrs' icon='2' key='%1%.'/>
+				<page ID='ncurses_termname' icon='2' key='%1%.'/>
+				<page ID='ncurses_timeout' icon='2' key='%1%.'/>
+				<page ID='ncurses_top_panel' icon='2' key='%1%.'/>
+				<page ID='ncurses_typeahead' icon='2' key='%1%.'/>
+				<page ID='ncurses_ungetch' icon='2' key='%1%.'/>
+				<page ID='ncurses_ungetmouse' icon='2' key='%1%.'/>
+				<page ID='ncurses_update_panels' icon='2' key='%1%.'/>
+				<page ID='ncurses_use_default_colors' icon='2' key='%1%.'/>
+				<page ID='ncurses_use_env' icon='2' key='%1%.'/>
+				<page ID='ncurses_use_extended_names' icon='2' key='%1%.'/>
+				<page ID='ncurses_vidattr' icon='2' key='%1%.'/>
+				<page ID='ncurses_vline' icon='2' key='%1%.'/>
+				<page ID='ncurses_waddch' icon='2' key='%1%.'/>
+				<page ID='ncurses_waddstr' icon='2' key='%1%.'/>
+				<page ID='ncurses_wattroff' icon='2' key='%1%.'/>
+				<page ID='ncurses_wattron' icon='2' key='%1%.'/>
+				<page ID='ncurses_wattrset' icon='2' key='%1%.'/>
+				<page ID='ncurses_wborder' icon='2' key='%1%.'/>
+				<page ID='ncurses_wclear' icon='2' key='%1%.'/>
+				<page ID='ncurses_wcolor_set' icon='2' key='%1%.'/>
+				<page ID='ncurses_werase' icon='2' key='%1%.'/>
+				<page ID='ncurses_wgetch' icon='2' key='%1%.'/>
+				<page ID='ncurses_whline' icon='2' key='%1%.'/>
+				<page ID='ncurses_wmouse_trafo' icon='2' key='%1%.'/>
+				<page ID='ncurses_wmove' icon='2' key='%1%.'/>
+				<page ID='ncurses_wnoutrefresh' icon='2' key='%1%.'/>
+				<page ID='ncurses_wrefresh' icon='2' key='%1%.'/>
+				<page ID='ncurses_wstandend' icon='2' key='%1%.'/>
+				<page ID='ncurses_wstandout' icon='2' key='%1%.'/>
+				<page ID='ncurses_wvline' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Network Functions' icon='1' key='network.' off='/%lang%/function.'>
+				<page ID='checkdnsrr' icon='2' key='%0%.'/>
+				<page ID='closelog' icon='2' key='%0%.'/>
+				<page ID='debugger_off' icon='2' key='%1%.'/>
+				<page ID='debugger_on' icon='2' key='%1%.'/>
+				<page ID='define_syslog_variables' icon='2' key='%1%.'/>
+				<page ID='dns_check_record' icon='2' key='%1%.'/>
+				<page ID='dns_get_mx' icon='2' key='%1%.'/>
+				<page ID='dns_get_record' icon='2' key='%1%.'/>
+				<page ID='fsockopen' icon='2' key='%0%.'/>
+				<page ID='gethostbyaddr' icon='2' key='%0%.'/>
+				<page ID='gethostbyname' icon='2' key='%0%.'/>
+				<page ID='gethostbynamel' icon='2' key='%0%.'/>
+				<page ID='getmxrr' icon='2' key='%0%.'/>
+				<page ID='getprotobyname' icon='2' key='%0%.'/>
+				<page ID='getprotobynumber' icon='2' key='%0%.'/>
+				<page ID='getservbyname' icon='2' key='%0%.'/>
+				<page ID='getservbyport' icon='2' key='%0%.'/>
+				<page ID='inet_ntop' icon='2' key='%1%.'/>
+				<page ID='inet_pton' icon='2' key='%1%.'/>
+				<page ID='ip2long' icon='2' key='%0%.'/>
+				<page ID='long2ip' icon='2' key='%0%.'/>
+				<page ID='openlog' icon='2' key='%0%.'/>
+				<page ID='pfsockopen' icon='2' key='%0%.'/>
+				<page ID='socket_get_status' icon='2' key='%1%.'/>
+				<page ID='socket_set_blocking' icon='2' key='%1%.'/>
+				<page ID='socket_set_timeout' icon='2' key='%1%.'/>
+				<page ID='syslog' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='YP/NIS Functions' icon='1' key='nis.' off='/%lang%/function.'>
+				<page ID='yp_all' icon='2' key='%1%.'/>
+				<page ID='yp_cat' icon='2' key='%1%.'/>
+				<page ID='yp_err_string' icon='2' key='%1%.'/>
+				<page ID='yp_errno' icon='2' key='%1%.'/>
+				<page ID='yp_first' icon='2' key='%1%.'/>
+				<page ID='yp_get_default_domain' icon='2' key='%1%.'/>
+				<page ID='yp_master' icon='2' key='%1%.'/>
+				<page ID='yp_match' icon='2' key='%1%.'/>
+				<page ID='yp_next' icon='2' key='%1%.'/>
+				<page ID='yp_order' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Lotus Notes Functions' icon='1' key='notes.' off='/%lang%/function.'>
+				<page ID='notes_body' icon='2' key='%1%.'/>
+				<page ID='notes_copy_db' icon='2' key='%1%.'/>
+				<page ID='notes_create_db' icon='2' key='%1%.'/>
+				<page ID='notes_create_note' icon='2' key='%1%.'/>
+				<page ID='notes_drop_db' icon='2' key='%1%.'/>
+				<page ID='notes_find_note' icon='2' key='%1%.'/>
+				<page ID='notes_header_info' icon='2' key='%1%.'/>
+				<page ID='notes_list_msgs' icon='2' key='%1%.'/>
+				<page ID='notes_mark_read' icon='2' key='%1%.'/>
+				<page ID='notes_mark_unread' icon='2' key='%1%.'/>
+				<page ID='notes_nav_create' icon='2' key='%1%.'/>
+				<page ID='notes_search' icon='2' key='%1%.'/>
+				<page ID='notes_unread' icon='2' key='%1%.'/>
+				<page ID='notes_version' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='NSAPI-specific Functions' icon='1' key='nsapi.' off='/%lang%/function.'>
+				<page ID='nsapi_request_headers' icon='2' key='%1%.'/>
+				<page ID='nsapi_response_headers' icon='2' key='%1%.'/>
+				<page ID='nsapi_virtual' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='Object Aggregation/Composition Functions' icon='1' key='objaggregation.' off='/%lang%/function.'>
+				<page ID='aggregate_info' icon='2' key='%1%.'/>
+				<page ID='aggregate_methods_by_list' icon='2' key='%1%.'/>
+				<page ID='aggregate_methods_by_regexp' icon='2' key='%1%.'/>
+				<page ID='aggregate_methods' icon='2' key='%1%.'/>
+				<page ID='aggregate_properties_by_list' icon='2' key='%1%.'/>
+				<page ID='aggregate_properties_by_regexp' icon='2' key='%1%.'/>
+				<page ID='aggregate' icon='2' key='%0%.'/>
+				<page ID='aggregation_info' icon='2' key='%1%.'/>
+				<page ID='deaggregate' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='Oracle-8 Functions' icon='1' key='oci8.' off='/%lang%/function.'>
+				<page ID='oci_bind_by_name' icon='2' key='%1%.'/>
+				<page ID='oci_cancel' icon='2' key='%1%.'/>
+				<page ID='oci_close' icon='2' key='%1%.'/>
+				<page ID='OCI-Collection->append' icon='2' key='oci-collection-append.'/>
+				<page ID='OCI-Collection->assign' icon='2' key='oci-collection-assign.'/>
+				<page ID='OCI-Collection->assignElem' icon='2' key='oci-collection-element-assign.'/>
+				<page ID='OCI-Collection->getElem' icon='2' key='oci-collection-element-get.'/>
+				<page ID='OCI-Collection->free' icon='2' key='oci-collection-free.'/>
+				<page ID='OCI-Collection->max' icon='2' key='oci-collection-max.'/>
+				<page ID='OCI-Collection->size' icon='2' key='oci-collection-size.'/>
+				<page ID='OCI-Collection->trim' icon='2' key='oci-collection-trim.'/>
+				<page ID='oci_commit' icon='2' key='%1%.'/>
+				<page ID='oci_connect' icon='2' key='%1%.'/>
+				<page ID='oci_define_by_name' icon='2' key='%1%.'/>
+				<page ID='oci_error' icon='2' key='%1%.'/>
+				<page ID='oci_execute' icon='2' key='%1%.'/>
+				<page ID='oci_fetch_all' icon='2' key='%1%.'/>
+				<page ID='oci_fetch_array' icon='2' key='%1%.'/>
+				<page ID='oci_fetch_assoc' icon='2' key='%1%.'/>
+				<page ID='oci_fetch_object' icon='2' key='%1%.'/>
+				<page ID='oci_fetch_row' icon='2' key='%1%.'/>
+				<page ID='oci_fetch' icon='2' key='%1%.'/>
+				<page ID='oci_field_is_null' icon='2' key='%1%.'/>
+				<page ID='oci_field_name' icon='2' key='%1%.'/>
+				<page ID='oci_field_precision' icon='2' key='%1%.'/>
+				<page ID='oci_field_scale' icon='2' key='%1%.'/>
+				<page ID='oci_field_size' icon='2' key='%1%.'/>
+				<page ID='oci_field_type_raw' icon='2' key='%1%.'/>
+				<page ID='oci_field_type' icon='2' key='%1%.'/>
+				<page ID='descriptor->free' icon='2' key='%1%.'/>
+				<page ID='oci_internal_debug' icon='2' key='%1%.'/>
+				<page ID='OCI-Lob->append' icon='2' key='oci-lob-append.'/>
+				<page ID='OCI-Lob->close' icon='2' key='oci-lob-close.'/>
+				<page ID='OCI-Lob->copy' icon='2' key='oci-lob-copy.'/>
+				<page ID='OCI-Lob->eof' icon='2' key='oci-lob-eof.'/>
+				<page ID='OCI-Lob->erase' icon='2' key='oci-lob-erase.'/>
+				<page ID='OCI-Lob->export' icon='2' key='oci-lob-export.'/>
+				<page ID='OCI-Lob->flush' icon='2' key='oci-lob-flush.'/>
+				<page ID='OCI-Lob->import' icon='2' key='oci-lob-import.'/>
+				<page ID='OCI-Lob->getBuffering' icon='2' key='oci-lob-getbuffering.'/>
+				<page ID='OCI-Lob->is_equal' icon='2' key='oci-lob-is-equal.'/>
+				<page ID='OCI-Lob->load' icon='2' key='oci-lob-load.'/>
+				<page ID='OCI-Lob->read' icon='2' key='oci-lob-read.'/>
+				<page ID='OCI-Lob->rewind' icon='2' key='oci-lob-rewind.'/>
+				<page ID='OCI-Lob->save' icon='2' key='oci-lob-save.'/>
+				<page ID='OCI-Lob->seek' icon='2' key='oci-lob-seek.'/>
+				<page ID='OCI-Lob->setBuffering' icon='2' key='oci-lob-setbuffering.'/>
+				<page ID='OCI-Lob->size' icon='2' key='oci-lob-size.'/>
+				<page ID='OCI-Lob->tell' icon='2' key='oci-lob-tell.'/>
+				<page ID='OCI-Lob->truncate' icon='2' key='oci-lob-truncate.'/>
+				<page ID='OCI-Lob->write' icon='2' key='oci-lob-write.'/>
+				<page ID='oci_new_collection' icon='2' key='%1%.'/>
+				<page ID='oci_new_connect' icon='2' key='%1%.'/>
+				<page ID='oci_new_cursor' icon='2' key='%1%.'/>
+				<page ID='oci_new_descriptor' icon='2' key='%1%.'/>
+				<page ID='oci_num_fields' icon='2' key='%1%.'/>
+				<page ID='oci_num_rows' icon='2' key='%1%.'/>
+				<page ID='oci_parse' icon='2' key='%1%.'/>
+				<page ID='oci_password_change' icon='2' key='%1%.'/>
+				<page ID='oci_pconnect' icon='2' key='%1%.'/>
+				<page ID='oci_result' icon='2' key='%1%.'/>
+				<page ID='oci_rollback' icon='2' key='%1%.'/>
+				<page ID='oci_server_version' icon='2' key='%1%.'/>
+				<page ID='oci_set_prefetch' icon='2' key='%1%.'/>
+				<page ID='oci_statement_type' icon='2' key='%1%.'/>
+				<page ID='ocibindbyname' icon='2' key='%0%.'/>
+				<page ID='ocicancel' icon='2' key='%0%.'/>
+				<page ID='ocicloselob' icon='2' key='%0%.'/>
+				<page ID='ocicollappend' icon='2' key='%0%.'/>
+				<page ID='ocicollassign' icon='2' key='%0%.'/>
+				<page ID='ocicollassignelem' icon='2' key='%0%.'/>
+				<page ID='ocicollgetelem' icon='2' key='%0%.'/>
+				<page ID='ocicollmax' icon='2' key='%0%.'/>
+				<page ID='ocicollsize' icon='2' key='%0%.'/>
+				<page ID='ocicolltrim' icon='2' key='%0%.'/>
+				<page ID='ocicolumnisnull' icon='2' key='%0%.'/>
+				<page ID='ocicolumnname' icon='2' key='%0%.'/>
+				<page ID='ocicolumnprecision' icon='2' key='%0%.'/>
+				<page ID='ocicolumnscale' icon='2' key='%0%.'/>
+				<page ID='ocicolumnsize' icon='2' key='%0%.'/>
+				<page ID='ocicolumntype' icon='2' key='%0%.'/>
+				<page ID='ocicolumntyperaw' icon='2' key='%0%.'/>
+				<page ID='ocicommit' icon='2' key='%0%.'/>
+				<page ID='ocidefinebyname' icon='2' key='%0%.'/>
+				<page ID='ocierror' icon='2' key='%0%.'/>
+				<page ID='ociexecute' icon='2' key='%0%.'/>
+				<page ID='ocifetch' icon='2' key='%0%.'/>
+				<page ID='ocifetchinto' icon='2' key='%0%.'/>
+				<page ID='ocifetchstatement' icon='2' key='%0%.'/>
+				<page ID='ocifreecollection' icon='2' key='%0%.'/>
+				<page ID='ocifreecursor' icon='2' key='%0%.'/>
+				<page ID='ocifreedesc' icon='2' key='%0%.'/>
+				<page ID='ocifreestatement' icon='2' key='%0%.'/>
+				<page ID='ociinternaldebug' icon='2' key='%0%.'/>
+				<page ID='ociloadlob' icon='2' key='%0%.'/>
+				<page ID='ocilogoff' icon='2' key='%0%.'/>
+				<page ID='ocilogon' icon='2' key='%0%.'/>
+				<page ID='ocinewcollection' icon='2' key='%0%.'/>
+				<page ID='ocinewcursor' icon='2' key='%0%.'/>
+				<page ID='ocinewdescriptor' icon='2' key='%0%.'/>
+				<page ID='ocinlogon' icon='2' key='%0%.'/>
+				<page ID='ocinumcols' icon='2' key='%0%.'/>
+				<page ID='ociparse' icon='2' key='%0%.'/>
+				<page ID='ociplogon' icon='2' key='%0%.'/>
+				<page ID='ociresult' icon='2' key='%0%.'/>
+				<page ID='ocirollback' icon='2' key='%0%.'/>
+				<page ID='ocirowcount' icon='2' key='%0%.'/>
+				<page ID='ocisavelob' icon='2' key='%0%.'/>
+				<page ID='ocisavelobfile' icon='2' key='%0%.'/>
+				<page ID='ociserverversion' icon='2' key='%0%.'/>
+				<page ID='ocisetprefetch' icon='2' key='%0%.'/>
+				<page ID='ocistatementtype' icon='2' key='%0%.'/>
+				<page ID='ociwritelobtofile' icon='2' key='%0%.'/>
+				<page ID='ociwritetemporarylob' icon='2' key='%0%.'/>
+			</chapter>
+			<chapter ID='OpenAL Audio Bindings' icon='1' key='openal.' off='/%lang%/function.'>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+				<page ID='mi' icon='2' key='%1%.'/>
+			</chapter>
+			<chapter ID='OpenSSL Functions' icon='1' key='openssl.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Oracle Functions [deprecated]' icon='1' key='oracle.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Output Control Functions' icon='1' key='outcontrol.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Object property and method call overloading' icon='1' key='overload.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Ovrimos SQL Functions' icon='1' key='ovrimos.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Parsekit Functions' icon='1' key='parsekit.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Process Control Functions' icon='1' key='pcntl.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Regular Expression Functions (Perl-Compatible)' icon='1' key='pcre.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='PDF Functions' icon='1' key='pdf.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='PDO Functions' icon='1' key='pdo.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Verisign Payflow Pro Functions' icon='1' key='pfpro.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='PostgreSQL Functions' icon='1' key='pgsql.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='POSIX Functions' icon='1' key='posix.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Printer Functions' icon='1' key='printer.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Pspell Functions' icon='1' key='pspell.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='qtdom Functions' icon='1' key='qtdom.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Rar Functions' icon='1' key='rar.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='GNU Readline' icon='1' key='readline.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='GNU Recode Functions' icon='1' key='recode.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Regular Expression Functions (POSIX Extended)' icon='1' key='regex.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Semaphore, Shared Memory and IPC Functions' icon='1' key='sem.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='SESAM Database Functions' icon='1' key='sesam.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Session Handling Functions' icon='1' key='session.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Shared Memory Functions' icon='1' key='shmop.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='SimpleXML functions' icon='1' key='simplexml.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='SNMP Functions' icon='1' key='snmp.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='SOAP Functions' icon='1' key='soap.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Socket Functions' icon='1' key='sockets.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Standard PHP Library (SPL) Functions' icon='1' key='spl.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='SQLite Functions' icon='1' key='sqlite.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Secure Shell2 Functions' icon='1' key='ssh2.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Stream Functions' icon='1' key='stream.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='String Functions' icon='1' key='strings.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Shockwave Flash Functions' icon='1' key='swf.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Sybase Functions' icon='1' key='sybase.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='TCP Wrappers Functions' icon='1' key='tcpwrap.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Tidy Functions' icon='1' key='tidy.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Tokenizer Functions' icon='1' key='tokenizer.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='ODBC Functions (Unified)' icon='1' key='uodbc.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='URL Functions' icon='1' key='url.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Variable Handling Functions' icon='1' key='var.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='vpopmail Functions' icon='1' key='vpopmail.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='W32api Functions' icon='1' key='w32api.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='WDDX Functions' icon='1' key='wddx.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='xattr Functions' icon='1' key='xattr.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='xdiff Functions' icon='1' key='xdiff.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='XML Parser Functions' icon='1' key='xml.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='XML-RPC Functions' icon='1' key='xmlrpc.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='XSL functions' icon='1' key='xsl.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='XSLT functions' icon='1' key='xslt.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='YAZ Functions' icon='1' key='yaz.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Zip File Functions (Read Only Access)' icon='1' key='zip.' off='/%lang%/function.'>
+			</chapter>
+			<chapter ID='Zlib Compression Functions' icon='1' key='zlib.' off='/%lang%/function.'>
+			</chapter>
+		</chapter>
+		<chapter ID='Z end API' icon='1' key='/%lang%/zend.'>
+		</chapter>
+		<chapter ID='PHP API : Interfaces for extension writers' icon='1' key=''>
+		</chapter>
+		<chapter ID='FAQ: Frequently Asked Questions' icon='1' key='/%lang%/faq.'>
+		</chapter>
+		<chapter ID='Appendixes' icon='1' key='/%lang%/appendixes.'>
+		</chapter>
+		<leaf ID='Copyright' icon='3' key='/%lang%/copyright.'/>
+	</book>
+<!-- _ -->
+	<book ID='ADOdb' icon ='1' key='' uri='http://adodb.sourceforge.net/#docs'>
+		<chapter ID='ADOdb Manual' icon='1' key='' off='/code.initialization.'>
+			<leaf ID='ADOdb Library for PHP' icon='2' key='/index.'/>
+			<leaf ID='Introduction' icon='2' key='/introduction.'/>
+			<leaf ID='Unique Features of ADOdb' icon='2' key='/unique.features.'/>
+			<leaf ID='How People are using ADOdb' icon='2' key='/how.people.are.using.adodb.'/>
+			<leaf ID='Feature Requests and Bug Reports' icon='2' key='/feature.requests.and.bug.reports.'/>
+			<leaf ID='Installation Guide' icon='2' key='/installation.guide.'/>
+			<leaf ID='Code Initialization and Connecting to Databases' icon='2' key='html'/>
+			<leaf ID='High Speed ADOdb' icon='2' key='html#speed'/>
+			<leaf ID='Hacking ADOdb Safely' icon='2' key='html#hack'/>
+			<leaf ID='PHP5 Features' icon='2' key='html#php5'/>
+			<leaf ID='Databases Supported' icon='2' key='/supported.databases.'/>
+			<chapter ID='Tutorials' icon='1' key='/tutorial.' off='/tutorial.'>
+				<leaf ID='Select Statement' icon='2' key='select.'/>
+				<leaf ID='Advanced Select with Field Objects' icon='2' key='advanced.select.with.field.objects.'/>
+				<leaf ID='Inserting' icon='2' key='inserting.'/>
+				<leaf ID='Debugging' icon='2' key='debugging.'/>
+				<leaf ID='MySQL and Menus' icon='2' key='mysql.and.menus.'/>
+				<leaf ID='Connecting to Multiple Databases at once' icon='2' key='connecting.to.multiple.databases.'/>
+				<leaf ID='Generating Update and Insert SQL' icon='2' key='generating.update.and.insert.sql.'/>
+				<leaf ID='Implementing Scrolling with Next and Previous' icon='2' key='implementing.scrolling.with.next.and.previous.'/>
+				<leaf ID='Exporting in CSV or Tab-Delimited Format' icon='2' key='exporting.in.csv.or.tab.delimited.format.'/>
+				<leaf ID='Recordset Filters' icon='2' key='recordset.filters.'/>
+				<leaf ID='Smart Transactions' icon='2' key='smart.transactions.'/>
+			</chapter>
+			<leaf ID='Using Custom Error Handlers and PEAR_Error' icon='2' key='/using.custom.error.handlers.and.pear_error.'/>
+			<leaf ID='Data Source Names' icon='2' key='/data.source.names.'/>
+			<leaf ID='Caching of Recordsets' icon='2' key='/caching.of.recordsets.'/>
+			<leaf ID='Pivot Tables' icon='2' key='/pivot.tables.'/>
+			<chapter ID='Class Reference' icon='1' key='/reference.'>
+				<chapter ID='Variables' icon='1' key='' off='/reference.varibles.'>
+					<page ID='$ADODB_COUNTRECS' icon='2' key='adodb_countrecs.'/>
+					<page ID='$ADODB_CACHE_DIR' icon='2' key='adodb_cache_dir.'/>
+					<page ID='$ADODB_LANG' icon='2' key='adodb_lang.'/>
+					<page ID='$ADODB_ANSI_PADDING_OFF' icon='2' key='adodb_lang.'/>
+					<page ID='$ADODB_FETCH_MODE' icon='2' key='adodb_fetch_mode.'/>
+				</chapter>
+				<chapter ID='Constants' icon='1' key=''>
+					<page ID='ADODB_ASSOC_CASE' icon='2' key='/reference.constants.adodb_assoc_case.'/>
+				</chapter>
+				<chapter ID='ADOConnection' icon='1' key='/reference.functions.adoconnection.' off='/reference.functions.'>
+					<page ID='Connect' icon='2' key='connect.'/>
+					<page ID='PConnect' icon='2' key='pconnect.'/>
+					<page ID='NConnect' icon='2' key='nconnect.'/>
+					<page ID='Execute' icon='2' key='execute.'/>
+					<page ID='CacheExecute' icon='2' key='cacheexecute.'/>
+					<page ID='ExecuteCursor' icon='2' key='executecursor.'/>
+					<page ID='SelectLimit' icon='2' key='selectlimit.'/>
+					<page ID='CacheSelectLimit' icon='2' key='cacheselectlimite.'/>
+					<page ID='CacheFlush' icon='2' key='cacheflush.'/>
+					<page ID='Prepare' icon='2' key='prepare.'/>
+					<page ID='PrepareSP' icon='2' key='preparesp.'/>
+					<page ID='InParameter' icon='2' key='parameter.'/>
+					<page ID='GetOne' icon='2' key='getone.'/>
+					<page ID='StartTrans' icon='2' key='transactions.'/>
+					<page ID='CacheGetOne' icon='2' key='cachegetone.'/>
+					<page ID='GetRow' icon='2' key='getrow.'/>
+					<page ID='CacheGetRow' icon='2' key='cachegetrow.'/>
+					<page ID='GetAll' icon='2' key='getall.'/>
+					<page ID='CacheGetAll' icon='2' key='cachegetall.'/>
+					<page ID='GetCol' icon='2' key='getcol.'/>
+					<page ID='CacheGetCol' icon='2' key='cachegetcol.'/>
+					<page ID='Replace' icon='2' key='replace.'/>
+					<page ID='AutoExecute' icon='2' key='getupdatesql.html#autoexecute'/>
+					<page ID='GetUpdateSQL' icon='2' key='getupdatesql.html#getupdatesql'/>
+					<page ID='GetInsertSQL' icon='2' key='getinsertsql.'/>
+					<page ID='UpdateBlob' icon='2' key='updateblob.'/>
+					<page ID='UpdateClob' icon='2' key='updateclob.'/>
+					<page ID='UpdateBlobFile' icon='2' key='updateblobfile.'/>
+					<page ID='BlobEncode' icon='2' key='blobencode.'/>
+					<page ID='BlobDecode' icon='2' key='blobdecode.'/>
+					<page ID='PageExecute' icon='2' key='pageexecute.'/>
+					<page ID='CachePageExecute' icon='2' key='cachepageexecute.'/>
+					<page ID='Close' icon='2' key='close.'/>
+					<page ID='BeginTrans' icon='2' key='begintrans.'/>
+					<page ID='CommitTrans' icon='2' key='committrans.'/>
+					<page ID='RollbackTrans' icon='2' key='rollbacktrans.'/>
+					<page ID='SetFetchMode' icon='2' key='setfetchmode.'/>
+					<page ID='Concat' icon='2' key='concat.'/>
+					<page ID='qstr' icon='2' key='%0%.'/>
+					<page ID='Quote' icon='2' key='quote.'/>
+					<page ID='DBDate' icon='2' key='dbdate.'/>
+					<page ID='DBTimeStamp' icon='2' key='dbtimestamp.'/>
+					<page ID='UnixDate' icon='2' key='unixdate.'/>
+					<page ID='UnixTimeStamp' icon='2' key='unixtimestamp.'/>
+					<page ID='OffsetDate' icon='2' key='offsetdate.'/>
+					<page ID='SQLDate' icon='2' key='sqldate.'/>
+					<page ID='Affected_Rows' icon='2' key='affected_rows.'/>
+					<page ID='Insert_ID' icon='2' key='insert_id.'/>
+					<page ID='GenID' icon='2' key='genid.'/>
+					<page ID='CreateSequence' icon='2' key='createsequence.'/>
+					<page ID='DropSequence' icon='2' key='dropsequenced.'/>
+					<page ID='ErrorMsg' icon='2' key='errormsg.'/>
+					<page ID='ErrorNo' icon='2' key='errorno.'/>
+					<page ID='MetaDatabases' icon='2' key='metadatabases.'/>
+					<page ID='MetaTables' icon='2' key='metatables.'/>
+					<page ID='MetaColumns' icon='2' key='metacolumns.'/>
+					<page ID='MetaColumnNames' icon='2' key='metacolumnnames.'/>
+					<page ID='MetaPrimaryKeys' icon='2' key='metaprimarykeys.'/>
+					<page ID='ServerInfo' icon='2' key='serverinfo.'/>
+					<page ID='LogSQL' icon='2' key='fnexecute.and.fncacheexecute.properties.'/>
+					<page ID='fnExecute' icon='2' key='fnexecute.and.fncacheexecute.properties.'/>
+					<page ID='fnCacheExecute' icon='2' key='fnexecute.and.fncacheexecute.properties.'/>
+					<page ID='Bind' icon='2' key='bind.'/>
+					<page ID='BlankRecordSet' icon='2' key='blankrecordset.'/>
+				</chapter>
+				<chapter ID='ADORecordSet' icon='1' key='/reference.functions.adorecordset.' off='/reference.functions.'>
+					<page ID='FetchRow' icon='2' key='fetchrow.'/>
+					<page ID='FetchInto' icon='2' key='fetchinto.'/>
+					<page ID='FetchObject' icon='2' key='fetchobject.'/>
+					<page ID='FetchNextObject' icon='2' key='fetchnextobjects.'/>
+					<page ID='FetchObj' icon='2' key='fetchobj.'/>
+					<page ID='FetchNextObj' icon='2' key='fetchnextobj.'/>
+					<page ID='GetArray' icon='2' key='getarray.'/>
+					<page ID='GetRows' icon='2' key='getrows.'/>
+					<page ID='GetAssoc' icon='2' key='getassoc.'/>
+					<page ID='Move' icon='2' key='move.'/>
+					<page ID='MoveNext' icon='2' key='movenext.'/>
+					<page ID='MoveFirst' icon='2' key='movefirst.'/>
+					<page ID='MoveLast' icon='2' key='movelast.'/>
+					<page ID='AbsolutePosition' icon='2' key='absoluteposition.'/>
+					<page ID='CurrentRow' icon='2' key='currentrow.'/>
+					<page ID='AtFirstPage' icon='2' key='atfirstpage.'/>
+					<page ID='AtLastPage' icon='2' key='atlastpage.'/>
+					<page ID='AbsolutePage' icon='2' key='absolutepage.'/>
+					<page ID='GetMenu' icon='2' key='getmenu.'/>
+					<page ID='GetMenu2' icon='2' key='getmenu2.'/>
+					<page ID='UserDate' icon='2' key='userdate.'/>
+					<page ID='UserTimeStamp' icon='2' key='usertimestamp.'/>
+					<page ID='RecordCount' icon='2' key='recordcount.'/>
+					<page ID='PO_RecordCount' icon='2' key='po_recordcount.'/>
+					<page ID='NextRecordSet' icon='2' key='nextrecordset.'/>
+					<page ID='FieldCount' icon='2' key='fieldcount.'/>
+					<page ID='FetchField' icon='2' key='fetchfield.'/>
+					<page ID='MetaType' icon='2' key='metatype.'/>
+					<page ID='Close' icon='2' key='close2.'/>
+					<page ID='GetRowAssoc' icon='2' key='getrowassoc.'/>
+					<page ID='Fields' icon='2' key='fields.'/>
+				</chapter>
+				<page ID='rs2html' icon='2' key='/functions.rs2html.'/>
+				<leaf ID='Database Driver Guide' icon='2' key='/database.driver.guide.'/>
+				<leaf ID='ToDo' icon='2' key='/todo.'/>
+				<leaf ID='Change Log' icon='2' key='/change.log.'/>
+			</chapter>
+		</chapter>
+		<chapter ID='Data Dictionary Manual' icon='1' key='/docs-datadict.htm' off=''>
+			<leaf ID='Data Dictionary Manual' icon='2' key='/docs-datadict.htm' off=''/>
+		</chapter>
+		<chapter ID='Session Manual' icon='1' key='/docs-session.htm' off=''>
+			<leaf ID='Session Manual' icon='2' key='/docs-session.htm' off=''/>
+		</chapter>
+		<chapter ID='Performance Monitoring Manual' icon='1' key='/docs-perf.htm' off=''>
+			<leaf ID='Performance Monitoring Manual' icon='2' key='/docs-perf.htm' off=''/>
+		</chapter>
+		<chapter ID='Writing Portable SQL' icon='1' key='/tips_portable_sql.htm' off=''>
+			<leaf ID='Writing Portable SQL' icon='2' key='/tips_portable_sql.htm' off=''/>
+		</chapter>
+	</book>
+<!-- _ -->
+	<book ID='CSS' icon ='1' key='' uri='http://www.htmlhelp.com/distribution/'>
+	</book>
+<!-- _ -->
+	<book ID='PHPGTK' icon ='1' key='' uri='http://www.angelfire.com/home/andryxa/'>
+	</book>
+<!-- _ -->
+	<book ID='HTML' icon ='1' key='' uri='http://www.htmlhelp.com/distribution/'>
+		<leaf ID="What's New in HTML 4.0" icon='3' key='/new.' off=''/>
+		<leaf ID='Structure of an HTML 4.0 Document' icon='4' key='/structure.' off=''/>
+		<chapter ID='HTML 4.0 Elements' icon='1' key='/olist.' off=''>
+			<chapter ID='All Elements' icon='1' key='/alist.' off=''>
+				<page ID='A' icon='2' key='/special/a.' off=''/>
+				<page ID='ABBR' icon='2' key='/phrase/abbr.' off=''/>
+				<page ID='ACRONYM' icon='2' key='/phrase/acronym.' off=''/>
+				<page ID='ADDRESS' icon='2' key='/block/address.' off=''/>
+				<page ID='APPLET' icon='2' key='/special/applet.' off=''/>
+				<page ID='AREA' icon='2' key='/special/area.' off=''/>
+				<page ID='B' icon='2' key='/fontstyle/b.' off=''/>
+				<page ID='BASE' icon='2' key='/head/base.' off=''/>
+				<page ID='BASEFONT' icon='2' key='/special/basefont.' off=''/>
+				<page ID='BDO' icon='2' key='/special/bdo.' off=''/>
+				<page ID='BIG' icon='2' key='/fontstyle/big.' off=''/>
+				<page ID='BLOCKQUOTE' icon='2' key='/block/blockquote.' off=''/>
+				<page ID='BODY' icon='2' key='/html/body.' off=''/>
+				<page ID='BR' icon='2' key='/special/br.' off=''/>
+				<page ID='BUTTON' icon='2' key='/forms/button.' off=''/>
+				<page ID='CAPTION' icon='2' key='/tables/caption.' off=''/>
+				<page ID='CENTER' icon='2' key='/block/center.' off=''/>
+				<page ID='CITE' icon='2' key='/phrase/cite.' off=''/>
+				<page ID='CODE' icon='2' key='/phrase/code.' off=''/>
+				<page ID='COL' icon='2' key='/tables/col.' off=''/>
+				<page ID='COLGROUP' icon='2' key='/tables/colgroup.' off=''/>
+				<page ID='DD' icon='2' key='/lists/dd.' off=''/>
+				<page ID='DEL' icon='2' key='/phrase/del.' off=''/>
+				<page ID='DFN' icon='2' key='/phrase/dfn.' off=''/>
+				<page ID='DIR' icon='2' key='/lists/dir.' off=''/>
+				<page ID='DL' icon='2' key='/lists/dl.' off=''/>
+				<page ID='DT' icon='2' key='/lists/dt.' off=''/>
+				<page ID='EM' icon='2' key='/phrase/em.' off=''/>
+				<page ID='FIELDSET' icon='2' key='/forms/fieldset.' off=''/>
+				<page ID='FONT' icon='2' key='/special/font.' off=''/>
+				<page ID='FORM' icon='2' key='/forms/form.' off=''/>
+				<page ID='FRAME' icon='2' key='/frames/frame.' off=''/>
+				<page ID='FRAMESET' icon='2' key='/frames/frameset.' off=''/>
+				<page ID='H1' icon='2' key='/block/h1.' off=''/>
+				<page ID='H2' icon='2' key='/block/h2.' off=''/>
+				<page ID='H3' icon='2' key='/block/h3.' off=''/>
+				<page ID='H4' icon='2' key='/block/h4.' off=''/>
+				<page ID='H5' icon='2' key='/block/h5.' off=''/>
+				<page ID='H6' icon='2' key='/block/h6.' off=''/>
+				<page ID='HEAD' icon='2' key='/head/head.' off=''/>
+				<page ID='HR' icon='2' key='/block/hr.' off=''/>
+				<page ID='HTML' icon='2' key='/html/html.' off=''/>
+				<page ID='I' icon='2' key='/fontstyle/i.' off=''/>
+				<page ID='IFRAME' icon='2' key='/special/iframe.' off=''/>
+				<page ID='IMG' icon='2' key='/special/img.' off=''/>
+				<page ID='INPUT' icon='2' key='/forms/input.' off=''/>
+				<page ID='INS' icon='2' key='/phrase/ins.' off=''/>
+				<page ID='ISINDEX' icon='2' key='/block/isindex.' off=''/>
+				<page ID='KBD' icon='2' key='/phrase/kbd.' off=''/>
+				<page ID='LABEL' icon='2' key='/forms/label.' off=''/>
+				<page ID='LEGEND' icon='2' key='/forms/legend.' off=''/>
+				<page ID='LI' icon='2' key='/lists/li.' off=''/>
+				<page ID='LINK' icon='2' key='/head/link.' off=''/>
+				<page ID='MAP' icon='2' key='/special/map.' off=''/>
+				<page ID='MENU' icon='2' key='/lists/menu.' off=''/>
+				<page ID='META' icon='2' key='/head/meta.' off=''/>
+				<page ID='NOFRAMES' icon='2' key='/frames/noframes.' off=''/>
+				<page ID='NOSCRIPT' icon='2' key='/block/noscript.' off=''/>
+				<page ID='OBJECT' icon='2' key='/special/object.' off=''/>
+				<page ID='OL' icon='2' key='/lists/ol.' off=''/>
+				<page ID='OPTGROUP' icon='2' key='/forms/optgroup.' off=''/>
+				<page ID='OPTION' icon='2' key='/forms/option.' off=''/>
+				<page ID='P' icon='2' key='/block/p.' off=''/>
+				<page ID='PARAM' icon='2' key='/special/param.' off=''/>
+				<page ID='PRE' icon='2' key='/block/pre.' off=''/>
+				<page ID='Q' icon='2' key='/special/q.' off=''/>
+				<page ID='S' icon='2' key='/fontstyle/s.' off=''/>
+				<page ID='SAMP' icon='2' key='/phrase/samp.' off=''/>
+				<page ID='SCRIPT' icon='2' key='/special/script.' off=''/>
+				<page ID='SELECT' icon='2' key='/forms/select.' off=''/>
+				<page ID='SMALL' icon='2' key='/fontstyle/small.' off=''/>
+				<page ID='SPAN' icon='2' key='/special/span.' off=''/>
+				<page ID='STRIKE' icon='2' key='/fontstyle/strike.' off=''/>
+				<page ID='STRONG' icon='2' key='/phrase/strong.' off=''/>
+				<page ID='STYLE' icon='2' key='/head/style.' off=''/>
+				<page ID='SUB' icon='2' key='/special/sub.' off=''/>
+				<page ID='SUP' icon='2' key='/special/sup.' off=''/>
+				<page ID='TABLE' icon='2' key='/tables/table.' off=''/>
+				<page ID='TBODY' icon='2' key='/tables/tbody.' off=''/>
+				<page ID='TD' icon='2' key='/tables/td.' off=''/>
+				<page ID='TEXTAREA' icon='2' key='/forms/textarea.' off=''/>
+				<page ID='TFOOT' icon='2' key='/tables/tfoot.' off=''/>
+				<page ID='TH' icon='2' key='/tables/th.' off=''/>
+				<page ID='THEAD' icon='2' key='/tables/thead.' off=''/>
+				<page ID='TITLE' icon='2' key='/head/title.' off=''/>
+				<page ID='TR' icon='2' key='/tables/tr.' off=''/>
+				<page ID='TT' icon='2' key='/fontstyle/tt.' off=''/>
+				<page ID='U' icon='2' key='/fontstyle/u.' off=''/>
+				<page ID='UL' icon='2' key='/lists/ul.' off=''/>
+				<page ID='VAR' icon='2' key='/phrase/var.' off=''/>
+			</chapter>
+			<chapter ID='Top-Level Elements' icon='4' key='/html/index.' off=''>
+			</chapter>
+			<chapter ID='Head Elements' icon='4' key='/head/index.' off=''>
+			</chapter>
+			<chapter ID='Generic Block-level Elements' icon='4' key='/block/index.' off=''>
+			</chapter>
+			<chapter ID='Lists Elements' icon='4' key='/lists/index.' off=''>
+			</chapter>
+			<chapter ID='Tables Elements' icon='4' key='/tables/index.' off=''>
+			</chapter>
+			<chapter ID='Forms Elements' icon='4' key='/forms/index.' off=''>
+			</chapter>
+			<chapter ID='Special Inline Elements' icon='4' key='/special/index.' off=''>
+			</chapter>
+			<chapter ID='Phrase Elements' icon='4' key='/phrase/index.' off=''>
+			</chapter>
+			<chapter ID='Font Style Elements' icon='4' key='/fontstyle/index.' off=''>
+			</chapter>
+			<chapter ID='Frames' icon='4' key='/frames/index.' off=''>
+			</chapter>
+		</chapter>
+		<chapter ID='HTML 4.0 Entities' icon='1' key='/entities/index.' off='/entities/'>
+			<leaf ID='Latin-1 Entities' icon='2' key='latin1.' off=''/>
+			<leaf ID='Symbols and Greek Letters' icon='2' key='symbols.' off=''/>
+			<leaf ID='Other Special Characters' icon='2' key='special.' off=''/>
+		</chapter>
+	</book>
+<!-- _ -->
+	<book ID='JS' icon ='1' key='' uri='http://javascript.charinnawaritloha.net/'>
+	</book>
+<!-- _ -->
+	<book ID='MYSQL' icon ='1' key='' uri='http://dev.mysql.com/doc/'>
+	</book>
+<!-- _ -->
+	<book ID='PEAR' icon ='1' key='' uri='http://pear.php.net/manual/'>
+	</book>
+</multiCHM>

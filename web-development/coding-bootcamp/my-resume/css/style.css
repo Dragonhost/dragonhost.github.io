@@ -1,0 +1,47 @@
+body {
+  background: #3498db;
+}
+
+.container {
+  width: 35%;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 3rem;
+}
+
+img {
+  width: 15rem;
+  border: #f39c12 solid 3px;
+  border-radius: 10rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+table {
+  display: table;
+  border: 2px solid #000;
+}
+
+td,
+th {
+  border: 1px #000 solid;
+}
+
+h1 {
+  padding: 1rem;
+}
+
+.x {
+  background: #f1c40f;
+}
+
+.y {
+  background: #2ecc71;
+}
+
+.z {
+  background: #1abc9c;
+}

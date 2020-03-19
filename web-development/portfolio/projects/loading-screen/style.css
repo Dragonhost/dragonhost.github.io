@@ -1,0 +1,38 @@
+body {
+  background: #2c3e50;
+}
+
+.rhombus {
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  animation: expand 3s ease infinite;
+}
+
+.rhombus-1 {
+  animation-delay: 0.5s;
+}
+.rhombus-2 {
+  animation-delay: 1s;
+}
+.rhombus-3 {
+  animation-delay: 1.5s;
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(0.1) rotate(45deg);
+    border: 0.3rem #fff solid;
+  }
+  50% {
+    border: 0.3rem #e67e22 solid;
+  }
+  100% {
+    transform: scale(1) rotate(270deg);
+    border: 0.3rem transparent solid;
+  }
+}

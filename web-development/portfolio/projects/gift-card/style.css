@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  font-family: "KoHo", sans-serif;
+}
+
+.cards {
+  display: inline-grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.card {
+  position: relative;
+  width: 15rem;
+  height: 20rem;
+  perspective: 600px;
+  transform-style: preserve-3d;
+  transition: box-shadow 1s ease;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+}
+
+.card1:hover,
+.shadow {
+  box-shadow: 0.2rem 0.5rem 5rem #34e7e4;
+}
+
+.card2:hover,
+.shadow {
+  box-shadow: 0.2rem 0.5rem 5rem #e67e22;
+}
+
+.card3:hover,
+.shadow {
+  box-shadow: 0.2rem 0.5rem 5rem #1abc9c;
+}
+
+.card4:hover,
+.shadow {
+  box-shadow: 0.2rem 0.5rem 5rem #3498db;
+}
+
+.card5:hover,
+.shadow {
+  box-shadow: 0.2rem 0.5rem 5rem #e74c3c;
+}
+
+.card6:hover,
+.shadow {
+  box-shadow: 0.2rem 0.5rem 5rem #9b59b6;
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: 0.5s;
+}
+.front img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(-180deg);
+  transition: 0.5s;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.info {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+/* 
+.card4 .info {
+  left: 10%;
+}
+
+.card5 .info {
+  left: 0;
+}
+
+.card6 .info {
+  left: 8%;
+}
+
+.card1 .info {
+  left: 15%;
+} */
+
+.back {
+  text-align: center;
+}
+
+.info h3 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.card1 .back {
+  background: #34e7e4;
+}
+
+.card2 .back,
+.card7 .back {
+  background: #e67e22;
+}
+
+.card3 .back,
+.card9 .back {
+  background: #1abc9c;
+}
+
+.card4 .back,
+.card8 .back {
+  background: #3498db;
+}
+
+.card5 .back,
+.card10 .back {
+  background: #e74c3c;
+}
+
+.card6 .back {
+  background: #9b59b6;
+}
+
+.emoji i {
+  color: #fff;
+}
+
+/* Media Queries */
+
+@media (max-width: 420px) {
+  .cards {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+    overflow: scroll;
+    padding: 3rem 0;
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 1400px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    height: 70%;
+    position: absolute;
+    top: 15%;
+  }
+}

@@ -1,0 +1,367 @@
+[Lang]
+Lang=Magyar
+
+# [ Main menu ]
+0=Fájl
+1=Szerkesztés
+2=Keresés
+3=Nézet
+4=Futtatás
+5=Beállítások
+6=Ablak
+7=Súgó
+;8=Please translate "&Tools"
+;9=Please translate "&Project"
+;10=Please translate "For&mat"
+# [ File menu ]
+50=Új
+51=Text Fájl
+52=HTML Dokumentum
+53=PHP Script
+54=Megnyit
+55=Újra Megnyit
+56=Elõzmények törlése
+57=Mentés
+58=Mentés másként...
+59=Mindent ment
+60=Bezár
+61=Exportálás
+62=Aktuális fájlból HTML
+63=Aktuális fájlból RTF
+64=Nyomtatás
+65=Nyomtatási kép
+66=Nyomtató beállítása...
+67=Kilépés
+68=Aktuális fájl bezárása
+69=
+70=Aktuális fájl újratöltése
+
+# [ Edit menu ]
+100=Visszavonás
+101=Újra
+102=Kivágás
+103=Másol
+104=Beilleszt
+105=Mindent kijelöl
+106=Kód Optimalizálás/Tömörítés
+107=Sortörlés
+108=Törlés a sor végéig
+109=Szó törlése
+110=Elõzõ szó törlése
+111=Betûméret beállítása
+112=NAGYBETÛ
+113=kisbetû
+114=Nagy Kezdõbetû
+
+# [ Search menu ]
+150=Keresés
+151=Csere
+152=Következõ...
+153=Sorra ugrás...
+154=Regex keresés az aktuális fájlban
+155=Regex keresés a nyitott fájlokban
+156=Regex keresés a könyvtárban
+
+# [ View menu ]
+200=Eszköztár
+201=Code Bar
+202=Állapotsor
+203=Számozott sorok
+204=Speciális karakterek megjelenítése
+205=Eszköztár szerkesztése...
+
+# [ Run menu ]
+250=PHP Script futtatás
+251=Szintaktikai ellenõrzés
+252=Függvény frissítés
+253=Futtatás PHP-GTK (normál mód)
+254=Futtatás PHP-GTK (ajánlott)
+255=Fájl küldés
+256=Fájl mentés és küldés
+
+# [ Options menu ]
+300=Szövegkiemelés
+301=Nincs szövegkiemelés
+303=Általános beállítások
+;304=Please translate "Look at available updates"
+
+# [ Window menu ]
+350=Mindent bezár
+351=Következõ
+352=Elõzõ
+353=Szöveg töredékek
+
+# [ Tools menu ]
+354=E-Mail varázsló
+355=Függvény beszúrása
+356=Táblázat beszúrása
+357=Kijelõlt szöveg PRINT-elése
+358=Kijelölt szöveg ECHO-zása
+359='\' csere '/'-re
+360=Szín beszúrása ...
+361=Dátum/Idõ
+362=Dátum beszúrása
+363=Idõ beszúrása
+364=Dátum és idõ beszúrása
+365=Betolás
+366=Visszahúzás
+367=Dokumentum különlegességek
+368=Dokumentum útvonalának beszúrása
+369=Dokumentum fájlnevének beszúrása
+370=Dokumentum elérésének beszúrása
+
+# [ Help menu ]
+400=Dev-PHP névjegye...
+401=PHP Dokumentáció keresése
+
+# [ Print Preview ]
+450=Nyomtatási kép
+451=Nyomtatás
+452=Nyomtatási kép bezárása
+
+# [ Optimalization/Compress code ]
+500=Kód optimalizálás/tömörítés...
+501=Beállítások
+502=Tabulátorok törlése
+503=Sorvége jel törlése
+504=Kisbetûssé alakít
+505=Nagybetûssé alakít
+506=Eredeti betûméret
+507=Indít
+508=Alkalmaz
+509=Mégse
+510=Bezár
+
+# [ Goto Line ]
+550=Sorra ugrás...
+551=Ugrás a következõ sorra:
+
+# [ Executing PHP ]
+600=PHP futtatás...
+601=Eredmény
+602=Az ellenõrzés eredménye
+603=Futtatási parancsok
+604=Sor
+605=Üzenet
+606=Információ
+607=Mérete byte-okban:
+608=Sorok:
+609=Figyelmeztetések:
+610=Elemzési hibák:
+611=Végzetes hibák:
+612=Folytat
+613=Futtat
+
+# [ Checking Syntax ]
+650=Szintaktikai ellenõrzés...
+651=Nincs hiba a kódban
+652=Hibák a kódban.
+653=Bezárás
+;654=Please translate "Syntax checked"
+
+# [ General Options ]
+700=Általános beállítások
+701=Általános
+702=PHP értelmezõ
+703=Keresés
+704=A szerkesztõ beállításai
+705=Jobb szegély:
+706=Tabulátor mérete:
+707=Betû mérete:
+708=Szerkesztõ színe:
+709=Kiválaszt
+710=Szerkesztõ betûi:
+711=Szintaktika
+712=Tulajdonságok
+713=Elõtér
+714=Háttér
+715=<nincs>
+716=Értelmezõ
+717=Futtatási opciók
+718=A HTTP fejlécek kimenetének elrejtése
+719=A kód megjelenítése színes szövegkimeléssel
+720=A kód megjelenítése megjegyzések és üressorok nélkül
+721=A PHP verzió számának megjelenítése az elemzõ script helyett
+722=A PHP információk megjelenítése az elemzõ script helyett
+723=Betöltött modulok megjelenítése
+724=Az összes lehetséges PHP parancs megjelenítése
+725=Külsõ infromáció generálása
+726=Aktuális paraméterek
+727=Nyelvi fájlok
+728=Aktuális nyelv:
+729=Extrák
+730=Automata bekezdés
+731=Környezeti beállítások
+732=Bal oldali sáv szélessége
+733=Sortördelés
+734=Összeillõ kerek/kapcsos zárójel kiemelése
+735=Dokumentum nyelve:
+736=PHP Dokumentáció
+737=Fájl társítás
+738=Dátum formátum:
+739=Idõ formátum:
+740=Dátum/Idõ formátum:
+
+# [ About Dev-PHP ]
+750=Dev-PHP névjegye
+752=E-Mail
+753=Dev-PHP Honlapja
+754=Projekt a SourceForge-on
+763=Verzió
+
+# [ Function Browser ]
+800=Sor
+801=Név
+
+# [ Code Bar ]
+850=Függvények
+851=PHP Függvények
+852=Kulcsszavak
+853=PHP kulcsszavak
+854=HTML
+855=HTML tagek
+856=Változók
+857=Elõre definiált változók
+
+# [ Buttons ]
+900=OK
+901=Mégse
+
+# [ Messages ]
+950=A fájl már nyitva van.
+951=Felülírja?
+952=A fájl
+953=megváltozott.
+954=Menti a változásokat?
+955=nem létezik.
+956=A sztring
+957=nem található
+
+# [ Context Menu ]
+1000=Beszúrás
+1001=Scriptek
+1002=Példák
+1003=Keresés
+
+# [ HTML Bar (Insert) ]
+1050=Kép
+1051=Táblázat
+1052=Réteg
+1053=Ürlap
+1054=Ürlap elemek
+1055=SSI
+1056=Linkek
+1057=Link
+1058=Email link
+1059=Könyvjelzõ link
+1060=Könyvjelzõ
+1061=Vízszintes vonal
+1062=Sortörés
+1063=Megjegyzések
+1064=HTML megjegyzések
+1065=PHP megjegyzések (C stílusú)
+1066=PHP megjegyzések (C++ stílusú)
+1067=PHP indítása
+1068=Rövid PHP tagek
+1069=Normál PHP tagek
+1070=PHP Script
+1071=Dátum és Idõ
+
+# [ Form ]
+1100=Szöveg beviteli mezõ
+1101=Gomb
+1102=Jelölõ négyzet
+1103=Rádiógomb
+1104=Lista/Menü
+1105=Fájl feltöltési mezõ
+1106=Kép mezõ
+1107=Rejtett beviteli mezõ
+
+# [ Script ]
+1150=Látogató számláló (TXT)
+1151=Látogató számláló (SQL)
+1152=Online felhasználók (TXT)
+1153=Online felhasználók (SQL)
+1154=Aktuális dátum
+
+# [ Examples ]
+1200=Kapcsolódás MySQL-hez
+1201=Osztály függvényekkel
+1202=Osztály
+1203=Függvény
+1204=Változó
+1205=PHP-GTK indítása
+
+# [ Status ]
+1250=Módosít
+1251=Beszúr
+1252=Felülír
+
+# [ Execution Log ]
+1300=Minta keresése...
+1301=Nincs egyezés.
+1302=Egyezést talált.
+1303=A forrás fájl írása...
+1304=Értelmezõ futtatása...
+1305=Paraméterek:
+1306=Futtatási hiba.
+1307=Kimenet generálása...
+1308=A kimeneti fájl írása...
+1309=A futtatás befejezõdött.
+
+# [ Run GTK ]
+1350=PHP-GTK futtatása...
+1351=Bezár
+1352=A futtatás befejezõdött
+1353=Értelmezõ nem található
+
+# [Options 2]=
+1700=Helyi Web Server
+1701=Helyi Server Útvonal
+1702=Port
+1703=Külsõ Web Server
+1704=Külsõ Web Server Útvonala       Például: http://www.sourceforge.net/
+1705=FTP
+1706=Például: ftp.sourceforge.net
+1707=Host
+1708=Felhasználó
+1709=Passzív FTP
+1710=Port
+1711=Jelszó
+1712=Például: /home/devphp/htdocs/
+1713=Útvonal
+1714=Ftp - Eredmények
+1715=Name Offset
+1716=Teszt
+
+# [FTP Messages]=
+2000=Küldés
+2001=Fogadás
+2002=linked Views
+2003=Fájl törlés
+2004=Új könyvtár
+2005=törlés ..
+2006=************* deleting all files ******
+2007=************* error delete ************
+2008=************* error ********************
+2009=Do you really want delete?
+2010=Get the Folder Name
+2011=Könyvtár:
+2012=newFolder
+2013=delete_________
+2014=delDir end_____
+2015=CurrDir on Ftp-Server:
+2016=delDirUp   up__
+2017=send___________
+2018=changedir up ..
+2019=changedir______
+2020=send___________
+2021=************* receiving all files ******
+2022=************* retrieving
+2023= - helyikönytár:
+2024=get____________
+
+#[Projects]=
+2025=Projekt megnyitása
+2026=Projekt mentése
+2027=SideBar elrejtése

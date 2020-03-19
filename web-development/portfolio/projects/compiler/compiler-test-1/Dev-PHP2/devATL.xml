@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DevATL Object="Dev-PHP and al. AutoText Library" Uri="http://devphp.sourceforge.net/">
+<![CDATA[
+// +-----------------------------------------------------------------------+
+// | Copyright (C) 2002-2008, http://devphp.sourceforge.net                |
+// +-----------------------------------------------------------------------+
+// | This file is free software; you can redistribute it and/or modify     |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation; either version 2 of the License, or     |
+// | (at your option) any later version.                                   |
+// | This file is distributed in the hope that it will be useful           |
+// | but WITHOUT ANY WARRANTY; without even the implied warranty of        |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the          |
+// | GNU General Public License for more details.                          |
+// +-----------------------------------------------------------------------+
+// | Author: Pierre Fauconnier pf18387@users.sourceforge.net               |
+// | Author: Urs Mäder         ursmaeder@users.sourceforge.net             |
+// | Author: Leonardo Garcìa   simbiotik@users.sourceforge.net             |
+// +-----------------------------------------------------------------------+
+]]>
+	<alias ID="dowhile" author="Gabor Hojtsy" date="jan-2008" desc="do ... while">
+		<code><![CDATA[%CURSOR%$i = 0;
+do {
+	echo $i;
+} while ( $i > 0 );
+]]>
+		</code>
+	</alias>
+	<alias ID="each" author="Gabor Hojtsy" date="jan-2008" desc="foreach loop">
+		<code><![CDATA[foreach ( %CURSOR%$arr as $key => $value ) {
+	echo "Key=$key= Value=$value=<br />\n";
+}
+]]></code>
+	</alias>
+	<alias ID="for..." author="Gabor Hojtsy" date="jan-2008" desc="for loop">
+		<code><![CDATA[%FORM=FOR :
+Enter the variable name and the limit%
+for ( %FIELD1=Variable=$j§Variable name% = 0, $i = 1; %FIELD1% <= %FIELD2=Limit=1000%; %FIELD1%++ ) {
+	%CURSOR%echo %FIELD1%;
+}
+]]></code>
+	</alias>
+	<alias ID="function..." author="ursmaeder@users.sf.net" builtIn="yes" date="feb-2008" desc="Function template...">
+		<code><![CDATA[%FORM=This dialog declares a function with the given Name and Arguments (values that you want the function to use).%
+function %FIELD1=Function Name§Enter the name of the function%( %FIELD2=Arguments=$i, $j% ) {
+//       -------
+// %FIELD3=Comments§Enter a short description for this function%
+	%CURSOR%
+} // %FIELD1%
+]]></code>
+	</alias>
+	<alias ID="ife" author="pf18387@users.sf.net" date="jan-2008" desc="if + elseif + else">
+		<code><![CDATA[if ( %CURSOR%$i > 10 ) {
+	echo 'i > 10';
+} elseif ( $i == 10 ) {
+	echo 'i == 10';
+} else {
+	echo 'i < 10';
+}
+
+		]]></code>
+	</alias>
+	<alias ID="return" author="Gabor Hojtsy" date="jan-2008" desc="return is NOT a function">
+		<code><![CDATA[return %CURSOR%$i;
+		]]></code>
+	</alias>
+	<alias ID="switch" author="Gabor Hojtsy" date="jan-2008" desc="switch + case + default">
+		<code><![CDATA[switch ( %CURSOR%$i ) {
+case 'pie':
+	echo "i is a $i";
+	break;
+case 'bar':
+	echo 'i is a bar';
+	break;
+case 'cake':
+case 'cookie':
+	echo 'i is a cake or a cookie';
+	break;
+default:
+	echo 'i should be something else';
+}
+		]]></code>
+	</alias>
+	<alias ID="t1..." date="févr.08.2008 16:50" desc="Test">
+		<code><![CDATA[BeginHurricane%FORM=Here I am
+at once%
+%FIELD1=What=Default§what tip% %FIELD1%
+%FIELD2=the second=2§which 2
+of them ?%]]></code>
+	</alias>
+	<alias ID="t2..." date="févr.09.2008 17:04" desc="Test 2">
+		<code><![CDATA[%FORM=FOR :
+Enter the variable name and the limit%
+for ( %FIELD1=Variable=$i§Enter the variable name.% = 0 ; %FIELD1% <= %FIELD2=Limit=100% ; %FIELD1%++ ) {
+       %CURSOR%
+}
+]]></code>
+	</alias>
+	<alias ID="T_CSS" author="eric@meyerweb.com" builtIn="yes" date="jan-2008" desc="Template for new CSS.">
+		<code><![CDATA[
+/* http://meyerweb.com/eric/thoughts/category/tech/css/ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Lord Voldemort Has Foul Ambitions */
+a:link {color: blue;}
+a:visited {color: purple;}
+a:hover {color: red;}
+a:focus {color: orange;}
+a:active {color: yellow;}
+]]>
+		</code>
+	</alias>
+	<alias ID="T_HTML" author="pf18387@users.sf.net" builtIn="yes" date="jan-2008" desc="Template for new HTML.">
+		<code><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- @(#) $Id$ -->
+<head>
+	<title>HTML Template</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta name="Generator" content="Dev-PHP 2.2.3" />
+	<meta name="Keywords" content="your,keywords,here" />
+	<meta name="Description" content="." />
+
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="stdStyle.css" />
+</head>
+<body>
+</body>
+</html>]]>
+		</code>
+	</alias>
+	<alias ID="T_PHP" author="pf18387@users.sf.net" builtIn="yes" date="jan-2008" desc="Template for new PHP.">
+		<code><![CDATA[<?php
+// @(#) $Id$
+// +-----------------------------------------------------------------------+
+// | Copyright (C) 2008, http://yoursite                                   |
+// +-----------------------------------------------------------------------+
+// | This file is free software; you can redistribute it and/or modify     |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation; either version 2 of the License, or     |
+// | (at your option) any later version.                                   |
+// | This file is distributed in the hope that it will be useful           |
+// | but WITHOUT ANY WARRANTY; without even the implied warranty of        |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the          |
+// | GNU General Public License for more details.                          |
+// +-----------------------------------------------------------------------+
+// | Author: pFa                                                           |
+// +-----------------------------------------------------------------------+
+//
+?>
+]]>
+		</code>
+	</alias>
+	<alias ID="try" author="Gabor Hojtsy" date="jan-2008" desc="try ... catch">
+		<code><![CDATA[try {
+	%CURSOR%
+}
+catch (Exception $e) {
+	echo 'Catching exception : ',  $e->getMessage(), "\n";
+}
+
+]]>
+		</code>
+	</alias>
+	<alias ID="while" author="Gabor Hojtsy" date="jan-2008" desc="while loop">
+		<code><![CDATA[while ( %CURSOR%$i <= 10 ) {
+	echo '$i='."$i=<br />\n";
+	$i++;
+}
+]]>
+		</code>
+	</alias>
+	<alias ID="x01" author="pf18387@users.sf.net" date="jan-2008" desc="Surround selection by user, computer, date.">
+		<code><![CDATA[// Begin Update	by %USERNAME% from %COMPUTERNAME% on %DATETIME%
+%SELECTION%
+// End   Update	by %USERNAME% from %COMPUTERNAME% on %DATETIME%
+]]>
+		</code>
+	</alias>
+</DevATL>

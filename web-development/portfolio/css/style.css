@@ -1,0 +1,139 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.background {
+  height: 15rem;
+  clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+  z-index: -1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.body_container {
+  max-width: 1500px;
+}
+
+.profile_box {
+  max-width: 411px;
+}
+
+.home {
+  font-size: 1.5rem !important;
+}
+.home:hover {
+  color: black;
+  transition: 0.5s ease;
+}
+
+.profile_image {
+  width: 10rem;
+  margin-top: -5rem;
+  border: 0.2rem #f8f9fa solid;
+}
+
+.box {
+  margin-top: -8rem;
+  border-radius: 1rem;
+}
+.box h3 {
+  font-weight: 900;
+}
+
+.info {
+  z-index: 999;
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu_item {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  align-items: center;
+  color: #7b7e84;
+}
+
+.menu_item i {
+  justify-self: center;
+  font-size: 1.3rem;
+}
+
+.menu_item h5 {
+  font-size: 1.3rem;
+}
+
+/* My Projects */
+.project_card {
+  border: none;
+  border-radius: 1rem;
+}
+
+.project_card_body_title,
+.project_card_body_date {
+  font-weight: 700;
+}
+
+.creator {
+  display: grid;
+  grid-template-columns: 27% 73%;
+  align-items: center;
+}
+
+.creator img {
+  width: 2rem;
+}
+
+.project_card_bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.view_project {
+  justify-self: end;
+}
+
+/* Message me */
+
+.message_container {
+  border-radius: 1rem;
+}
+
+/* Share */
+
+.share_container {
+  border-radius: 1rem;
+}
+
+.social_media {
+  font-size: 2rem;
+}
+
+.social_media i:hover {
+  color: #000;
+  transition: 0.5s ease;
+}
+
+/* About me */
+
+.about_container {
+  border-radius: 1rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .background {
+    height: 20rem;
+  }
+}

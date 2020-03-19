@@ -1,0 +1,768 @@
+! Root=Dev-PHP 2.x
+!  Exp=2.4.0.338 http://devphp2.free.fr/files/devphp.exe
+! Stab=2.4.0.338 http://downloads.sourceforge.net/devphp/devphp2_4_0_338.exe
+
+coding: utf-8 at the very beginning of a file
+DevTabs : fix hints and moves, add some new styles to the tabs
+Todo list : RegExp for todo list - /[/*]\s*?(TODO|BUG|DONE).*?\n It would be better to use regular expressions in order to extract the todo
+Check syntax on the fly
+Automatic indentation (http://universalindent.sourceforge.net/)
+(s)FTP : include several sites ( http://sourceforge.net/forum/forum.php?thread_id=3325735&forum_id=426561 )
+Strings running on several lines, break line numbers to retrieve function names in "Class"
+Find text : "Log results" and "Selection" should not be exclusive.
+File busy crashes a Search / Search-replace loop
+BOTS and Autotext : to be merged
+Class : add a form with options to control the display (filters and orders)
+Component IdCGIrunner to be merged to Dev-PHP and DosCommand
+
+http://www.codeproject.com/KB/cs/htmlhelp.aspx
+http://www.xtractpro.com/articles/Help-File-Extractor.aspx
+http://www.russotto.net/chm/index.html
+http://www.chmtools.com/dev.php
+http://svn.freepascal.org/svn/fpc/trunk/packages/chm/src
+
+version 2.4.0
+@ --- 2.4.0.338 11-jun-2010
+- FIX [] () Internal Preview : headers removed "X-Powered-By:" and "Content-type:"
+@ --- 2.4.0.337 04-may-2010
+- FIX [] () Autotext : Impossible to edit an autotext item - message "Error reading SynEdit1.Lines.UnicodeStrings: Property UnicodeStrings does not exist."
+@ --- 2.4.0.336 24-apr-2010
+- FIX [] () SFTP : Dev-PHP can't close if sftp session was canceled by user (a psftp.exe process was still running)
+- FIX [] () GTK : Environment variables "ProgramFiles" and "TEMP" added to the execution context
+- FIX [] () Xdebug : Modifying the content of a variable or of an array item is possible again
+@ --- 2.4.0.335 01-apr-2010
+- FIX [] () UI : The HTML toolbar must be disabled if no file is opened
+- FIX [] () Installer : More languages available during installation (directly from the project NSIS) and the choice of language is ok now
+@ --- 2.4.0.334 29-mar-2010
+- FIX [2922438] (ackulik) MustangPeak : Several errors on x64 operating systems - see: "VirtualExplorerTree disables OpenDialog on Win Vista x64" http://www.mustangpeak.net/phpBB2/viewtopic.php?f=1&t=1946&p=9078&hilit=mpcommonutilities#p9078
+* CHG [] () PortableApps : Installer revisited, thanks to Oleg N. Scherbakov's modified module - http://7zsfx.info/en/
+* CHG [] () UI : Better control of "initial folder" and "file extensions" inside dialogbox (save, save as, ...)
+* CHG [] () UI : Better detection of the PHP engine to use (CGI, CLI, or none)
+- FIX [] () FTP : The FTP tab was unduly visible, under some circumstances
+- FIX [] () Options : Clicking on the Python icon, now connects to its web site
+- FIX [] () Help : Documentation/Help does not work. Project phpdoc changed the structure of the .chm again
+- FIX [] () Print Preview : The Printer icon must indicate the name of the default printer (instead of all defined printers)
+@ --- 2.4.0.332 27-feb-2010
+- FIX [] (tsigordo) FTP : Path on server must start with /
+* CHG [] (tsigordo) L10N : Updated msgid "Path on Server  (e.g. /)"
+* CHG [] () Installer : Provide common information expected by the ms-windows uninstall program
+@ --- 2.4.0.329 14-jan-2010
++ NEW [] () Sidebar : New button R (for Refresh), as F5-key (previously used to refresh) is now used to run PHP/Python
++ NEW [] () Python : Highlighter and Run - this is (and will remain) a minimalistic implementation
+- FIX [] () ADom : Access violation. Function parseString is not provided by OpenXML project and had to be ported then fixed :(
+- FIX [] () SynEdit : AutoIndentation feature works better now - with HT (horizontal Tab) characters
+- FIX [] () Options : Problem with declaration of Xdebug.dll - must not be enclosed between double-quotes
+@ --- 2.4.0.328 15-nov-2009
+* CHG [] () Delphi : Homogenize components configuration, so Delphi6 development environment is easier to install *and* to be able to use Delphi2009 - added and/or updated .dof files, deleted .res and .cfg files
+* CHG [] () Delphi : Component DWS (Delphi Web Script) deleted. Component was unused by Dev-PHP and project DWS is inactive - see http://sourceforge.net/projects/dws/
+* CHG [] () Delphi : Components from "Mustang Peak" added - CommonLibrary and EasyListview + see also "VirtualShellTools" below
+* CHG [] () Delphi : Component php4delphi - Dev-PHP is only using IdCGIrunner ; to be merged and based upon DosCommand in a near future
+* CHG [] () Delphi : Component "Virtual Treeview" updated to latest version (4.7.0)
+* CHG [] () Delphi : Component "VirtualShellTools" updated to latest version (2.3.0) + see also "Mustang Peak" above
+@ --- 2.4.0.326 02-nov-2009
+* CHG [] () Delphi : Component ADOM (Alternative Document Object Model), from project Open XML, for processing XML documents or strings. No SAX (Simple API for XML) for the moment.
+@ --- 2.4.0.325 01-nov-2009
+* CHG [] () Delphi : Component devFileMonitor is now a true nonvisual component
+* CHG [] () Delphi : Component SynWeb, fixed a Delphi6 issue inside the Smarty highlighter
+* CHG [] () Delphi : Component Toolbar2000 (TB2K) version 2.2.2, with the ResizeableToolWindow add-in
+* CHG [] () Delphi : Component TBX (a TB2K add-in) has been removed because not maintained since 2005.
+* CHG [] () BOTS : Now is connecting to the FSF when going to project PHPCSL
+@ --- 2.4.0.324 03-oct-2009
++ NEW [] () Editor : A new highlighter 'Smarty' is provided, thanks to Kristian Bigaj
+* CHG [] () Delphi : Latest version of SynWeb (Krystian Bigaj)
+* CHG [] () Delphi : Latest version of UniSynEdit (Maël Hörz) - only due to the latest version of SynWeb
+* CHG [] () Delphi : TBX (A.Denisov) all components, except TBXDockablePanel, removed and replaced by similar components from TB2K (Jordan Russel). Because TBX doesn't seem to be maintained nor supported since 2005
+* CHG [] () View : The "customize toolbars" form is now resizeable
+* CHG [] () Sidebar : This dockable panel has a double bar (previously single) and a close icon
+- FIX [] () Options : If no highlighter applies, pressing the "Cancel" button of the Options form causes an access violation
+@ --- 2.4.0.323 01-aug-2009
++ NEW [2826099] (rjplummer) Project : Allow startup from a project file by double-clicks on a project file in MS-explorer
+* CHG [7524123] (rjplummer) Project : Add a menu item "Project Close"
+- FIX [2822691] (jeffg1) Browser : Carriage return not accepted in TWebBrowser - no effect when inputting in windows (such as Internal preview, Help, Browser etc.)
++ NEW [] (dysmas2) Options : Add a ToDo tab sheet in order to deal with several 'tracker' formats (tracker_ID/folderID, 0 being the default folder, the first letter of a folderID is generally sufficient)
+* CHG [] (dysmas2) Search : "Selection" and "Log results" seem to be exclusive. So, the controls of the form must work the same.
+* CHG [] (dysmas2) Search : Use "Current file" instead of "Global" in the form.
+* CHG [] (dysmas2) Replace : The option "Prompt on replace" is useless. Consider replacing that option by "Log results". By the way, "Prompt on replace" *is* an implicit option, now.
+* CHG [] (dysmas2) Class : "Globals" are pretty useless, put them at the end of the tree structure.
+* CHG [] (dysmas2) Todo list : Wrong recognition of "todo" markers - The scanner / parser has been completly rewritten
+* CHG [] () L10N : New msgid (Options - To-do)="URI format - %s will be replaced by tracker ID"
+- FIX [2823631] (dysmas2) Save All : Doesn't go back to active file. Then, looking for the active file is a stupid waste of time
+- FIX [2823967] (nobody) Class : Sometimes, a double-click on an "Include" item doesn't open the right file - looks like a problem with the sort order. It's fine as long as the sort order of the "Includes" is same as the order found in the file.
+- FIX [] (mordef) Editor : Apply Cut or Copy to current line - even on a "not selected and empty" line ; paste then undo then undo must work.
+- FIX [] (dysmas2) Search : Access violation when starting an instant search <Ctrl+F3> followed by a standard search <Crl+F>
+version 2.3.2
+@ --- 2.3.2.322 14-jul-2009
++ NEW [] (dysmas2) Replace : Context of replace, actually all its options, is saved and automatically restored when needed
++ NEW [] (dysmas2) Search : Context of search, actually all its options, is saved and automatically restored when needed
++ NEW [] (dysmas2) Help : The URI to "Mastering Dev-PHP" may be accessed thru the menu Help->Dev-PHP Documentation
+* CHG [3326297] (mordef) Editor : Apply Cut or Copy to current line, when no active selection - new option, disabled by default
+* CHG [3326480] (mordef) Autotext : New variable for filename %FULLFILENAME%
+- FIX [3326480] (mordef,dysmas2) Autotext : After editing an AutoText, changes are saved but are not available via the shortcut, the IDE must be restarted.
+- FIX [3333932] (dysmas2,mordef) GUI : Access violation on exit when a file has been modified and 'Cancel' is chosen.
+* CHG [] (dysmas2) Debug : A double-click on a line in the debugger-log for PHP-GTK (case of Fatal error: ... in script.php on line 9876) might display the file script.php centered on line 9876.
+* CHG [] (dysmas2) GUI : The last icon from the Debug toolbar (eval expression) is useless
+- FIX [] (dysmas2) Options : Modifying Options while PHP and/or Xdebug engines are running must be disabled because this crashes Dev-PHP
+* CHG [] () Replace : Goes automatically to next search, works on all project files (was limited to current file or open files), regular expressions, the quit button (X) stops replacements for current file
+* CHG [] () Search : All in one. Current file, opened files, project file, regexp, log results, ... feature entirely rewritten
+* CHG [] () L10N : New msgid "Searching...", "Regular &Expressions", "&Project files", "&Log results", "&All Yes", "A&ll No", "Formats for date and time", "Case no selection, apply Cut or Copy to current line"
+- FIX [] () Class : Heredoc and Nowdoc are implemented now
+- FIX [] () Class : Globals and Includes are now really sorted
+@ --- 2.3.2.321 25-jun-2009
++ NEW [] (dysmas2) Debug : While debugging it'd be handy to display the content of a variable on the fly
+* CHG [] (dysmas2) Debug : During debugging, the setting of breakpoints must be enabled only if the status of xdebug is 'break'
+* CHG [] (dysmas2) Debug : The execution point (next line that will be executed) should be visible only if Xdebug is waiting for an user's action
+* CHG [] (dysmas2) Options : Revisited. Options are accessed thru a tree structure and have been reordered, Debugger options splitted in 2 parts, Gradient panel
+- FIX [] (dysmas2) GTK : "Current directory" parameter is back again.
+* CHG [] () Class : The class tab (from sidebar) has been completely rewritten (new tokenizer, new parser) some new features (defines, globals, private, protected)
+@ --- 2.3.2.320 24-may-2009
+- FIX [] (dysmas2) Debug : Context icon (from debug toolbar) works fine. Size of the response from Xdebug is now limited to 2^31 - 1 bytes ; previous limit was 2^14 - 1 bytes.
+- FIX [2793755] (fredlixo) Editor : Single file open does not display contents
+- FIX [2793830] (fredlixo,dysmas2) Autocompletion : Autocompletion fails sporadically and must be reactivated on each tab change
+* CHG [] (dysmas2) GTK : "Current directory" parameter is no longer transmitted to "CreateProcess" API, because this seems to prevent the setting of environment variables
+* CHG [] (dysmas2) Todo list : Add an option to context menu in order to erase the contents of the displayed lists
+* CHG [] () L10N : New msgid (Todo list)="Erase"
+- FIX [] (dysmas2) Todo list : A quote 'like this' is not an apostrophe as in Bill's company. $dirs = glob('config*/*', GLOB_ONLYDIR); /* todo : it's not a '*/*' suffix */
++ NEW [] () GUI : Process keys Browser_back and Browser_forward to switch from tab to tab inside Editor
+- FIX [] () Print Preview : The Printer icon must be disabled if there is no printer defined. Checked only once, at launch.
+- FIX [] () GUI : New tabs initilizations were done several times. Now, program launches faster
+* CHG [] () System : The DosCommand component provides a better control over launched programs.
+* CHG [] () System : The component "DelphiWebScript" is not really used and has been removed
+* CHG [] () System : The component "Mozilla Active-X" is not really useful and has been removed
+version 2.3.1
+@ --- 2.3.1.319 12-apr-2009
+* CHG [] (dysmas2) Todo list : Multi-line comments mut not be embedded, or add an option to allow / ignore embedded comments
+* CHG [] (dysmas2) GTK : It should be possible to kill a running session via Ctrl + Break (due to infinite loops and so on)
+- FIX [3103037] (fifth-horseman) GUI : One can't see hidden folders and files in the project tree.
+- FIX [] (dysmas2) Todo list : The following instruction is disabling Todo lists $dirs = glob('config/*', GLOB_ONLYDIR); 
+- FIX [] (dysmas2) Debug : It's no more possible to change the value of a PHP variable while debugging
+- FIX [] () GUI : MRU (most recently used) lists are really limited to 10 items for projects and really limited to 20 items for files
+@ --- 2.3.1.318 26-feb-2009
+- FIX [] (dysmas2) Todo list : Under certain circumstances, the Editor tab is left blank after a Todo List Refresh, for Opened Files or for All Files of Project
+- FIX [] (dysmas2) Search : Under certain circumstances, the Editor tab is left blank after a Search, into Opened Files or into All Files of Project
+* CHG [] (dysmas2) Messages : It would be nice if the "Messages" horizontal panel could also be docked to vertical docking areas, as previously
+@ --- 2.3.1.317 23-feb-2009
+* NEW [] (dysmas2) Messages : Add a new icon into the file toolbar in order to toggle the visibility of the Messages panel
+* CHG [] (dysmas2) Messages : Create a tabsheet "Context" in order to store the "Context" tree structure separately from the "evaluation"-tree
+* CHG [] (dysmas2) Debug : Normalize shortcuts for web-mode and gtk-mode. F5=Run Main, Shift+F5=Run current, Ctrl+F5=Debug Main, Shift+Ctrl+F5=Debug current, afterwards F5=Run or Continue, F7=Context, Ctrl+F7=Evaluate, F8=Step into, Shift+F8=Step over, Ctrl+F8=Run to cursor, Shift+Ctrl+F8=Step out, Ctrl+Break=Stop
+- FIX [] (dysmas2) Debug : The program Dev-PHP must check if a Debug session is already active before launching another one
+* CHG [] (dysmas2) Debug : The "Context" button, from Debug toolbar, displays partial results and is so slow that it is useless.
+* CHG [] () Syntax : On syntax error, change the color of the Syntax tab, to red
+* CHG [] () Editor : When a line is containing a breakpoint, display the entire line with the corresponding color (either red or fuschia)
+* CHG [] () Options : When a file doesn't exist or doesn't exist any longer, then display its filename in red
+* CHG [] () L10N : New msgid (Evaluation)="Add to the List", "Remove from the List", "Empty the list" (File toolbar icons)="Toggle Messages"
+* CHG [] () Messages : Restrict docking of "Messages" to horizontal docking areas.
+* CHG [] () Messages : Save and restore the docking locations of the "Messages" dockable panel
+* CHG [] () Context : Save and restore the docking locations of the "Context" dockable panel
+* CHG [] () Sidebar : Save and restore the location of the splitter in the Files-tab, between the treeview and the listview
+* CHG [] () Todo list : Column "Action item" is now auto sized
+* CHG [] () Debug : Configuration parameters { 1, 255, 16383 } ( Node depth, Max Number of children, Max returned data)
+- FIX [] () Debug : From time to time, Dev-PHP reports that "php.exe doesn't exist" instead of "Unable to create process."
+* CHG [] () Options : If a file does not exist or no longer exists, write its filename in red.
+* CHG [] () GUI : MRU (most recently used) lists are limited to 10 items for projects and 20 items for files
+@ --- 2.3.1.316 07-feb-2009
+- FIX [2492546] (xtin) GUI : Filenames are case sensitive, so it's possible to load, several times, the same file into the editor.
+- FIX [] (dysmas2) Debug : The "Context" button, from Debug toolbar, must show the panel used to display variables and their contents
+- FIX [] (dysmas2) Debug : The Xdebug DLL is either TS (thread safe) or NTS (not thread safe). Dev-PHP must use the right key into php.ini, in order to load Xdebug : either zend_extension_ts, or zend_extension
+- FIX [] (dysmas2) Debug : php-cgi.exe requires the fullname of php.ini, not just the pathname of its directory
+- FIX [2541040] (nobody) Help : Documentation/Help does not work. Project phpdoc changed the structure of the .chm, so language is no longer needed
+- FIX [2540886] (nobody) Editor : Mouse wheel / Zoom in and out. The zoom effects are reversed.
+- FIX [2541040] (linux_dr) GUI : At startup, there is a message in german "Ausgewählter Drucker ist ungültig." ('Selected printer is invalid')
++ NEW [] (dysmas2) Debug : Add or remove a variable from the list of variables to spy on - when right-clicking over a variable in Editor
+* CHG [] (dysmas2) GTK : Use F11 to execute PHP-GTK and Ctrl+F11 to control execution of PHP-GTK via Xdebug
+* CHG [] (dysmas2) GTK : Use the <Shift> modifier in order to shift execution to the current file. Default is to execute the main file defined by Options » General options » Web-server » Default-document.
+* CHG [] (dysmas2) GTK : If necessary, automatic saving (via Save All) of all modified files, before launching a PHP-GTK session.
+* CHG [] (dysmas2) Debug : Use one control list to store the messages coming from script.php, and another one to store the messages coming from Xdebug.
+* CHG [] (dysmas2) Debug : While debugging, it's useful to spy on some variables. The Evaluation-tab is the right place to do it, with a tree-structure.
+* CHG [] (dysmas2) Debug : CGI and CLI modes are exclusive. So, disable (or enable) the corresponding tabsheets, menus and other icons
+* CHG [] (dysmas2) Completion : Add the GTK functions and their arguments to completion lists
+* CHG [2541040] (linux_dr) Options : No way to declare Compiled HTML Help files within devPHP. See %APPDATA%/devphp.ini at Section 'Documentation' Keys 'PHP.http','ADOdb.http','CSS.http','PHPGTK.http','HTML.http','JS.http','MYSQL.http','PEAR.http'
+* CHG [2550183] (nobody) Print : No title sent to printer - it was impossible to cancel a specific request, because all requests were labeled 'nonew'.
+* CHG [] () Print : Name of default printer is displayed while the mouse is over the printer icon in tab Print Preview
+* CHG [] () L10N : New msgid (Setting Breakpoints)="at &Function", "in Class", (Spy variables) "Clear that log" (Editor popup menu) "Remove from Evaluation List", "Add to Evaluation List"
+* CHG [] () Debug : Markers for breakpoints and current line updated.
+* CHG [] () Debug : The undefined breakpoints (due to their deletion) are unduly restored
+* CHG [] () Debug : The Debug toolbar is now dockable at the left of the Messages panel. From now, this is its default position.
+* CHG [] () Debug : Breakpoint on entering a function. The classname of the function (if exists) must be entered by hand - case sensitive.
+* CHG [] () Debug : Context menu linked to logs, at panel "Messages" from "Debugger log" tab
+* CHG [] () RegExp : Regular Expression searching was case sensitive
+* CHG [] () Projects : Pathnames for the PHP engine and its ini-file moved from Global settings to Projects
+* CHG [] () GUI : New dockable panel at the very bottom of the main form
+- FIX [] () Todo list : Doesn't display correctly at startup, if its tab is the first one.
+- FIX [] () SFTP : Did not work if filename contained at least one space
+@ --- 2.3.1.315 04-jan-2009
++ NEW [2381579] (putkonen) L10N : Thanks to Eikki Putkonen, here is his work on localization - Suomi (Finnish).
+- FIX [2381579] (putkonen) Toolbars : The form used to customize toolbars (coming from TB2K project) was not tranlated
+- FIX [2381579] (putkonen) Toolbars : The 'Separator', into the form used to customize toolbars, was not translated
+- FIX [2381579] (putkonen) Menu : The Project » New project subitem was not translated
+- FIX [2381579] (putkonen) Table : The wizard for the markup <table>. Some labels were not translated and their width was too short.
+- FIX [2381579] (putkonen) Options : The debugger tab had 4 check boxes whose width was not big enough.
+- FIX [2381579] (putkonen) Find Text : "Options" was not translated.
+- FIX [2381579] (putkonen) Replace : "Options" was not translated.
+* CHG [] () Internal Preview : By default, our embedded web server is now listening on port 8888 (previously 8080)
+* CHG [] () Options : The user can change the order of tabs
+* CHG [] () Installer : Tooltips displayed in front of corresponding ms-windows(r) start menu folder and ms-windows(r) quick launch bar
+* CHG [] () SideBar : New tabs are preset to bottom of control. Dockable panels alignment to top is better
+* CHG [] () Messages : New tabs are preset to bottom of control. Same alignment as SideBar.
+* CHG [] () GUI : New tabs come with a popup menu, in order to set tabs at top or at bottom of the corresponding page.
+version 2.3.0
+@ --- 2.3.0.314 29-nov-2008
+- FIX [5717194] (zhongygah) BOTS : On exiting, there's no warning in case of modified snippets.
+- FIX [2215681] (nobody) Profiler : creates a lot of unwanted files.
+- FIX [2205245] (nobody) SFTP : Key re-exchange initiated by remote server was ignored (not trapped)
+- FIX [2195505] (nobody) Editor : Access violation while opening a file marked as busy
+- FIX [2352634] (nobody) Options : PHP displays a message "Failed loading" whenever Xdebug DLL is not set.
+@ --- 2.3.0.313 15-oct-2008
+- FIX [2130115] (mawg + frogfoot) Internal preview : Access violation if file is out of project tree structure
+- FIX [2116374] (tobatty) Internal Preview : Erratic crashing with iframes. - If browser still active then stop it.
+- FIX [2060536] (nobody) Save All : File contents deleted on "Save All". - Only modified files must be saved.
+* CHG [2116510] (masonwheeler) Delphi : Great work in order to compile with BDS2006. Only very few updates inserted, for the moment.
+- FIX [] () SFTP : Infinite loops when psftp program was encountering a Fatal error. Now, reconnects when needed. Problem when activating the FTP-tabsheet.
+* CHG [] () UPX : Ultimate Packer for eXecutables version 3.03w Better compression ration with the new --lzma switch. Compared to previous compression method : 158 KB less.
+* CHG [] () Installer : Nullsoft Scriptable Install System version 2.40 - Just being up to date.
+@ --- 2.3.0.312 02-aug-2008
+- FIX [2121376] (jsweatt) Editor : Access violation searching a text while no file is opened yet
+- FIX [] (masonwheeler) Memory leaks : Thanks to Mason, now we're using FastMM (http://sourceforge.net/projects/fastmm/)
+- FIX [] (davitof) Multi-monitor : If Dev-PHP was previously displayed on a screen that doesn't exist anymore on current config, then the program was hidden (totally or partially).
+- FIX [] (davitof) Multi-monitor : Stop using two different methods to save screen coordinates. 
+@ --- 2.3.0.311 13-jul-2008
+- FIX [1970661] (davitof) Debug : When debug session terminates, debug icons are not disabled.
+- FIX [4982824] (davitof) Code completion : Does not work. This was a side effect due to AutoText feature.
+- FIX [4982119] (davitof) Debug : profiler options are not working.
+- FIX [5030497] (tooldeveloper) svn : Added to svn, some missing files frmFindText and frmAutoTextWizard
++ NEW [] () MySQL : Attempt to embed a first database engine - (UNSTABLE : still under development)
+@ --- 2.3.0.310 21-may-2008
+* CHG [4937820] (av3nger) L10N : Language file for german (de) works correctly, thanks to av3nger.
+* CHG [4958581] (dt30) GUI : Icon drawn onto tabsheets in Editor, only if corresponding file is modified.
+* CHG [] () GUI : Button 'Create New' added in 'Select Directory' Dialogs.
+* CHG [] () GUI : Minimized flicker when scrolling from tabsheet to tabsheet in Editor.
+* CHG [] () GUI : HTML toolbar and Debug toolbar are now hidden by default. 'Messages' dockable panel is also hidden by default.
+* CHG [] () GTK : Messages and results are now redirected to the 'Messages.Debugger Log' tabsheet.
+* CHG [] () Options : Formats for Date and Time are now localized by default.
+* CHG [] () Print Preview : Date and Time displayed in preview are using the format defined in 'General Options.Extra'.
+* CHG [] () Search : Navigation in search results revisited + number of matching items displayed for each file.
+* CHG [] () Syntax check : Faster - Directly forks the php engine + uses temporary file only if needed (i.e. if file is modified).
+* CHG [] () Status Bar : Now able to use the font defined in 'General Options.General'
+* CHG [] () Installer : Icon for uninstall, coming from nsis.
+@ --- 2.3.0.309 13-apr-2008
++ NEW [] () i18n : Using dxGetText (same as GNU Gettext, for Delphi). New translations needed, of course.
++ NEW [] () Editor : Icon on each tabsheet switches on, as soon as its content changes.
+- FIX [ 4732401 ] (dt30) Internal Preview : Many access violations with versions > 2.2.0.300 * from 23-apr-2007
+- FIX [ 1879943 ] (bluefugu) Debug toolbar : Debug toolbar cannot be turned off.
+- FIX [ 1870363 ] (fredlixo) Editor : message box in german - Corresponding SynEdit tabsheet must be visible
+- FIX [ 1909292 ] (mquinlan) External Preview : Generates access errors
+- FIX [] () About : mail to authors wasn't correctly generated
+- FIX [] () Editor : Enabling and disabling of "Undo" and "Redo" didn't work
+- FIX [] () Print Preview : The Tabsheet must be hidden if there is no printer defined. Checked only once, at launch.
+* CHG [] () Installer : Options to force/preserve APPDATA folder content, Option to Register Dev-PHP into Quick launch bar, Language preselection
+* CHG [] () AutoText : Previously "Snippets", now associated with Ctrl+J and auto proposal in Editor - and much more : see Wiki.
+* CHG [] () Search : Instant Search (previously "Search First"). Finds a text directly, without calling the Search-Form, from either the selected text, either the word at cursor, or the word at mouse
+* CHG [] () Search : The form "Prompt on replace" is displayed near the text to replace, with a pretty transparency.
+version 2.2.3
+@ --- 2.2.3.308 16-feb-2008
+- FIX [ 1894768 ] () L10N : Language brazillian_portuguese (Português) error
+@ --- 2.2.3.307 10-jan-2008
+* CHG [] () Project, Externals : Portable version initializes faster and terminates more quickly.
+version 2.2.2
+@ --- 2.2.2.306 31-dec-2007
++ NEW [ 1823691 ] (bluefugu) Options : Add an option to remove the Right Border.
++ NEW [ 1823691 ] (bluefugu) Options : Add an option to set / unset the underline style from an Editor attribute
++ NEW [ 1859676 ] (nobody) Searches : Use a list of the Most Recently Used strings for searches
++ NEW [] () Internal Preview : Preview is detachable / dockable. Debugging should be easier (<F9> toggles Editor / Preview).
++ NEW [] () Print Preview : Now with Printer orientation (Portrait or Landscape)
++ NEW [] () Bookmarks : Active bookmarks (toggle menus with check boxes "On" if already set, and jump menus disabled if unset)
++ NEW [] () Lang : 1759=Underline
+- FIX [ 1823691 ] (bluefugu) Options : No option to increase the Right Border above 100 (now, value is [1, 255])
+- FIX [ 1823691 ] (bluefugu) Editor : Word Wrap does not work.
+- FIX [ 1854901 ] (jltgordon) Search : Escape key finds next occurence of whatever is seleted or typed.
+- FIX [] () Xdebug : Some fixes with filenames / came with version 2.0.0
+- FIX [] () Xdebug : Fix the resetting of breakpoints.
+- FIX [] () Reload : Reloading a file now sets its encoding and format
+- FIX [] () FTP : Useless "Connect" button is removed
+- FIX [] () File monitoring : Fired while saving a file opened thru Dev-PHP itself
+- FIX [] () Toolbar : Icons defined in Toolbars may disappear due to localization or other updates (lot of components renamed)
+@ --- 2.2.2.305 14-sep-2007
++ NEW [ 1786469 ] (mandx) Options : Add an option to trim trailing spaces in Editor
+- FIX [ 1773626 ] (mandx) Internal preview : Access violation when using a new empty file
+- FIX [ 1773626 ] (fredlixo) Editor : List index out of bounds (-1) while right-clicking on the vertical scroll bar
+- FIX [ 1775900 ] (fredlixo, dt30) Projects : no files opened upon (re)start
+- FIX [ 1763008 ] (nobody) Syntax check : doesn't work
+* CHG [ 4378280 ] (gschantz) Syntax check : Every time I try to run Syntax Check, I get the error : "PHP engine not active". 
+* CHG [] () Check for Update : Revisited with URI and a treeview - Actually it's rather "News for Update" than "Check for Update"
+* CHG [] () i18n : still same file structure (ID=Text), case of missing ID a default english or german text is used (ID=Default)
+* CHG [] () About : Used projects with licenses, Report (click on authors' name) with Dev-PHP and OS versions
+- FIX [] () Projects : Activate "Project New..." then cancel the 'Select local root', results in all opened files are closed and current project is reset
+- FIX [] () External Preview : Must work like "Internal preview". if Default_doc defined then (if Shift-key pressed then Current_doc else Default_doc) else Current_doc
+@ --- 2.2.2.304 01-sep-2007
+* CHG [] (Kees Lucassen) L10N : Thanks to Kees Lucassen, here is his work on localization - Dutch.
+@ --- 2.2.2.303 21-jul-2007
++ NEW [] () GUI : Multiple Display Monitors
+- FIX [ 4413709 ] (tsigordo) FTP : Dev-PHP used to write a timestamped pathname of the last uploaded file.
+- FIX [] (tsigordo) FTP : When Side-bar is hidden, "Send current file" still doesn't work correctly.
+* CHG [ 4413709 ] (tsigordo) FTP : A right-click would provide a "clear" capability to the log list.
+* CHG [] (maelh) UniSynEdit : New version "13, July 2007" by Maël Hörz
+* CHG [] (statham) SFTP : New version 0.60
+- FIX [] () Projects : Menu Project » New doesn't set local path folder
+version 2.2.1
+@ --- 2.2.1.302 7-jul-2007
+- FIX [ 4384176 ] (tsigordo) FTP : "Save and Send Current File" always "saves", but often does not Send. It can even send all selected files... but the currently edited one.
+- FIX [ 1743578 ] (cmo) Options : Debugger-Tab, Can't update Xdebug parameters when the php.ini filepath is empty (default value)
+- FIX [ 1743572 ] (cmo) Options : Debugger-Tab, Can't define Xdebug.dll filepath because the speed button doesn't work
+- FIX [ 1741471 ] (tsigordo) Project : "close all" followed by a "save project" gives an Access violation
+- FIX [ 1731309 ] (tsigordo) Editor : Closing the first Tab causes an index out of range error.
+- FIX [ 1731309 ] (tsigordo) Search : "Find from top"-option retrieves only the first occurence
+- FIX [ 1731309 ] (tsigordo) Search : "Find in selection" doesn't work
+- FIX [ 1731309 ] (tsigordo) MRU : The "Recently Used" list is cleared when devphp closes.
+* CHG [ 1710833 ] (Octav) BOTS : SQL dump to database is bad. No data in any field of any table must contain a ';'
+* CHG [] () Editor : Auto size the gutter depending on the number of lines
+- FIX [] () SideBar : Contents of SideBar were hidden when applying changes from the "General Options" modal window.
+* CHG [] () SynEdit search revisited : selected text, from top, full, mode column/line/normal, ...
+- FIX [] () SynEdit speed-up : GetHasTabs, ExpandString, GetLengthOfLongestLine
+version 2.2.0
+@ --- 2.2.0.301 23-apr-2007
+* CHG [1712692] (skeishi) L10N : Thanks to Keishi Suenaga, here is his work on localization - Japanese.
+- FIX [1712692] (skeishi) Search, Replace : Both dialogs' font can't display Japanese text.
+- FIX [1712692] (skeishi) Tip of the day : Document's font can't display Japanese text.
+* CHG [] () multiCHM : Faster search, optionally with proposal ; bigger XML-file.
+@ --- 2.2.0.300 06-apr-2007
+* CHG [] (flatdev) SynWeb : new version 1.4.140 with XML and SynTokenMatch
+* CHG [1216452] (t008) Internal Preview : Search doesn't work in Internal preview - yes, search only works in Editor
+* CHG [1693099] (dt30) Editor : Closing File Tabs, once the rightmost tab is closed, the next rightmost tab becomes the current one.
+- FIX [4176480] (av3nger) Editor : Matching braces/parenthese aren't highlighted
+- FIX [1686209] [1687227] (JFish) : Portable version multiple error messages at startup
+* CHG [] (dt30) Lang : ID 255 and 256 elegantly rewritten
+- FIX [] () Projects : Access violation while clicking Project New...
+* CHG [] () GUI : Parser + FTP + Documentation + External Preview Tabs are now hidden as needed
+* CHG [] () Options : SpeedButtons are now sharing the same Glyph (optimizing)
+- FIX [] () FTP : Error message when the FTP proxy port wasn't set
+@ --- 2.2.0.299 11-mar-2007
+- FIX [] (av3nger) General options : Cancel after changing syntax highlighting does not work - because these changes are always carried out.
+- FIX [] (dt30) CloseAll : While closing all files (quit), if User hit "Cancel" when asked, then all the Editor-tabs temporarily disappear - files must even be sometimes reloaded (like Matrix ;)
+* CHG [] () Portable : Includes 1 cmd to build all the executables, and the method to build the famous 7z.sfx
+@ --- 2.2.0.298 08-mar-2007
+- FIX [] (dt30) FTP : Hourglass is stuck - sometimes.
+- FIX [] (dt30) Editor : While closing a project or quitting the program, if there are modified files and User hit "cancel", all the file tabs temporarily disappear.
+@ --- 2.2.0.297 04-mar-2007
+- FIX [1665537] (dt30) FTP : at least six bugs :-[
+- FIX [1681096] (av3nger) Installer : On install, we should remember the already used path, if any.
+- FIX [1686305] (pro_mapmkr] FTP : access violation
+- FIX [] () Projects : small bug on calling menu MRU-projects
+@ --- 2.2.0.296 24-feb-2007
+- FIX [1681099] (av3nger) Files-Tab : On key press, should select the first file whose name correspond to the key. So it's easier to find files in a big folder.
+@ --- 2.2.0.295 24-feb-2007
++ NEW [1666297] (TsiGordo) File monitoring : Please consider adding to the warning message the option to perform the reload immediately. Also, consider adding a reload icon to the file toolbar.
+@ --- 2.2.0.294 16-feb-2007
+- FIX [] (Derick Rethans) Xdebug : Conditional break is now available
+* CHG [] (Krystian Bigaj) SynWeb : Version 1.3.122 is stable
++ NEW [] (drew.hubl) PortableApps : First step to portableApps compliant
+@ --- 2.2.0.293 23-jan-2007
+- FIX [] () FTP : bug on change FTP path
++ NEW [] () Editor : Save and restore the caret and the scrollbars (horz and vert) positions
+* CHG [] () Project : Don't check the SaveSession flag when loading a project
+* CHG [] () Proxy : added a checkbox named 'Proxy enabled' in General Options at FTP-Tab
+@ --- 2.2.0.290 14-jan-2007
+* CHG [] () Highlighting : Using new component TSynWeb instead of TSynMultiSyn
+* CHG [] () Check for update : proxy parameters (not really ok yet)
+@ --- 2.2.0.289 01-jan-2007
+- FIX [] () Toolbars : not initialized, position not saved
+- FIX [] () Projects : default project file invalid in installer
+
+version 2.1.2
+@ --- 2.1.2.288 01-jan-2007
+- FIX [] () Toolbars : not initialized, position not saved
+- FIX [] () Projects : default project file invalid
+@ --- 2.1.2.287 31-dec-2006
+- FIX [1597349] (flatdev) UniSynEdit : ToggleCase not working - patch
+* CHG [] () UniSynEdit : Use TMemIniFile is faster when loading highlighters from Ini-files
+* CHG [] () TB2K : Use TMemIniFile is faster when initializing the buttons on toolbars
+* CHG [] () Languages : Key ID 69 (Encoding) is useless, now
+* CHG [] () MRU : Most recently used Files and Projects - renamed and rewritten
+* CHG [] () MRU : After selecting a file, its content is shown since we can open only one file at the same time
+* CHG [] () Program loading : project is loaded only once
+* CHG [] () Program ending : working with TMemIniFile (speed)
+* CHG [] () I18N : Language file is loaded via TMemIniFile (speed)
+* CHG [] () Tip of the day : Is shown as soon as possible (seems faster)
+- FIX [] () PHP.ini : Edit PHP.ini, is able to open a file named PHP.INI which is in the same folder as PHP-CGI.exe, if the name of that file is left empty
+- FIX [1620692] (ysirjean) Options : OpenDialog doesn't draw correctly when attempting to activate Mozilla ActiveX
+* CHG [] () Check for Update : this feature doesn't need a local file anymore (HTTP->TStringList->TMemIniFile)
+* NEW [] () Environment : New environment variable %USBDRIVE% generated on the fly (contains a drive unit K:, L:, ...)
+@ --- 2.1.2.286 19-dec-2006
+- FIX [1618603] (Nobody) Portable Dev-PHP : wrong paths due to FileCtrl.ProcessPath (actually a workaround)
+- FIX [] () Configuration : the path to sftp.exe doesn't refer to %DEVPHP% variable
+@ --- 2.1.2.285 14-dec-2006
+* CHG [] () SynEdit : using TMemIniFile instead of TIniFile helps to increase speed while writing Highlighters attributes into ini-Files
+* CHG [] () Tb2k : switching from TIniFile to TMemIniFile speeds up the SaveToolbarButtons process
++ NEW [] () Unicode : Keep track of BOM (Byte Order Mark) in SynUnicode
++ NEW [] () Status Bar : now reports file format and file encoding of opened files
++ NEW [] () Unicode : New menu 'Format' in order to change format (Dos, Unix, Mac, ...), encoding (Ansi, UTF8, UTF16-le and be) and BOM for current file
+* CHG [] () Parameters : Internal use of %DEVPHP% variable as soon as a path is relative to exe-name
++ NEW [] () Portable : Declare environment variable 'DevPHP_AppFolder' in order to remap drive units and to define an 'Application Data' folder
+@ --- 2.1.2.284 03-dec-2006
+- FIX [4041430] (pengjetty) Installer : File phpcsl2.xml is not copied if %APPDATA%\devphp\autotext.xml already exists
+@ --- 2.1.2.283 11-nov-2006
+- FIX [] () Debug : Small fixes around debugger.
+@ --- 2.1.2.279 08-nov-2006
+* CHG [] () Debug : Breakpoints click on the left half of the gutter (unconditional, on hit, on expression true) + enable(red)/disable(blue) + save/restore via projects save/load
+* CHG [] () Debug : button Activate from the debug toolbar is enabled if (as soon as) a file PHP.exe has been defined via General Options » Parser
+* NEW [] () Debug : SynEdit plugin in order to play with the gutter - no icon : breakpoint are best viewed in case of zoom in/out
+@ --- 2.1.2.276 03-nov-2006
+- FIX [1589179] (Nobody) Projects : Reload project => index out of bounds (-1)
+* CHG [] () Xdebug : very few changes
+
+version 2.1.0
+@ --- 2.1.0.274 24-oct-2006
++ NEW [] Tip of the day : Thanks to Dev-Cpp project http://sourceforge.net/projects/dev-cpp/
++ NEW [] usb device : experimental via the environment variable %DevPHP_AppFolder% a relative path to devphp.exe folder
++ NEW [] Xdebug : some new features 'Run to cursor', 'Context display and reset'
+* CHG [] Xdebug : at least 30% rewritten, works fine with php-gtk
+* CHG [] Projects : new icons
+* CHG [] GUI : Dockable windows, with translucency
+* CHG [] GUI : Listviews with columns sort ascending / descending
+* CHG [] Installer : some new languages...
+- FIX [1579605] (PenguSven + contributor peteridunne) File open : Slow to open when double-clicking inside Explorer 
+- FIX [1451866] (dt30) Internal preview : Preview Refresh Problem with msie (bug was back again)
+- FIX [] (dt30) Parser : Win98 doesn't understand double doublequotes, however XP, NT, 2K, do
+- FIX [] (dt30) Parser : Win98 may ignore entered php.ini pathname, due to command line length (only a warn, can't fix ;)
+- FIX [] File monitoring : was not monitoring files + avoid conflicting VirtualShellTools events + Hide component at run time
+- FIX [] Dockable Help : width was wrong after a resize of the SideBar
+- FIX [] Projects : ftp / sftp environments were incorrectly set / reset
+- FIX [] Syntax check : check for php5ts.dll *or* php4ts.dll
+
+version 2.0.13
+@ --- 2.0.13.263 30-jul-2006
+- FIX [] Editor : Cancel the Hint on Editor-Tab if still active
+* CHG [] UniSynEdit : upgrade to version 2006-jun-25
+@ --- 2.0.13.261 25-jul-2006
+- FIX [] Internal Preview : Really restricted to localhost
+- FIX [] GUI : Menus, access with <Alt> Shortcuts like &File, &Edit, ...
+* CHG [] Projects : Now, there is a special menu with New, Save, Open and Reload
+* CHG [] GUI : MRU, Most Recently Used list for files and projects
+* CHG [] Projects : Dialogs are directories context dependent
+* CHG [] SFTP : Selecting '.' directory means select all files and sub-directories
+* CHG [] Print Preview : Hints on buttons
+* CHG [] Editor : Closing a Tab is using CloseEditorTab function instead of CloseEditor function
+- FIX [] () Editor : Sync the file listview (from SideBar) in case of 'Save As...' feature
+* NEW [] Editor : <Ctrl>+<Alt>+<S> now saves and send the current file via ftp or sftp
+- FIX [] FTP : Listview of remote files, sorting on column 'Date' should be ok
+* CHG [] Installer : Auto-selection of language for installer in {English, French, German, Spanish}
+* CHG [] () Installer : Compressor set to lzma (because it appeared to be the best compressor for Dev-PHP ;)
+* CHG [] Installer : Its versionning is like the Dev-PHP's one
+- FIX [] () Installer : File 'copying.txt' (GPL Licence) copied to right directory and attribute set to read-only
+- FIX [] () Installer : File 'news.txt' (this file) attribute set to read-only
+- FIX [] Installer : File 'libeay32.dll' and 'ssleay32.dll' are no longer provided, since they are illegal in countries where encryption is outlawed
+- FIX [] Installer : Files 'devphp.ini', 'devphp.prd', 'autotext.xml' and 'phpcsl2.xml' are no longer reset if already existing in %APPDATA%
+@ --- 2.0.13.260 12-jul-2006
+* CHG [] () Completion : The 2 ShortCuts are : Ctrl+Space for functions or variables' completion with pretty text (styles and colors), and : Shift+Ctrl+Space for hints inside a function's params
+@ --- 2.0.13.259 9-jul-2006
++ NEW [] Multi CHM : with uri in order to download some CHM files
+* CHG [] SideBar : The user can change the order of tabs
+- FIX [] External Preview : best checking of default uri
+- FIX [] SFTP : bad session initialization
+- FIX [] () System : configuration of components revisited (developpers internal use)
+@ --- 2.0.13.258 14-jun-2006
++ NEW [] SFTP : with pSftp.exe, added "Delete empty directory" feature
+@ --- 2.0.13.257 14-jun-2006
++ NEW [] SFTP : with pSftp.exe
++ NEW [] () File monitoring : Monitor changing and deleting of local (no network) opened files
++ NEW [] Editor : Hint on Editor-Tabs with full file-name
++ NEW [] SideBar : Hint on speedButton on Files-Tab
+* CHG [] () FTP : Better list view with ftp + sftp (columnClick with sort asc / desc)
+- FIX [] some bugs
+* CHG [] Indy : FTPListParseUnix in order to manage sftp directory listings
+* FIX [] idCGIRunner : in order to manage the right php.ini file
+@ --- 2.0.13.253 25-apr-2006
+* FIX [1471282] (ryiden Hansgeorg Schwibbe) Editor : Ctrl+Y deletes current line instead of "Undo" the last change
+@ --- 2.0.13.252 10-apr-2006
++ NEW [] () Editor : Highlighters for INI files (*.ini) and Unix ShellScript (sh, csh, ksh, bash)
+* CHG [] () Editor : Better filter for file extensions (*.htm*, *.php*)
+- FIX [] () Editor : OpenFile (many bugs fixed)
+* CHG [] File : History of recently opened files
+- FIX [] () GUI : CloseAll (PageControl was left hidden)
+- FIX [] () GUI : Close a file (synchro with SynEdit)
+- FIX [1451866] (dt30) Internal preview : with msie, we must force a refresh when file is autosaved by Dev-PHP
+- FIX [] () GUI : HTML Tool Bar visibility (was depending on main tool bar visibility)
+* CHG [] () GUI : Search in files or (sub)directories - The Search-Tab and the selection are automatically shown
+- FIX [] GUI : ToolBar customizations were always lost
+- FIX [] idRunner : from php4delphi - is now using the declared php.ini ; if none declared in "General Options" : uses the default php.ini defiend by PHP1Click
+* CHG [] GUI : Ensure that the results of Search are always visible, without changing user's configuration.
+@ --- 2.0.13.250 9-mar-2006
+* FIX [] (Urs) Editor : on close file, autoload if file is not really loaded
+* FIX [] (Urs) Editor : change pagecontrol on doubleclick-openFile and set focus to the editor
+@ --- 2.0.13.249 5-mar-2006
+* FIX [3610689] (rhoerner) FTP : FTP default directory must be '/' terminated (http://sf.net/forum/message.php?msg_id=3610689)
+* CHG [] () Help : attempt to give focus to 'WebBrowser2' Help-Tab,
+* GHG [] () delphi : using TMemIniFile instead of IniFile for frmUpdate (Check for update)
+@ --- 2.0.13.248 20-feb-2006
+* FIX [] (Urs) delphi : Dropped 'PHPSupport = False'
+@ --- 2.0.13.247 20-feb-2006
+* CHG [ 3583126 ] (myk-ncsa) Editor : Use fixed fonts in SynEdit
+* FIX [] delphi : rewrote small pieces of code
+@ --- 2.0.13.246 14-feb-2006
++ NEW [] (Urs) FTP : FTP-proxy options
+@ --- 2.0.13.244 14-feb-2006
++ NEW [] Find : reverse is available via <Shift+F3>
+* FIX [] Find : small fixes in the form associated with <Ctrl+F>
+@ --- 2.0.13.243 11-feb-2006
+* CHG [1427578] (anickol) Help : New languages are available for compiled help PHP.chm
+- FIX [1425791] (Nobody) Editor : Background "Editor Color" preference doesn't stick
+* CHG [] delphi : VirtualTreeView 4.4.3 - By: Mike Mischke - http://www.delphi-gems.com/VirtualTreeview/VT.php
+* CHG [] delphi : VirtualShellTools 1.4.0 - By: Jim Kueneman - http://www.mustangpeak.net/download.htm
+* CHG [] About form : References to famous projects used by Dev-PHP
+- FIX [] (Urs) delphi : Init from TEditor had no third parameter... - By: Urs Maëder - Fortunately ;)
+* CHG [] Editor : Faster loading and closing - files are loaded on demand.
+@ --- 2.0.13.239 31-jan-2006
+* CHG [1433547] (av3nger) GUI : Confirm on 'Close All' - http://sf.net/forum/forum.php?thread_id=1433547&forum_id=426561
+* CHG [] () UniSynEdit : Faster highlighter since we're using a more standard SynHighlighterPHP.pas (newly generated hash table by the SynGen program)
+* CHG [] GUI : Visibility - of Debug bar and Messages panel, now saved and restored
+* CHG [] () Editor : Files' loadings are dramatically faster (loaded on demand)
+- FIX [] Status bar : some fixes, read-only sticker
+- FIX [3510973] (Neven) Editor : Read only files may be changed with html toolbar - http://sf.net/forum/message.php?msg_id=3542278
+* CHG [ 1118431 ] (DevPHP 3.0 community) Compatibility : <?php recognized - http://sf.net/forum/forum.php?thread_id=1118431&forum_id=392687
+* CHG [] UniSynEdit : 21, January 2006
++ NEW [] () Editor : With mouse wheel one can Zoom (associated with Ctrl-key) and page-scroll (associated with Shift-key)
+* CHG [] GUI : Order of Tabs - only one PageControl has still fixed Tabs
+@ --- 2.0.13.236 08-jan-2006
+- FIX [3510973] (Neven) Editor : Read only files not saved and however closed.
++ NEW [1398569] (nullbarriere) Options : user-defined colors with a 'more colors' button
+* CHG [3508902] (nullbarriere) GUI : Order of Tabs for the SideBar page control are draggable
+- FIX [] File loading : case of File busy or anything else
+* CHG [] (marc) Language : catalan.lng
+- FIX [1211370] (Nobody) GUI : Error, can't close when removing toolbars
+* CHG [] delphi : popup menus and items - migrated from regular to TBX
+* CHG [] BOTS : placed prior to the Snippets-Tab
+@ --- 2.0.13.230 02-dec-2005
+* CHG [] (Keishi Suenaga) Unicode : new component UniSynEdit available from Oct.25, 2005 - Thanks to Keishi Suenaga
+- FIX [1345739] (mtm.jansen@hetnet.nl) GUI : short cut keys externals no longer work
+- FIX [1230455] (dt30) GUI : Auto-Save always done, even if no changes made, when using the internal preview
+@ --- 2.0.13.224 06-nov-2005
+- FIX [] Projects : Menu 'File » Save project' should save current project to selected file
+* CHG [] () SRC : Snippets Remote Control might be translucent :)
+- FIX [] FTP : view style in ftp lists now remain as previously selected
++ NEW [] () SRC : as Snippets Remote Control :)
++ NEW [] () BOTS : as Best Of Text Snippets (xml)
+- FIX [] DEBUG : was not functionnal due to a comment on aug.27 13:17:57 :-[
+- FIX [] GUI : Splitter, when one move 'SideBar' from left dock to right one, splitting was weird
+- FIX [] FTP : case of 'Connection reset by peer'
+@ --- 2.0.13.212 11-sept-2005
+- FIX (Neven) : Read only files may be edited, cannot be saved and no messageBox !
+* CHG (pFa) : Check for update is back ;-)
+* CHG (pFa) Editor : popup menu 'selected text' options
+* CHG (Apostille) Editor : Comment/uncomment selected text
+* CHG (Apostille) Editor : Dump selected variable - with 'selected text » print'
++ NEW (Apostille) GUI : It would be nice to add the wheel click event in order to close an Editor-Tab :)
++ NEW (pFa) Editor : selection mode toggles line / column ; <Shift+Ctrl+Tab> switches to prior TabSheet, as <F7> does
+- FIX (Marek) GUI : <F1> key, sometimes doesn't work correctly
++ NEW (Marek) Todo list : 
+* CHG (t008) Editor window: if left sidebar is "Files" then clicking opened file tabs (under Editor) gives the focus to left sidebar.
+- FIX (t008) FTP : When pressing Test without entering ftp port number -> "'' ist kein gültiger Integerwert". It might either tell it in english or set it to default 21
++ NEW (Eric Boutin) Search : Goto dialog pressing enter/search wrap after not found to line 0. Thanks to Eric Boutin for his Feature Request
++ NEW (Urs) Options : Add a Uri to download latest documentation file php.chm
+* CHG (Urs) Indy10 : and OpenSSL
+- FIX (Urs) Editor : Fix saving and loading empty files
+* CHG (Urs) GUI : Initial dir if open or save files with dialog now always the path of the currently open file is preselected
+- FIX (Urs) Editor : With uppercase recognition in class browser (ex. FUNCTION)
++ NEW (Urs) Debug : Beginning debugger implementation
+- FIX (Urs) Editor : Fixed elsif in syntax-highlightning
++ NEW (Urs) Preview : It's now possible to set a default-preview-file (if empty then preview current file) if you have defined a default-preview-file, you can preview other files with pressing shift key if you have not defined a default-preview-file then current file will be served by the local server
+- FIX (Urs) Editor : Fix bug with saving unicode
++ NEW (Urs) GUI : On program start sync current file and filetreeview
++ NEW (Urs) Options : Configurable local-servertimeout (default value 10 000 ms)
++ NEW (Urs) Indy 10 : Changed to indy10 ! Better ftp support / Faster internal server
+- FIX (Urs) GUI : Fixed splitter between filebrowser and editor
+
+version 2.0.12
+@ --- 2.0.12 
+. bugfix : pathes with blank chars
+. changed writing files with or without bom
+. changed order of tabs (files,classes,snippets,html)
+. changed selection of unicode type (Ansi,UTF8,UTF16) if files saved (in the options dialog)
+. fix some small bugfixes
+. changed installation : path of the menu-links from user to allusers
+
+version 2.0.11
+@ --- 2.0.11 
++ new [] () Preview : full implemented local webserver (included output view) first call may need a little more time 
+* chg [] () PHP : using php4 or php5 possible. php-gtk is working for me in this moment only with php4
++ new [] () PHP : opening directly the used php.ini
+- fix [] () Preview : $_GET and $_POST -Variables will be filled 
++ new [] () GUI : changed to VirtualShellTools with full integrated Tortoise-CVS/SVN icons (downloads from: http://sourceforge.net/projects/tortoisecvs/  http://www.mustangpeak.net/vstools.htm)
+* chg [] () Class browser : better class browser (complete rewrite) with number based jumps
+* chg [] () Class browser : with sorted include/function/vars/classes items
++ new [] () Preview : you can now choice between mozilla control or IE for the internal preview
++ new [] () Editor : active Line color added - see options
+* chg [] () Program : changed source from cvs to subversion
+* chg [] () : opening/saving files in the path of current document
+* chg [] () Editor : more items in right mouse button menu
+* chg [] () Editor : better settings from multihighligher with language first
+- fix [] () : and many other small changes and bugfixes
+* chg [] () : adjusted highlighter after save
+
+version 2.0.10
+@ --- 2.0.10 
+. replaced midas.dll with the openxml-components (you dont more need midas)
+. better ftp-client without offset of names
+. Listview or ReportView for ftp-client
+. updated to synedit unicode from 19.12.04
+. bugfix mysterious chars at begin of text when saving files
+. added manifest-file
+. added some html-tags for editing - not completed...-:)
+. some small bugfixes
+. added source view when localpreview
+. jump to errors in local preview
+. better undo with buttons and html-Tag-Editor
+. zoom-in/zoom-out with ctrl+/ctrl-
+
+version 2.0.9
+@ --- 2.0.9 
+. added syntax highlightning for php 5
+. added class browser features for php 5
+. changed devphp.ini to Appdata (personal application data)
+. changed Highlighter-Ini-Files to Appdata to allow any user different highlightning
+. support for unicode (testing)
+. supporting different highlight background for multi-highlighter
+. highlightning-settings in the options dialog depends now from the current file
+. better loading from project files / reload from external programs settings
+. TIMESTAMP implemented 
+. PrintPreview implemented
+. HTML-Tag Editor not complete...-:) (testing) not implemented things with php and single quotes
+. !!!!!!!!!!!!! uninstalling Programm will now delete the Programdirectory of devphp2 !!!!!!!!!!!!!!! Please save all data you will hold before
+
+version 2.0.8
+@ --- 2.0.8 
+. better dialog for replace
+. added call of external programs(please do not add more then 9 programs)
+	you can add on this way WINSCP, other Ftp-clients, code-beautifer
+	the currentfilename you can put with the string "%CURRFILE%" as parameter to the external
+	the shortcuts will be ALT+CTRL+number of the external
+. Filepath of doc,lang,parser may be relative to the applicationpath with "%DEVPHP%"
+. changed <br> to <br /> and <hr> to <hr />
+. many bugfixes in class browser 
+. some small bugfixes
+. better Find function 
+	1. Select text and then press Ctrl+F3 for find first from top of text and then F3 for find next.
+	2. Press Ctrl+F to open "Find dialog box", enter your text and accept then F3 for Find Next.
+	3. Select text and press Ctrl+F to open "Find dialog box" filled with this selected text.
+  thanks to hilaner at users.sourceforge.net
+. full translation of all dialogs / may be there are some messages but no more
+. History for project files
+  
+version 2.0.7
+@ --- 2.0.7 
+. docking sidebar at right is possible
+. bugfixes fileregistration
+. choice the highlighter for a file-extension
+. more translation items -> please translate the newest version and send it to ursmaeder@users.sourceforge.net
+. better starting process
+. syntaxcolors are changable
+. added button to change the project-path
+. i hope no errors by no DriveC
+. class browser small changings 
+	if you have a "<?" or ">?" in a string then the mulithighlighter will not function. try to change it to '<'.'?' in php
+. added Link button 
+. the file in forground will be hold to the next program start.
+. indent / unindent set to Shift-Ctrl i/u (like Delphi) this function in this moment only with spaces not with tabs. i try to fix it for the next version.
+ 
+version 2.0.6
+@ --- 2.0.6 
+. fixed bug with white spaces in Filenames, Filepaths
+. class browser small changings
+. bugfix table-dialog changed rows and cols
+. bugfix indentifier foreach/as 
+. bugfix code completition 
+
+version 2.0.5
+@ --- 2.0.5 
+. tab and shift tab will indent and unindent selected text
+. Sidbar is dockable
+. toolbars/menus are changed to toolbars2000
+. added template for new html/php-File named "HTMLTemplate" "PHPTemplate" in snippets 
+	Define the snippets to have a own template
+. removed CVS -> i think, it's better to doit with tortoise - cvs -> possible to use in DEV-PHP for folders -:)
+. changed Umsch+ Strg+ to Shift+ Ctrl+
+. translations more complete
+. bugs fixed by get folders via FTP
+. escape - key in all dialogs
+
+version 2.0.4
+@ --- 2.0.4 
+. added wordWrap - > settings in OptionsDialog
+. added selectable AutoIndent
+. bugfix backspace by blanks depending of AutoIndent
+. changed to CVS-Version of synedit -> 2004-03-05
+. added new SyntaxHighlightning HTML-PHP
+. showing Folders-Icon in FTP-View
+. more translated Items - updated english.lng/german.lng
+. added Cursorstring in TextSnippets - Cursor will go to this position after insert the Snippet
+. added Import-Export in TextSnippets for a exchange of Snippets 
+	send your exquisite snippets to ursmaeder@users.sourceforge.net
+	i will put it on the homepage
+. functionbrowser now in SideBar
+. added RegExpression Search in current File or selected Directory
+. configurable and dockable Toolbars
+
+version 2.0.3
+@ --- 2.0.3 
+. added hide SideBar to ViewMenu
+. bugfix backspace by blanks at the end of line
+. added delete to end of line
+. added delete previous word
+. added date statements more flexible - you can define your own format in the options-dialog
+. bugfix save untitled.php
+. added checkbox for Special Chars
+. added save FTP Password
+. possible to save files with lf(Unix), crlf(Win), cr(Mac)
+
+version 2.0.2
+@ --- 2.0.2 
+. bugfix color
+. added better icons to ftp-view
+. bugfix adding blanks at end of line
+. moved some menu items
+. added turkish language / turkish doc language
+. better windowsize saving
+. added insert date, time, date-time
+. added delete line - delete word
+. added insert edited Filename/Pathname
+. added insert Filename from shelllistview-browser with right mouse click
+
+version 2.0.1
+@ --- 2.0.1 
+. added Upper/LowerCase
+. added Capitalize
+. some bugfixes - selecting preview..
+
+version 2.0.0
+@ --- 2.0.0 
+. added class browser
+. some bugfixes
+@ --- 2.0.0 beta 0.0.9 um
+. restored code completition
+. added text snippets in a xml-File
+@ --- 2.0.0 beta 0.0.8 um
+. bug fix by history save
+. some bugfixes in the cvs part - cvs using is really beta in this time
+. translator added (in a separate download)
+@ --- 2.0.0 beta 0.0.7 um
+. changed help if no item found -> go to firstpage with chapters
+. added dropping files if no document is open
+. if you are connected to a ftp - Server evry 120 seconds the client will get a Directory - Listing to keep alive the connection
+. added make visible special chars
+. added menu open/save project may be a little buggy - try it but ... it's a beta
+@ --- 2.0.0 beta 0.0.6 um
+. make a cvs - server in this moment no anonymous account
+. cvs-client a little bit buggy
+. some Bugfixes
+. choice for passive or active FTP
+. Setting for FTP-Filenames as offset from full result
+@ --- 2.0.0 alpha 0.0.5 Urs Mäder
+. Simple FTP- interface
+. Internal WebServer
+. Some Changes
+. added indent undent text
+@ --- 2.0.0 alpha 0.1.0
+. Lots of optimizations and bugfixes.
+. Removed a lot of useless code.
+. Ported to Delphi 6 Enterprise.
+. Rewritten editor (removed the old MDI-based one).
+. Added an internal Web Browser (only for documentation and previews).
+. Added a Project Manager.
+. Rewritten Function Browser.
