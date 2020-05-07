@@ -69,3 +69,12 @@ body {
   border: 2px solid #f5ba09;
   border-radius: 0.5rem;
 }
+
+.showEmail {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: 0.5s ease;
+  width: 100%;
+}

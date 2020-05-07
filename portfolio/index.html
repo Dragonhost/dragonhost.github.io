@@ -18,6 +18,9 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
+    <!-- My Javascript -->
+    <script src="main.js"></script>
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/996973c893.js"></script>
 
@@ -41,27 +44,27 @@
           <div
             class="row text-center p-0 d-flex justify-content-end align-items-center"
           >
-            <div class="col-3">
+            <div class="col-4">
               <a href="#about" class="text-white navigation-link">About</a>
             </div>
-            <div class="col-3">
+            <div class="col-4">
               <a href="#projects" class="text-white navigation-link"
                 >Projects</a
               >
             </div>
-            <div class="col-3">
+            <div class="col-4">
               <a href="#social-media" class="text-white navigation-link"
                 >Social Media</a
               >
             </div>
-            <div class="col-3">
+            <!-- <div class="col-3">
               <a
                 href="https://packetcode.github.io/web-development-crash-course/resume-mini-project/"
                 target="_blank"
                 class="text-white navigation-link"
                 >Resume</a
               >
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -85,14 +88,14 @@
           >
         </div>
       </div>
-      <div class="d-block text-center pt-3">
+      <!-- <div class="d-block text-center pt-3">
         <a
           href="https://packetcode.github.io/web-development-crash-course/resume-mini-project/"
           target="_blank"
           class="btn btn-outline-warning"
           >Resume</a
         >
-      </div>
+      </div> -->
     </div>
 
     <!-- Main Container for Computer-->
@@ -130,21 +133,14 @@
           <h3 class="text-warning">About Me</h3>
           <h1 class="m-heading">I'm a Web Developer</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
-            eligendi natus, ex maiores
-            <b class="text-warning">quaerat provident</b> iusto tenetur vero
-            ipsum. Beatae expedita obcaecati odio dignissimos itaque nulla
-            voluptatum doloremque sed iusto!
+            I have started web development one and a half year back and have created many projects as I strongly believe that you can learn only by doing it.
           </p>
           <br />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-            magni <b class="text-warning">adipisci sunt eum</b>, reprehenderit
-            dignissimos quaerat maiores ad. Magni, totam iure. Doloribus ea
-            <b class="text-warning">molestiae deleniti</b> excepturi iure neque,
-            harum illum!
+            I have a Youtube channel named as Packetcode. 
+            The main aim of me maintainig that channel is to make programming easy and simple for anyone to understand.
           </p>
-          <a class="btn btn-outline-warning" href="#" target="_blank">
+          <a class="btn btn-outline-warning" href="https://www.linkedin.com/in/kamal-teja-157111168/" target="_blank">
             Learn More
           </a>
         </div>
@@ -152,113 +148,155 @@
     </div>
 
     <div id="projects" class="container mt-5 pt-5">
-      <h1 class="text-warning mb-3 pb-2">My Projects</h1>
+      <h1 class="text-warning mb-3 pb-3 m-heading">My Projects</h1>
       <div class="row">
         <div class="col-12 col-md-4 mb-5 d-flex justify-content-center">
           <div class="card" style="width: 18rem;">
             <img
-              src="images/messaging.svg"
-              class="card-img-top"
+              src="images/corona-tracker.svg"
+              class="card-img-top p-3"
               style="height: 13rem;"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Messaging Web App</h5>
+              <h5 class="card-title text-warning ">COVID-19 Tracker</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                This is a COVID-19 tracker web app which takes the data from the public API <b>CSSEGISandData</b> provided by <b>Johns Hopkins University</b>. 
+                In this tracker we take the data from this API using <b>PHP</b> and parse it and display it on the frontend in a table. 
               </p>
-              <a href="#" class="btn btn-warning">See Project</a>
+              <div class="row">
+                <div class="col-6">
+                  <a href="https://github.com/kamaltejag/corona-tracker"  target="_blank" class="btn btn-warning d-flex justify-content-center">Code</a>
+                </div>
+                <div class="col-6">
+                  <a href="https://packetcode.in/apps/corona-tracker/"  target="_blank" class="btn btn-dark d-flex justify-content-center"">View</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4 mb-5 d-flex justify-content-center">
           <div class="card" style="width: 18rem;">
             <img
-              src="images/fitness.svg"
-              class="card-img-top img-fluid"
+              src="images/disappr.svg"
+              class="card-img-top p-3"
               alt="..."
               style="height: 13rem;"
             />
             <div class="card-body">
-              <h5 class="card-title">Fitness Web App</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <h5 class="card-title text-warning ">Disappr</h5>
+              <p class="card-text" style="min-height:12rem">
+                The main idea behind this project is to share messages <b>anonymously</b> and <b>securely</b>.
+                All the messages created and shared using this web app are <b>time bound</b> i.e. these messages automatically disappear after 24hhrs.
               </p>
-              <a href="#" class="btn btn-warning">See Project</a>
+              <div class="row align-self-end">
+                <div class="col-6">
+                  <a href="https://github.com/kamaltejag/disappr" target="_blank"  class="btn btn-warning d-flex justify-content-center">Code</a>
+                </div>
+                <div class="col-6">
+                  <a href="http://packetcode.in/apps/disappr/"  target="_blank" class="btn btn-dark d-flex justify-content-center"">View</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4 mb-5 d-flex justify-content-center">
           <div class="card" style="width: 18rem;">
             <img
-              src="images/e_commerce_platform.svg"
-              class="card-img-top"
+              src="images/corona-tracker-india.svg"
+              class="card-img-top p-3"
               alt="..."
               style="height: 13rem;"
             />
             <div class="card-body">
-              <h5 class="card-title">E-Commerce Platform</h5>
+              <h5 class="card-title text-warning ">COVID-19 Tracker India</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                This is a COVID-19 tracker web app which takes the data from the public API <b>covid19india</b>, open sourced by the people in india. 
+                In this tracker we take the data from this API using <b>Javascript</b>, parse it and display it on the frontend in the form of a chart using Chart.js. 
               </p>
-              <a href="#" class="btn btn-warning">See Project</a>
+              <div class="row">
+                <div class="col-6">
+                  <a href="https://github.com/kamaltejag/corona-tracker-india" target="_blank"  class="btn btn-warning d-flex justify-content-center">Code</a>
+                </div>
+                <div class="col-6">
+                  <a href="https://packetcode.github.io/corona-tracker-india/" target="_blank"  class="btn btn-dark d-flex justify-content-center"">View</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4 mb-5 d-flex justify-content-center">
           <div class="card" style="width: 18rem;">
             <img
-              src="images/music.svg"
-              class="card-img-top"
+              src="images/job-aggregator.svg"
+              class="card-img-top p-3"
               alt="..."
               style="height: 13rem;"
             />
             <div class="card-body">
-              <h5 class="card-title">Music Player</h5>
+              <h5 class="card-title text-warning ">Job Aggregator</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                The motive behind this project is to bridge the gap between the employer and the employee.
+                This is a simple web app where we post many available <b>job postings</b> in various companies and anyone can signup and <b>apply</b> for that job from this web app.
               </p>
-              <a href="#" class="btn btn-warning">See Project</a>
+              <div class="row">
+                <div class="col-6">
+                  <a href="https://github.com/kamaltejag/job-aggregator" target="_blank" class="btn btn-warning d-flex justify-content-center">Code</a>
+                </div>
+                <div class="col-6">
+                  <a href="http://packetcode.in/apps/job-aggregator/" target="_blank"  class="btn btn-dark d-flex justify-content-center"">View</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4 mb-5 d-flex justify-content-center">
           <div class="card" style="width: 18rem;">
             <img
-              src="images/photography.svg"
-              class="card-img-top"
+              src="images/pomodoro-timer.svg"
+              class="card-img-top p-3"
               alt="..."
               style="height: 13rem;"
             />
             <div class="card-body">
-              <h5 class="card-title">Photography Platform</h5>
+              <h5 class="card-title text-warning ">Pomodoro Timer</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                This is a simple web app which can be used to follow the <b>Pomodoro Technique</b> i.e. this contains a timer in it, which is preset to <b>25mins</b>. 
+                You can start the timer, do your work and once the timer hits zero, it rings a bell implying the end of the session. 
               </p>
-              <a href="#" class="btn btn-warning">See Project</a>
+              <div class="row">
+                <div class="col-6">
+                  <a href="https://github.com/kamaltejag/pomodoro" target="_blank"  class="btn btn-warning d-flex justify-content-center">Code</a>
+                </div>
+                <div class="col-6">
+                  <a href="https://packetcode.github.io/pomodoro/"  target="_blank" class="btn btn-dark d-flex justify-content-center"">View</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-4 mb-5 d-flex justify-content-center">
           <div class="card" style="width: 18rem;">
             <img
-              src="images/web_scraping.svg"
-              class="card-img-top"
+              src="images/social-wall.svg"
+              class="card-img-top p-3"
               alt="..."
               style="height: 13rem;"
             />
             <div class="card-body">
-              <h5 class="card-title">Manga Scraping Web App</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <h5 class="card-title text-warning ">Social Wall</h5>
+              <p class="card-text" style="min-height:12rem">
+                This is a platform where people can <b>share anything</b> that they want. This is similar to the Facebook wall but much simpler. 
+                Here anyone can signup and share any link or video or photo that they want others in the <b>community</b> to see.
               </p>
-              <a href="#" class="btn btn-warning">See Project</a>
+              <div class="row">
+                <div class="col-6">
+                  <a href="https://github.com/kamaltejag/social-wall"  target="_blank" class="btn btn-warning d-flex justify-content-center">Code</a>
+                </div>
+                <div class="col-6">
+                  <a href="http://packetcode.in/apps/social-wall/" target="_blank"  class="btn btn-dark d-flex justify-content-center"">View</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -270,49 +308,76 @@
         <h4 class="text-warning">Social Media</h4>
         <h1 class="m-heading">Let's be friends</h1>
         <div class="row pt-5 d-flex justify-content-center">
+
           <div class="col-12 col-md-3 mt-md-3 media_link btn">
-            <div class="row">
-              <div class="col-6 d-flex justify-content-start">
-                <h3 class="m-0 pt-2 text-white">LinkedIn</h3>
+            <a
+            href="https://www.linkedin.com/in/kamal-teja-157111168/"
+            target="_blank" class="text-decoration-none"
+          >
+              <div class="row">
+                <div class="col-6 d-flex justify-content-start">
+                  <h3 class="m-0 pt-2 text-white">LinkedIn</h3>
+                </div>
+                <div
+                  class="col-6 d-flex justify-content-end align-items-center"
+                >
+                  <i class="fab fa-linkedin-in fa-2x text-secondary"></i>
+                </div>
               </div>
-              <div class="col-6 d-flex justify-content-end align-items-center">
-                <i class="fab fa-linkedin-in fa-2x text-secondary"></i>
-              </div>
-            </div>
+            </a>
           </div>
 
+
+        
           <div class="col-12 col-md-3 mt-3 media_link btn">
-            <div class="row">
-              <div class="col-6 d-flex justify-content-start">
-                <h3 class="m-0 pt-2 text-white">Github</h3>
+            <a href="https://github.com/kamaltejag" target="_blank" class="text-decoration-none">
+              <div class="row">
+                <div class="col-6 d-flex justify-content-start">
+                  <h3 class="m-0 pt-2 text-white">Github</h3>
+                </div>
+                <div
+                  class="col-6 d-flex justify-content-end align-items-center"
+                >
+                  <i class="fab fa-github fa-2x text-secondary"></i>
+                </div>
               </div>
-              <div class="col-6 d-flex justify-content-end align-items-center">
-                <i class="fab fa-github fa-2x text-secondary"></i>
-              </div>
-            </div>
+            </a>
           </div>
 
+
+        
           <div class="col-12 col-md-3 mt-3 media_link btn">
-            <div class="row">
-              <div class="col-6 d-flex justify-content-start">
-                <h3 class="m-0 pt-2 text-white">Youtube</h3>
+            <a href="https://youtube.com/packetcode" target="_blank" class="text-decoration-none" >
+              <div class="row">
+                <div class="col-6 d-flex justify-content-start">
+                  <h3 class="m-0 pt-2 text-white">Youtube</h3>
+                </div>
+                <div
+                  class="col-6 d-flex justify-content-end align-items-center"
+                >
+                  <i class="fab fa-youtube fa-2x text-secondary"></i>
+                </div>
               </div>
-              <div class="col-6 d-flex justify-content-end align-items-center">
-                <i class="fab fa-youtube fa-2x text-secondary"></i>
-              </div>
-            </div>
+            </a>
           </div>
 
           <div class="col-12 col-md-3 mt-3 media_link bg-warning btn">
-            <div class="row">
-              <div class="col-6 d-flex justify-content-start">
-                <h3 class="m-0 pt-2 text-dark">Email</h3>
-              </div>
-              <div class="col-6 d-flex justify-content-end align-items-center">
-                <i class="fas fa-envelope fa-2x text-secondary"></i>
+            <div onclick="openEmail();">
+              <div class="row">
+                <div class="col-6 d-flex justify-content-start">
+                  <h3 class="m-0 pt-2 text-dark">Email</h3>
+                </div>
+                <div
+                  class="col-6 d-flex justify-content-end align-items-center"
+                >
+                  <i class="fas fa-envelope fa-2x text-secondary"></i>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div id="mailId" class="bg-warning">
+          <h3 id="mailIdText" class="m-0"></h3>
         </div>
       </div>
     </div>

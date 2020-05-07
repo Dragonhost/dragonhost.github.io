@@ -5,10 +5,7 @@
     $password = "";
     $dbname = "social_wall";
 
-    // $server = "localhost";
-    // $username = "packetpz_kamal";
-    // $password = "HELERcar";
-    // $dbname = "packetpz_kamal";
+
 
     $conn = mysqli_connect($server, $username, $password, $dbname);
 

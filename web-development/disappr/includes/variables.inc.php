@@ -8,10 +8,6 @@ $databaseUsername ="root";
 $databasePassword ="";
 $databaseName ="disappr"; 
 
-// $serverName ="sv34";
-// $databaseUsername ="coziamco_disappr";
-// $databasePassword ="HELERcar";
-// $databaseName ="coziamco_disappr";
 
 // Table data
 
