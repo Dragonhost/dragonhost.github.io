@@ -1,0 +1,38 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+/* Some CSS styling */
+#sketchpadapp {
+    /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#sketchpad {
+    /* height:902px;
+    width:638px; */
+    /* min-height: 70vh;
+    width: 100%; */
+    position:relative; /* Necessary for correct mouse co-ords in Firefox */
+    background:url(bg3.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain; 
+    cursor: pointer;
+}
+
+/* #save_remote {
+    float:left;
+    margin-left:5px;
+}
+.save_box {
+    border:1px solid #bbb;
+    border-radius:4px;
+    padding:5px;
+    clear:both;
+} */
