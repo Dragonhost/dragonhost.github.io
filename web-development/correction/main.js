@@ -154,6 +154,14 @@ function init() {
     // If the browser supports the canvas tag, get the 2d drawing context for this canvas
     if (canvas.getContext)
         ctx = canvas.getContext('2d');
+        var width = window.innerWidth;
+        if(width < 990){
+            ctx.canvas.width = width;
+        }
+        else{
+            ctx.canvas.width = 500;
+        }
+        ctx.canvas.height = window.innerHeight;
 
     // Check that we have a valid context to draw on/with before adding event handlers
     if (ctx) {
