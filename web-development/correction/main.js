@@ -163,8 +163,8 @@ function init() {
         window.addEventListener('mouseup', sketchpad_mouseUp, false);
 
         // React to touch events on the canvas
-        canvas.addEventListener('touchstart', sketchpad_touchStart, false);
-        canvas.addEventListener('touchmove', sketchpad_touchMove, false);
-        canvas.addEventListener('touchend', sketchpad_touchEnd, false);
+        canvas.addEventListener('touchstart', sketchpad_touchStart);
+        canvas.addEventListener('touchmove', sketchpad_touchMove);
+        canvas.addEventListener('touchend', sketchpad_touchEnd);
     }
 }
