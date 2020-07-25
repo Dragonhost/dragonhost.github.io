@@ -1,0 +1,47 @@
+<html>
+<head>
+    
+    <!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"> -->
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="hammer.js"></script>
+
+    <script>
+        var myElement = document.getElementById('sketchpadapp');
+        var mc = new Hammer(myElement);
+
+    </script>
+
+    <title>Sketchpad</title>
+</head>
+
+<body onload="init()">
+    <div id="sketchpadapp">
+
+        <!-- Buttons -->
+        <div class="container text-center justify-content-center my-3">
+            <button class="btn btn-dark" onclick="clearCanvas(canvas,ctx);">Clear</button>
+            <button class="btn btn-outline-dark" onclick="saveImageRemote(canvas)">Save</button>
+        </div>
+
+        <!-- Canvas -->
+        <div class="container-flex text-center justify-content-center">
+            <canvas id="sketchpad" height="902" width="638" class="m-auto"></canvas>
+        </div>
+        
+        <!-- Form -->
+        <form name='save_remote' id='save_remote' method='POST' action='/save-image.php'>
+            <input type="hidden" name="save_remote_data" id="save_remote_data">
+        </form>
+
+    </div>
+</body>
+</html>
