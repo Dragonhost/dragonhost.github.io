@@ -10,8 +10,8 @@
 
 #sketchpad {
     /* float:left; */
-    /* height:902px;
-    width:638px; */
+    height:902px;
+    width:638px;
     max-width: 95vw;
     border:2px solid #888;
     border-radius:4px;
